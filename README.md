@@ -139,6 +139,12 @@ python scripts/scrape_law_details.py --resume          # resume from checkpoint
 
 # Scrape historical judgments
 python scripts/scrape_all_data.py --source ecourts --from 1960 --to 2019
+
+# Enhanced lawyer scraper (extracts from judgments + online sources)
+python scripts/scrape_lawyers_enhanced.py
+
+# Regulatory documents (FIAU, MFSA, MGA, IDPC, CFR)
+python scripts/scrape_regulatory_docs.py
 ```
 
 ### 4. Backend API (optional — for AI search)
@@ -162,6 +168,9 @@ uvicorn main:app --reload
 | `scripts/scrape_all_data.py --source lawyers` | Scrape lawyer register + law firms |
 | `scripts/scrape_law_details.py` | Enhanced scraper — metadata, PDF links, ELI, keywords, timeline |
 | `scripts/scrape_law_details.py --resume` | Resume from last checkpoint |
+| `scripts/scrape_lawyers_enhanced.py` | Extract lawyers from judgments + Chamber of Advocates + register |
+| `scripts/scrape_regulatory_docs.py` | Scrape FIAU, MFSA, MGA, IDPC, CFR regulatory documents |
+| `scripts/scrape_regulatory_docs.py --source fiau` | Scrape just FIAU |
 
 ---
 
