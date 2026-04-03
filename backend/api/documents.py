@@ -22,7 +22,7 @@ async def proxy_pdf(url: str):
     try:
         async with httpx.AsyncClient(timeout=30, follow_redirects=True) as client:
             resp = await client.get(url, headers={
-                "User-Agent": "LexMalta-OpenSource/1.0"
+                "User-Agent": "Ligi4Friends-OpenSource/1.0"
             })
         if resp.status_code != 200:
             raise HTTPException(status_code=404, detail="PDF ma nstabx")

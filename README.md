@@ -1,8 +1,8 @@
-# LexMalta — Il-Liġi Maltija Miftuħa għal Kulħadd
+# Ligi4Friends — Il-Liġi Maltija Miftuħa għal Kulħadd
 
 > **Free. Forever. Powered by Rark Musso.**
 
-The definitive open-source Maltese legal intelligence platform. Built for lawyers, law students, businesses, and citizens. Everything lex.mt has — and much more — at zero cost.
+The definitive open-source Maltese legal intelligence platform. Built for lawyers, law students, businesses, and citizens — at zero cost.
 
 ---
 
@@ -115,8 +115,8 @@ Scrapers (Python) → PostgreSQL + pgvector → RAG Pipeline → Claude API → 
 ### 1. Clone
 
 ```bash
-git clone https://github.com/rurkmasso/law4friendsnotmoney.git
-cd law4friendsnotmoney
+git clone https://github.com/rurkmasso/ligi4friends.git
+cd ligi4friends
 ```
 
 ### 2. Backend
@@ -211,7 +211,7 @@ npm run build
 
 ### Backend → Railway
 
-1. Connect `rurkmasso/law4friendsnotmoney` on [railway.app](https://railway.app)
+1. Connect `rurkmasso/ligi4friends` on [railway.app](https://railway.app)
 2. Set root to `backend`
 3. Add PostgreSQL + Redis plugins
 4. Set environment variables:
@@ -223,7 +223,7 @@ npm run build
 
 ## Why This Exists
 
-lex.mt charges up to €1,499/month for access to public law.
+Some providers charge up to €1,499/month for access to public law.
 
 **Public law belongs to everyone.**
 
@@ -246,10 +246,10 @@ git push origin your-feature
 
 ## Disclaimer
 
-LexMalta is a legal research tool. Responses are for information only and do not constitute legal advice. Always consult a warranted advocate for legal matters.
+Ligi4Friends is a legal research tool. Responses are for information only and do not constitute legal advice. Always consult a warranted advocate for legal matters.
 
 *Dan is għar-riċerka legali biss. Mhux parir legali.*
 
 ---
 
-**Powered by Rark Musso** · [github.com/rurkmasso/law4friendsnotmoney](https://github.com/rurkmasso/law4friendsnotmoney)
+**Powered by Rark Musso** · [github.com/rurkmasso/ligi4friends](https://github.com/rurkmasso/ligi4friends)

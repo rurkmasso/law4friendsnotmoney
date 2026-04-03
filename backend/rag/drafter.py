@@ -118,9 +118,9 @@ def _build_docx(title: str, body: str, language: str) -> bytes:
     # Footer
     doc.add_paragraph()
     footer_text = (
-        "Dan id-dokument ġie abbozzat bl-għajnuna ta' LexMalta AI. "
+        "Dan id-dokument ġie abbozzat bl-għajnuna ta' Ligi4Friends AI. "
         "Mhux parir legali. Ikkonsulta avukat." if language == "mt" else
-        "This document was drafted with LexMalta AI assistance. "
+        "This document was drafted with Ligi4Friends AI assistance. "
         "Not legal advice. Consult a warranted advocate."
     )
     footer = doc.add_paragraph(footer_text)

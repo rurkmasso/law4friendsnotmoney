@@ -49,14 +49,14 @@ export interface Law {
 export const search = (query: string, language: Language, filters = {}) =>
   api.post<SearchResult>("/api/search/", { query, language, filters }).then((r) => r.data);
 
-export const getLawyers = (q?: string, page = 1) =>
-  api.get<Lawyer[]>("/api/lawyers/", { params: { q, page } }).then((r) => r.data);
+export const getLawyers = (q?: string, page = 1, limit?: number) =>
+  api.get<Lawyer[]>("/api/lawyers/", { params: { q, page, limit } }).then((r) => r.data);
 
 export const getLawyer = (warrant: string) =>
   api.get<Lawyer>(`/api/lawyers/${warrant}`).then((r) => r.data);
 
-export const getLaws = (q?: string, page = 1) =>
-  api.get<Law[]>("/api/laws/", { params: { q, page } }).then((r) => r.data);
+export const getLaws = (q?: string, page = 1, limit?: number) =>
+  api.get<Law[]>("/api/laws/", { params: { q, page, limit } }).then((r) => r.data);
 
 export const getJudgments = (params: Record<string, string | number>) =>
   api.get<Judgment[]>("/api/judgments/", { params }).then((r) => r.data);

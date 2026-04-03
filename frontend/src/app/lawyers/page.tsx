@@ -1,10 +1,12 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Search, Briefcase, Mail, Building2, SlidersHorizontal, ArrowUpDown, Scale } from "lucide-react";
 import { getLawyers, type Lawyer } from "@/lib/api";
 import { useLanguage } from "@/lib/useLanguage";
 import Link from "next/link";
+
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 type SortKey = "name" | "case_count" | "firm";
 
@@ -21,46 +23,73 @@ const NAV_LINKS = [
   { href: "/judgments", label_mt: "Sentenzi", label_en: "Judgments" },
   { href: "/lawyers", label_mt: "Avukati", label_en: "Lawyers" },
   { href: "/documents", label_mt: "Dokumenti", label_en: "Documents" },
-  { href: "/draft", label_mt: "Abbozza", label_en: "Draft" },
-  { href: "/case-builder", label_mt: "Ibni Każ", label_en: "Build Case" },
+  { href: "/igaming", label_mt: "iGaming", label_en: "iGaming" },
 ];
 
 export default function LawyersPage() {
   const [lang, setLang] = useLanguage();
   const [q, setQ] = useState("");
-  const [lawyers, setLawyers] = useState<Lawyer[]>([]);
-  const [filtered, setFiltered] = useState<Lawyer[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState<Lawyer[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [fetchFailed, setFetchFailed] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
   const [sortKey, setSortKey] = useState<SortKey>("name");
   const [sortAsc, setSortAsc] = useState(true);
   const [filterProfession, setFilterProfession] = useState("");
   const [filterArea, setFilterArea] = useState("");
 
-  const fetchLawyers = async (query?: string) => {
-    setLoading(true);
-    try {
-      const results = await getLawyers(query, 1);
-      setLawyers(results);
-    } catch (e) { console.error(e); }
-    finally { setLoading(false); }
-  };
-
-  useEffect(() => { fetchLawyers(); }, []);
-
   useEffect(() => {
-    let data = [...lawyers];
-    if (filterProfession) data = data.filter((l) => l.profession?.toLowerCase().includes(filterProfession.toLowerCase()));
-    if (filterArea) data = data.filter((l) => l.practice_areas?.some((a) => a.toLowerCase().includes(filterArea.toLowerCase())));
-    data.sort((a, b) => {
-      let va: any = a[sortKey as keyof Lawyer] ?? "";
-      let vb: any = b[sortKey as keyof Lawyer] ?? "";
+    let cancelled = false;
+    (async () => {
+      setLoading(true);
+      try {
+        const results = await getLawyers(undefined, 1, 200);
+        if (!cancelled) { setData(results); setFetchFailed(false); }
+      } catch {
+        if (!cancelled) { setData([]); setFetchFailed(true); }
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, []);
+
+  const filtered = useMemo(() => {
+    let results = [...data];
+
+    // Text search
+    if (q.trim()) {
+      const lower = q.toLowerCase();
+      results = results.filter(
+        (l) =>
+          l.full_name?.toLowerCase().includes(lower) ||
+          l.firm?.toLowerCase().includes(lower) ||
+          l.email?.toLowerCase().includes(lower) ||
+          l.profession?.toLowerCase().includes(lower)
+      );
+    }
+
+    // Profession filter
+    if (filterProfession) {
+      results = results.filter((l) => l.profession?.toLowerCase().includes(filterProfession.toLowerCase()));
+    }
+
+    // Practice area filter
+    if (filterArea) {
+      results = results.filter((l) => l.practice_areas?.some((a) => a.toLowerCase().includes(filterArea.toLowerCase())));
+    }
+
+    // Sort
+    results.sort((a, b) => {
+      let va: string | number = (a[sortKey as keyof Lawyer] as string | number) ?? "";
+      let vb: string | number = (b[sortKey as keyof Lawyer] as string | number) ?? "";
       if (typeof va === "string") va = va.toLowerCase();
       if (typeof vb === "string") vb = vb.toLowerCase();
       return sortAsc ? (va > vb ? 1 : -1) : (va < vb ? 1 : -1);
     });
-    setFiltered(data);
-  }, [lawyers, sortKey, sortAsc, filterProfession, filterArea]);
+
+    return results;
+  }, [data, q, sortKey, sortAsc, filterProfession, filterArea]);
 
   const toggleSort = (key: SortKey) => {
     if (sortKey === key) setSortAsc(!sortAsc);
@@ -75,13 +104,13 @@ export default function LawyersPage() {
           <Link href="/" className="flex items-center gap-2">
             <Scale size={20} className="text-gold" />
             <span className="text-lg font-display font-bold text-[#1a1a2e]">
-              <span className="text-gold">Lex</span>Malta
+              <span className="text-gold">Ligi</span>4Friends
             </span>
           </Link>
           <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
             {NAV_LINKS.map((link) => (
               <Link key={link.href} href={link.href}
-                className="hover:text-gold transition-colors font-medium">
+                className={`hover:text-gold transition-colors font-medium ${link.href === "/lawyers" ? "text-gold" : ""}`}>
                 {lang === "mt" ? link.label_mt : link.label_en}
               </Link>
             ))}
@@ -106,7 +135,7 @@ export default function LawyersPage() {
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <h1 className="text-3xl font-display font-bold mb-1 text-[#1a1a2e]">
-            <span className="text-gold">Avukati</span> ta' Malta
+            <span className="text-gold">Avukati</span> ta&apos; Malta
           </h1>
           <p className="text-[#9ca3af] text-sm mb-6">
             Lista kompluta minn reġistru uffiċjali — aġġornata awtomatikament
@@ -117,15 +146,10 @@ export default function LawyersPage() {
             <div className="relative flex-1">
               <Search size={15} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#9ca3af]" />
               <input value={q} onChange={(e) => setQ(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && fetchLawyers(q)}
                 placeholder="Fittex isem, firma, email..."
                 className="w-full pl-10 pr-4 py-3 bg-white border border-[#e5e0d5] rounded-xl text-sm
                            focus:outline-none focus:border-gold/50 placeholder:text-[#9ca3af] text-[#1a1a2e]" />
             </div>
-            <button onClick={() => fetchLawyers(q)}
-              className="px-4 py-3 bg-gold hover:bg-gold/90 text-white rounded-xl font-bold transition-colors">
-              <Search size={16} />
-            </button>
             <button onClick={() => setShowFilters(!showFilters)}
               className={`px-4 py-3 rounded-xl border transition-all flex items-center gap-2 text-sm ${
                 showFilters
@@ -168,10 +192,14 @@ export default function LawyersPage() {
             </motion.div>
           )}
 
-          {/* Sort bar */}
+          {/* Sort bar + count */}
           <div className="flex items-center gap-1 mb-4 text-xs text-[#9ca3af]">
-            <span>{filtered.length} avukati</span>
-            <span className="mx-2">·</span>
+            {!loading && data.length > 0 && (
+              <>
+                <span>Showing {filtered.length} of {data.length} avukati</span>
+                <span className="mx-2">·</span>
+              </>
+            )}
             <span>Issortja:</span>
             {(["name", "case_count", "firm"] as SortKey[]).map((key) => (
               <button key={key} onClick={() => toggleSort(key)}
@@ -187,6 +215,14 @@ export default function LawyersPage() {
           {/* Lawyer list */}
           {loading ? (
             <p className="text-[#9ca3af] text-sm">Qed jgħabbi...</p>
+          ) : data.length === 0 && fetchFailed ? (
+            <div className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-10 text-center">
+              <Briefcase size={36} className="text-[#9ca3af] mx-auto mb-3" />
+              <p className="text-[#1a1a2e] font-semibold mb-1">Il-backend qed jgħabbi... / Backend loading...</p>
+              <p className="text-[#6b7280] text-sm mb-3">Run the backend server to see data here</p>
+              <p className="text-xs text-[#9ca3af] font-mono">Run: python3 main.py in /backend</p>
+              <p className="text-xs text-[#9ca3af] font-mono mt-1">API: {API}/api/lawyers/</p>
+            </div>
           ) : (
             <div className="flex flex-col gap-2">
               {filtered.map((l) => (
@@ -226,7 +262,7 @@ export default function LawyersPage() {
                   </div>
                 </Link>
               ))}
-              {filtered.length === 0 && !loading && (
+              {filtered.length === 0 && data.length > 0 && (
                 <p className="text-[#9ca3af] text-sm py-4">L-ebda avukat ma nstab.</p>
               )}
             </div>
@@ -235,7 +271,7 @@ export default function LawyersPage() {
 
         {/* Footer */}
         <div className="py-10 mt-10 text-center text-xs text-[#9ca3af] border-t border-[#e5e0d5]">
-          <p>LexMalta — Powered by Rark Musso · B&apos;Xejn għal Dejjem</p>
+          <p>Ligi4Friends — Powered by Rark Musso · B&apos;Xejn għal Dejjem</p>
         </div>
       </div>
     </div>

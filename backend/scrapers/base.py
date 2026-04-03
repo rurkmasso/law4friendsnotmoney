@@ -7,7 +7,7 @@ from rich import print
 
 class BaseScraper(ABC):
     headers = {
-        "User-Agent": "LexMalta-OpenSource/1.0 (https://github.com/markrusso/lex-malta; educational/public-interest)",
+        "User-Agent": "Ligi4Friends-OpenSource/1.0 (https://github.com/rurkmasso/ligi4friends; educational/public-interest)",
     }
 
     def __init__(self):

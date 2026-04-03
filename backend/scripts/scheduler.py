@@ -122,7 +122,7 @@ async def scrape_law_firms():
 
 
 async def main():
-    print("[bold gold1]LexMalta 24/7 Scheduler — Powered by Rark Musso[/bold gold1]")
+    print("[bold gold1]Ligi4Friends 24/7 Scheduler — Powered by Rark Musso[/bold gold1]")
     await init_db()
 
     # Run everything once on startup

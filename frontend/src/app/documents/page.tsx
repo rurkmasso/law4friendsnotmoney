@@ -1,10 +1,13 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { FileText, Search, ExternalLink, Scale } from "lucide-react";
-import { getLaws, getJudgments, type Law, type Judgment } from "@/lib/api";
+import { type Law, type Judgment } from "@/lib/api";
 import { useLanguage } from "@/lib/useLanguage";
 import Link from "next/link";
+import axios from "axios";
+
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 type Tab = "laws" | "judgments" | "regulatory";
 
@@ -13,8 +16,7 @@ const NAV_LINKS = [
   { href: "/judgments", label_mt: "Sentenzi", label_en: "Judgments" },
   { href: "/lawyers", label_mt: "Avukati", label_en: "Lawyers" },
   { href: "/documents", label_mt: "Dokumenti", label_en: "Documents" },
-  { href: "/draft", label_mt: "Abbozza", label_en: "Draft" },
-  { href: "/case-builder", label_mt: "Ibni Każ", label_en: "Build Case" },
+  { href: "/igaming", label_mt: "iGaming", label_en: "iGaming" },
 ];
 
 export default function DocumentsPage() {
@@ -23,23 +25,53 @@ export default function DocumentsPage() {
   const [q, setQ] = useState("");
   const [laws, setLaws] = useState<Law[]>([]);
   const [judgments, setJudgments] = useState<Judgment[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [fetchFailed, setFetchFailed] = useState(false);
 
-  const fetchData = async (query?: string) => {
-    setLoading(true);
-    try {
-      if (tab === "laws") {
-        const data = await getLaws(query);
-        setLaws(data);
-      } else if (tab === "judgments") {
-        const data = await getJudgments({ q: query || "", page: 1 });
-        setJudgments(data);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      setLoading(true);
+      try {
+        const [lawsRes, judgmentsRes] = await Promise.allSettled([
+          axios.get<Law[]>(`${API}/api/laws/`, { params: { limit: 100 }, timeout: 10000 }),
+          axios.get<Judgment[]>(`${API}/api/judgments/`, { params: { limit: 100 }, timeout: 10000 }),
+        ]);
+        if (!cancelled) {
+          setLaws(lawsRes.status === "fulfilled" ? lawsRes.value.data || [] : []);
+          setJudgments(judgmentsRes.status === "fulfilled" ? judgmentsRes.value.data || [] : []);
+          setFetchFailed(lawsRes.status === "rejected" && judgmentsRes.status === "rejected");
+        }
+      } catch {
+        if (!cancelled) { setLaws([]); setJudgments([]); setFetchFailed(true); }
+      } finally {
+        if (!cancelled) setLoading(false);
       }
-    } catch (e) { console.error(e); }
-    finally { setLoading(false); }
-  };
+    })();
+    return () => { cancelled = true; };
+  }, []);
 
-  useEffect(() => { fetchData(); }, [tab]);
+  const filteredLaws = useMemo(() => {
+    if (!q.trim()) return laws;
+    const lower = q.toLowerCase();
+    return laws.filter(
+      (law) =>
+        law.chapter?.toLowerCase().includes(lower) ||
+        law.title?.toLowerCase().includes(lower)
+    );
+  }, [laws, q]);
+
+  const filteredJudgments = useMemo(() => {
+    if (!q.trim()) return judgments;
+    const lower = q.toLowerCase();
+    return judgments.filter(
+      (j) =>
+        j.reference?.toLowerCase().includes(lower) ||
+        j.parties?.toLowerCase().includes(lower) ||
+        j.court?.toLowerCase().includes(lower) ||
+        j.judge?.toLowerCase().includes(lower)
+    );
+  }, [judgments, q]);
 
   const TABS: { id: Tab; label_mt: string; label_en: string }[] = [
     { id: "laws", label_mt: "Liġijiet", label_en: "Laws" },
@@ -62,6 +94,9 @@ export default function DocumentsPage() {
     { name: "Parliament", desc: "Acts & Debates", url: "https://parliament.mt", color: "text-[#dc2626]" },
   ];
 
+  const currentTotal = tab === "laws" ? laws.length : judgments.length;
+  const currentFiltered = tab === "laws" ? filteredLaws.length : filteredJudgments.length;
+
   return (
     <div className="min-h-screen bg-cream text-[#1a1a2e]">
       {/* Nav */}
@@ -70,13 +105,13 @@ export default function DocumentsPage() {
           <Link href="/" className="flex items-center gap-2">
             <Scale size={20} className="text-gold" />
             <span className="text-lg font-display font-bold text-[#1a1a2e]">
-              <span className="text-gold">Lex</span>Malta
+              <span className="text-gold">Ligi</span>4Friends
             </span>
           </Link>
           <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
             {NAV_LINKS.map((link) => (
               <Link key={link.href} href={link.href}
-                className="hover:text-gold transition-colors font-medium">
+                className={`hover:text-gold transition-colors font-medium ${link.href === "/documents" ? "text-gold" : ""}`}>
                 {lang === "mt" ? link.label_mt : link.label_en}
               </Link>
             ))}
@@ -106,7 +141,7 @@ export default function DocumentsPage() {
           {/* Tabs */}
           <div className="flex gap-2 mb-6">
             {TABS.map((t) => (
-              <button key={t.id} onClick={() => setTab(t.id)}
+              <button key={t.id} onClick={() => { setTab(t.id); setQ(""); }}
                 className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                   tab === t.id
                     ? "bg-gold text-white shadow-sm"
@@ -119,19 +154,32 @@ export default function DocumentsPage() {
 
           {/* Search */}
           {tab !== "regulatory" && (
-            <div className="flex gap-2 mb-6">
+            <div className="flex gap-2 mb-4">
               <div className="relative flex-1">
                 <Search size={15} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#9ca3af]" />
                 <input value={q} onChange={(e) => setQ(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && fetchData(q)}
                   placeholder={tab === "laws" ? "Fittex kapitolu jew titlu..." : "Fittex referenza, partijiet, qorti..."}
                   className="w-full pl-10 pr-4 py-3 bg-white border border-[#e5e0d5] rounded-xl text-sm
                              focus:outline-none focus:border-gold/50 placeholder:text-[#9ca3af] text-[#1a1a2e]" />
               </div>
-              <button onClick={() => fetchData(q)}
-                className="px-4 py-3 bg-gold hover:bg-gold/90 text-white rounded-xl font-semibold transition-colors">
-                <Search size={16} />
-              </button>
+            </div>
+          )}
+
+          {/* Results count */}
+          {!loading && tab !== "regulatory" && currentTotal > 0 && (
+            <p className="text-xs text-[#9ca3af] mb-4 px-1">
+              Showing {currentFiltered} of {currentTotal} results
+            </p>
+          )}
+
+          {/* Backend error state */}
+          {!loading && fetchFailed && laws.length === 0 && judgments.length === 0 && tab !== "regulatory" && (
+            <div className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-10 text-center">
+              <FileText size={36} className="text-[#9ca3af] mx-auto mb-3" />
+              <p className="text-[#1a1a2e] font-semibold mb-1">Il-backend qed jgħabbi... / Backend loading...</p>
+              <p className="text-[#6b7280] text-sm mb-3">Run the backend server to see data here</p>
+              <p className="text-xs text-[#9ca3af] font-mono">Run: python3 main.py in /backend</p>
+              <p className="text-xs text-[#9ca3af] font-mono mt-1">API: {API}/api/laws/ and {API}/api/judgments/</p>
             </div>
           )}
 
@@ -139,7 +187,10 @@ export default function DocumentsPage() {
           {tab === "laws" && (
             <div className="flex flex-col gap-2">
               {loading ? <p className="text-[#9ca3af] text-sm">Qed jgħabbi...</p> :
-                laws.map((law) => (
+                filteredLaws.length === 0 && laws.length > 0 ? (
+                  <p className="text-[#9ca3af] text-sm py-4">L-ebda riżultat.</p>
+                ) :
+                filteredLaws.map((law) => (
                   <Link key={law.chapter} href={`/view?url=${encodeURIComponent(law.source_url)}&title=${encodeURIComponent(law.chapter + ' ' + law.title)}`}
                     className="flex items-center gap-4 px-4 py-3 bg-white hover:shadow-md border border-[#e5e0d5]
                                hover:border-navy/30 rounded-xl transition-all group shadow-sm">
@@ -157,7 +208,10 @@ export default function DocumentsPage() {
           {tab === "judgments" && (
             <div className="flex flex-col gap-2">
               {loading ? <p className="text-[#9ca3af] text-sm">Qed jgħabbi...</p> :
-                judgments.map((j) => (
+                filteredJudgments.length === 0 && judgments.length > 0 ? (
+                  <p className="text-[#9ca3af] text-sm py-4">L-ebda riżultat.</p>
+                ) :
+                filteredJudgments.map((j) => (
                   <Link key={j.reference} href={`/judgments/${j.reference}`}
                     className="flex items-center gap-4 px-4 py-3 bg-white hover:shadow-md border border-[#e5e0d5]
                                hover:border-gold/30 rounded-xl transition-all group shadow-sm">
@@ -192,7 +246,7 @@ export default function DocumentsPage() {
 
         {/* Footer */}
         <div className="py-10 mt-10 text-center text-xs text-[#9ca3af] border-t border-[#e5e0d5]">
-          <p>LexMalta — Powered by Rark Musso · B&apos;Xejn għal Dejjem</p>
+          <p>Ligi4Friends — Powered by Rark Musso · B&apos;Xejn għal Dejjem</p>
         </div>
       </div>
     </div>

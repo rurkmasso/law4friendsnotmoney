@@ -75,7 +75,7 @@ export default function DraftPage() {
           <Link href="/" className="flex items-center gap-2">
             <Scale size={20} className="text-gold" />
             <span className="text-lg font-display font-bold text-[#1a1a2e]">
-              <span className="text-gold">Lex</span>Malta
+              <span className="text-gold">Ligi</span>4Friends
             </span>
           </Link>
           <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
@@ -146,7 +146,7 @@ export default function DraftPage() {
 
         {/* Footer */}
         <div className="py-10 mt-10 text-center text-xs text-[#9ca3af] border-t border-[#e5e0d5]">
-          <p>LexMalta — Powered by Rark Musso · B&apos;Xejn għal Dejjem</p>
+          <p>Ligi4Friends — Powered by Rark Musso · B&apos;Xejn għal Dejjem</p>
         </div>
       </div>
     </div>

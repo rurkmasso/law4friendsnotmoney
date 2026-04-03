@@ -14,7 +14,7 @@ from config import settings
 
 _anthropic = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
 
-SYSTEM_PROMPT_MT = """Inti LexMalta, assistent ta' riċerka legali speċjalizzat fil-liġi Maltija.
+SYSTEM_PROMPT_MT = """Inti Ligi4Friends, assistent ta' riċerka legali speċjalizzat fil-liġi Maltija.
 
 REGOLI MANDATORJI:
 - WIEĠEB BIL-MALTI dejjem, sakemm l-utent ma jitlobx bl-Ingliż
@@ -27,7 +27,7 @@ REGOLI MANDATORJI:
 - Fi tmiem kull tweġiba, inkludi taqsima "**Referenzi:**" bil-lista sħiħa tal-kurrikolu ċċitati
 - It-tweġibiet huma għar-riċerka legali biss — mhux parir legali"""
 
-SYSTEM_PROMPT_EN = """You are LexMalta, a legal research assistant specialising in Maltese law.
+SYSTEM_PROMPT_EN = """You are Ligi4Friends, a legal research assistant specialising in Maltese law.
 
 MANDATORY RULES:
 - ONLY answer based on the provided source documents
@@ -56,7 +56,7 @@ def _is_complex_query(query: str) -> bool:
 
 def _cache_key(query: str, filters: dict, lang: str) -> str:
     raw = json.dumps({"q": query.lower().strip(), "f": filters, "l": lang}, sort_keys=True)
-    return "lexmalta:query:" + hashlib.sha256(raw.encode()).hexdigest()
+    return "ligi4friends:query:" + hashlib.sha256(raw.encode()).hexdigest()
 
 
 async def query(

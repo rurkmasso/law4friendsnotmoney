@@ -20,7 +20,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="LexMalta",
+    title="Ligi4Friends",
     description="Il-pjattaforma tal-intelliġenza legali Maltija — b'xejn, miftuħa għal kulħadd.",
     version="1.0.0",
     lifespan=lifespan,
@@ -50,7 +50,7 @@ app.include_router(igaming.router, prefix="/api/igaming", tags=["iGaming"])
 @app.get("/")
 async def root():
     return {
-        "message": "LexMalta API",
+        "message": "Ligi4Friends API",
         "description": "Il-liġi Maltija — miftuħa għal kulħadd",
         "docs": "/docs",
     }

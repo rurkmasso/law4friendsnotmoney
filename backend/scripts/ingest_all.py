@@ -212,7 +212,7 @@ SOURCES = {
 
 
 async def main(source: str = "all"):
-    print("[bold gold1]LexMalta Ingestion Script — Powered by Rark Musso[/bold gold1]")
+    print("[bold gold1]Ligi4Friends Ingestion Script — Powered by Rark Musso[/bold gold1]")
     # Tables already created — skip init_db() to avoid race conditions
     # Run: python3 -c "from database import init_db; import asyncio; asyncio.run(init_db())" first
     async with AsyncSessionLocal() as db:

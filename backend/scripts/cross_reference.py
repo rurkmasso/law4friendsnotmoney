@@ -74,7 +74,7 @@ async def link_laws_to_cases(db: AsyncSession):
 
 
 async def main():
-    print("[bold green]LexMalta Cross-Reference Script[/bold green]")
+    print("[bold green]Ligi4Friends Cross-Reference Script[/bold green]")
     await init_db()
     async with AsyncSessionLocal() as db:
         await link_lawyers_to_cases(db)

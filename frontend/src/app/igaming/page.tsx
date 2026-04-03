@@ -1,12 +1,11 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
   Scale,
   Shield,
   ExternalLink,
-  AlertCircle,
   Loader2,
   BookOpen,
   CheckCircle2,
@@ -43,15 +42,18 @@ const LABELS = {
     viewSource: "Ara s-Sors",
     noResults: "L-ebda operatur ma nstab. Ipprova termini differenti.",
     connecting: "Qed jingħaqad mal-backend...",
-    error: "Ma setgħetx tintlaħaq is-servizz. Tipprova aktar tard.",
     back: "← Lura / Back",
     regulations_list: "Lista ta' Regolamenti",
+    showing: "Qed juri",
+    of: "minn",
+    results: "riżultati",
+    backendTitle: "Il-backend qed jgħabbi...",
+    backendSub: "Run the backend server to see data here",
     nav: {
       laws: "Liġijiet",
       judgments: "Sentenzi",
       lawyers: "Avukati",
       igaming: "iGaming",
-      calendar: "Kalendarju",
     },
     filters: {
       All: "Kollha",
@@ -79,15 +81,18 @@ const LABELS = {
     viewSource: "View Source",
     noResults: "No operators found. Try different search terms.",
     connecting: "Connecting to backend...",
-    error: "Could not reach the service. Please try again later.",
     back: "← Lura / Back",
     regulations_list: "Regulations List",
+    showing: "Showing",
+    of: "of",
+    results: "results",
+    backendTitle: "Backend loading...",
+    backendSub: "Run the backend server to see data here",
     nav: {
       laws: "Laws",
       judgments: "Judgments",
       lawyers: "Lawyers",
       igaming: "iGaming",
-      calendar: "Calendar",
     },
     filters: {
       All: "All",
@@ -136,8 +141,6 @@ const REGULATIONS = [
     tag: "B2B",
   },
 ];
-
-type Status = "idle" | "loading" | "success" | "error" | "empty";
 
 function StatusBadge({ status, labels }: { status: string; labels: Record<string, string> }) {
   const normalized = status?.trim() ?? "";
@@ -189,51 +192,59 @@ function TypeBadge({ type }: { type: string }) {
 
 export default function IGamingPage() {
   const [lang, setLang] = useLanguage();
-  const [query, setQuery] = useState("");
-  const [draftQuery, setDraftQuery] = useState("");
+  const [q, setQ] = useState("");
   const [activeFilter, setActiveFilter] = useState<FilterKey>("All");
-  const [operators, setOperators] = useState<Operator[]>([]);
-  const [status, setStatus] = useState<Status>("idle");
+  const [data, setData] = useState<Operator[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [fetchFailed, setFetchFailed] = useState(false);
   const t = LABELS[lang];
 
-  const fetchOperators = useCallback(async (q: string, filter: FilterKey) => {
-    setStatus("loading");
-    try {
-      const params: Record<string, string> = {};
-      if (q.trim()) params.q = q.trim();
-      if (filter === "B2C") params.licence_type = "B2C";
-      else if (filter === "B2B") params.licence_type = "B2B";
-      else if (filter === "Active") params.status = "Active";
-      else if (filter === "Suspended") params.status = "Suspended";
-
-      const res = await axios.get<Operator[]>(`${API}/api/igaming/operators/`, { params, timeout: 8000 });
-      const data = res.data;
-      if (!data || data.length === 0) {
-        setOperators([]);
-        setStatus("empty");
-      } else {
-        setOperators(data);
-        setStatus("success");
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      setLoading(true);
+      try {
+        const res = await axios.get<Operator[]>(`${API}/api/igaming/operators/`, {
+          params: { limit: 200 },
+          timeout: 10000,
+        });
+        if (!cancelled) { setData(res.data || []); setFetchFailed(false); }
+      } catch {
+        if (!cancelled) { setData([]); setFetchFailed(true); }
+      } finally {
+        if (!cancelled) setLoading(false);
       }
-    } catch {
-      setOperators([]);
-      setStatus("error");
-    }
+    })();
+    return () => { cancelled = true; };
   }, []);
 
-  useEffect(() => {
-    fetchOperators("", "All");
-  }, [fetchOperators]);
+  const filtered = useMemo(() => {
+    let results = data;
 
-  const handleSearch = () => {
-    setQuery(draftQuery);
-    fetchOperators(draftQuery, activeFilter);
-  };
+    // Text search
+    if (q.trim()) {
+      const lower = q.toLowerCase();
+      results = results.filter(
+        (op) =>
+          op.company_name?.toLowerCase().includes(lower) ||
+          op.licence_number?.toLowerCase().includes(lower) ||
+          op.licence_type?.toLowerCase().includes(lower)
+      );
+    }
 
-  const handleFilterChange = (filter: FilterKey) => {
-    setActiveFilter(filter);
-    fetchOperators(query, filter);
-  };
+    // Filter buttons
+    if (activeFilter === "B2C") {
+      results = results.filter((op) => op.licence_type?.toUpperCase().includes("B2C"));
+    } else if (activeFilter === "B2B") {
+      results = results.filter((op) => op.licence_type?.toUpperCase().includes("B2B"));
+    } else if (activeFilter === "Active") {
+      results = results.filter((op) => op.status?.toLowerCase().includes("active"));
+    } else if (activeFilter === "Suspended") {
+      results = results.filter((op) => op.status?.toLowerCase().includes("suspend"));
+    }
+
+    return results;
+  }, [data, q, activeFilter]);
 
   const FILTER_KEYS: FilterKey[] = ["All", "B2C", "B2B", "Active", "Suspended"];
   const NAV_LINKS = Object.entries(t.nav);
@@ -246,7 +257,7 @@ export default function IGamingPage() {
           <Link href="/" className="flex items-center gap-2">
             <Scale size={20} className="text-gold" />
             <span className="text-lg font-display font-bold text-[#1a1a2e]">
-              <span className="text-gold">Lex</span>Malta
+              <span className="text-gold">Ligi</span>4Friends
             </span>
           </Link>
           <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
@@ -305,29 +316,14 @@ export default function IGamingPage() {
               <div className="relative flex-1">
                 <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9ca3af] pointer-events-none" />
                 <input
-                  value={draftQuery}
-                  onChange={(e) => setDraftQuery(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                  value={q}
+                  onChange={(e) => setQ(e.target.value)}
                   placeholder={t.searchPlaceholder}
                   className="w-full pl-10 pr-4 py-3 bg-white border border-[#e5e0d5] rounded-xl
                              focus:outline-none focus:border-[#b8963a]/50 text-[#1a1a2e]
                              placeholder:text-[#9ca3af] text-sm transition-all"
                 />
               </div>
-              <button
-                onClick={handleSearch}
-                disabled={status === "loading"}
-                className="px-5 py-3 bg-[#b8963a] text-white rounded-xl font-semibold
-                           hover:bg-[#a07828] transition-colors disabled:opacity-50 text-sm
-                           flex items-center gap-2 shrink-0"
-              >
-                {status === "loading" ? (
-                  <Loader2 size={15} className="animate-spin" />
-                ) : (
-                  <Search size={15} />
-                )}
-                {t.search}
-              </button>
             </div>
 
             {/* Filter buttons */}
@@ -335,7 +331,7 @@ export default function IGamingPage() {
               {FILTER_KEYS.map((f) => (
                 <button
                   key={f}
-                  onClick={() => handleFilterChange(f)}
+                  onClick={() => setActiveFilter(f)}
                   className={`px-4 py-1.5 rounded-xl text-sm font-semibold border transition-all ${
                     activeFilter === f
                       ? "bg-[#b8963a] text-white border-[#b8963a] shadow-sm"
@@ -348,9 +344,16 @@ export default function IGamingPage() {
             </div>
           </div>
 
+          {/* Results count */}
+          {!loading && data.length > 0 && (
+            <p className="text-xs text-[#9ca3af] mb-4 px-1">
+              {t.showing} {filtered.length} {t.of} {data.length} {t.results}
+            </p>
+          )}
+
           {/* Operator Results */}
           <AnimatePresence mode="wait">
-            {status === "loading" && (
+            {loading && (
               <motion.div
                 key="loading"
                 initial={{ opacity: 0 }}
@@ -363,7 +366,7 @@ export default function IGamingPage() {
               </motion.div>
             )}
 
-            {status === "error" && (
+            {!loading && data.length === 0 && fetchFailed && (
               <motion.div
                 key="error"
                 initial={{ opacity: 0, y: 10 }}
@@ -371,19 +374,15 @@ export default function IGamingPage() {
                 exit={{ opacity: 0 }}
                 className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-10 text-center"
               >
-                <AlertCircle size={32} className="text-[#9ca3af] mx-auto mb-3" />
-                <p className="text-[#6b7280] text-sm mb-4">{t.error}</p>
-                <button
-                  onClick={() => fetchOperators(query, activeFilter)}
-                  className="px-4 py-2 bg-[#b8963a] text-white rounded-xl font-semibold
-                             hover:bg-[#a07828] text-sm transition-colors"
-                >
-                  {t.search}
-                </button>
+                <Shield size={36} className="text-[#9ca3af] mx-auto mb-3" />
+                <p className="text-[#1a1a2e] font-semibold mb-1">{t.backendTitle}</p>
+                <p className="text-[#6b7280] text-sm mb-3">{t.backendSub}</p>
+                <p className="text-xs text-[#9ca3af] font-mono">Run: python3 main.py in /backend</p>
+                <p className="text-xs text-[#9ca3af] font-mono mt-1">API: {API}/api/igaming/operators/</p>
               </motion.div>
             )}
 
-            {status === "empty" && (
+            {!loading && data.length === 0 && !fetchFailed && (
               <motion.div
                 key="empty"
                 initial={{ opacity: 0, y: 10 }}
@@ -396,7 +395,20 @@ export default function IGamingPage() {
               </motion.div>
             )}
 
-            {status === "success" && (
+            {!loading && filtered.length === 0 && data.length > 0 && (
+              <motion.div
+                key="no-filter"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-10 text-center"
+              >
+                <Shield size={32} className="text-[#9ca3af] mx-auto mb-3" />
+                <p className="text-[#6b7280] text-sm">{t.noResults}</p>
+              </motion.div>
+            )}
+
+            {!loading && filtered.length > 0 && (
               <motion.div
                 key="results"
                 initial={{ opacity: 0 }}
@@ -404,12 +416,12 @@ export default function IGamingPage() {
                 exit={{ opacity: 0 }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-3"
               >
-                {operators.map((op, i) => (
+                {filtered.map((op, i) => (
                   <motion.div
                     key={`${op.licence_number}-${i}`}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.04 }}
+                    transition={{ delay: Math.min(i * 0.02, 0.5) }}
                     className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-5
                                hover:border-gold/30 hover:shadow-md transition-all group"
                   >
@@ -447,19 +459,6 @@ export default function IGamingPage() {
                     )}
                   </motion.div>
                 ))}
-              </motion.div>
-            )}
-
-            {status === "idle" && (
-              <motion.div
-                key="idle"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="flex flex-col items-center justify-center py-16 gap-4"
-              >
-                <Loader2 size={28} className="text-gold animate-spin" />
-                <p className="text-sm text-[#9ca3af]">{t.connecting}</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -539,7 +538,7 @@ export default function IGamingPage() {
 
         {/* Footer */}
         <div className="py-10 text-center text-xs text-[#9ca3af] border-t border-[#e5e0d5] mt-12">
-          <p>LexMalta — Powered by Rark Musso</p>
+          <p>Ligi4Friends — Powered by Rark Musso</p>
         </div>
       </div>
     </div>

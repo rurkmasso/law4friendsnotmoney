@@ -7,3 +7,11 @@ node_modules/
 .DS_Store
 venv/
 .venv/
+
+frontend/out/
+frontend/.next/
+frontend/tsconfig.tsbuildinfo
+frontend/out/
+frontend/.next/
+frontend/tsconfig.tsbuildinfo
+frontend/next-env.d.ts
