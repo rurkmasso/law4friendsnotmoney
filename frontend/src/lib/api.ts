@@ -42,11 +42,39 @@ export interface Judgment {
   source_url: string;
 }
 
+export interface LawRelationship {
+  type: string;
+  text: string;
+  url?: string;
+}
+
+export interface LawTimelineEntry {
+  text: string;
+  date?: string;
+  url?: string;
+}
+
 export interface Law {
   chapter: string;
   title: string;
-  last_amended: string | null;
+  title_en?: string;
+  title_mt?: string;
+  type?: string;
+  eli_link?: string;
+  keywords?: string[];
+  languages?: string[];
+  format?: string;
+  status?: string;
+  effective_date?: string;
+  publication_date?: string;
+  indicative_publication_date?: string;
+  pdf_url?: string;
+  pdf_url_en?: string;
+  pdf_url_mt?: string;
   source_url: string;
+  relationships?: LawRelationship[];
+  timeline?: LawTimelineEntry[];
+  last_amended?: string | null;
 }
 
 /**
@@ -63,8 +91,111 @@ async function loadStaticData<T>(filename: string): Promise<T[]> {
   return [];
 }
 
-export const search = (query: string, language: Language, filters = {}) =>
-  api.post<SearchResult>("/api/search/", { query, language, filters }).then((r) => r.data);
+/**
+ * Local client-side search across all static data.
+ * Used as fallback when the backend API is unavailable (e.g., GitHub Pages).
+ */
+async function localSearch(query: string, language: Language): Promise<SearchResult> {
+  const lower = query.toLowerCase();
+  const sources: SearchResult["sources"] = [];
+
+  // Search laws
+  const laws = await loadStaticData<Law>("legislation.json");
+  for (const law of laws) {
+    const searchable = `${law.chapter} ${law.title} ${law.title_en || ""} ${(law.keywords || []).join(" ")}`.toLowerCase();
+    if (searchable.includes(lower)) {
+      sources.push({
+        type: "law",
+        title: `${law.chapter} — ${law.title}`,
+        url: law.source_url,
+        score: searchable.startsWith(lower) ? 0.95 : 0.7,
+      });
+    }
+    if (sources.length >= 20) break;
+  }
+
+  // Search judgments
+  const judgments = await loadStaticData<Judgment>("ecourts_judgments.json");
+  let jCount = 0;
+  for (const j of judgments) {
+    const searchable = `${j.reference} ${j.parties} ${j.court} ${j.judge}`.toLowerCase();
+    if (searchable.includes(lower)) {
+      sources.push({
+        type: "judgment",
+        title: `${j.reference} — ${j.parties}`,
+        url: j.source_url,
+        score: 0.65,
+      });
+      jCount++;
+    }
+    if (jCount >= 10) break;
+  }
+
+  // Search lawyers
+  const lawyers = await loadStaticData<Lawyer>("lawyers.json");
+  let lCount = 0;
+  for (const l of lawyers) {
+    const searchable = `${l.full_name} ${l.firm} ${l.profession} ${(l.practice_areas || []).join(" ")}`.toLowerCase();
+    if (searchable.includes(lower)) {
+      sources.push({
+        type: "lawyer",
+        title: l.full_name,
+        url: l.source_url,
+        score: 0.6,
+      });
+      lCount++;
+    }
+    if (lCount >= 5) break;
+  }
+
+  // Sort by score
+  sources.sort((a, b) => b.score - a.score);
+
+  // Build answer from results
+  const lawResults = sources.filter(s => s.type === "law");
+  const judgmentResults = sources.filter(s => s.type === "judgment");
+  const lawyerResults = sources.filter(s => s.type === "lawyer");
+
+  let answer = "";
+  if (sources.length === 0) {
+    answer = language === "mt"
+      ? `Ma nstab l-ebda riżultat għal "${query}". Ipprova b'termini differenti.`
+      : `No results found for "${query}". Try different search terms.`;
+  } else {
+    if (language === "mt") {
+      answer = `**Riżultati għal "${query}":**\n\n`;
+      if (lawResults.length > 0) answer += `**Liġijiet (${lawResults.length}):** ${lawResults.slice(0, 3).map(s => s.title).join(" · ")}\n\n`;
+      if (judgmentResults.length > 0) answer += `**Sentenzi (${judgmentResults.length}):** ${judgmentResults.slice(0, 3).map(s => s.title).join(" · ")}\n\n`;
+      if (lawyerResults.length > 0) answer += `**Avukati (${lawyerResults.length}):** ${lawyerResults.slice(0, 3).map(s => s.title).join(" · ")}\n\n`;
+      answer += `*Ikklikkja fuq ir-riżultati hawn taħt għal aktar dettalji.*`;
+    } else {
+      answer = `**Results for "${query}":**\n\n`;
+      if (lawResults.length > 0) answer += `**Laws (${lawResults.length}):** ${lawResults.slice(0, 3).map(s => s.title).join(" · ")}\n\n`;
+      if (judgmentResults.length > 0) answer += `**Judgments (${judgmentResults.length}):** ${judgmentResults.slice(0, 3).map(s => s.title).join(" · ")}\n\n`;
+      if (lawyerResults.length > 0) answer += `**Lawyers (${lawyerResults.length}):** ${lawyerResults.slice(0, 3).map(s => s.title).join(" · ")}\n\n`;
+      answer += `*Click on the results below for more details.*`;
+    }
+  }
+
+  return {
+    answer,
+    sources: sources.slice(0, 15),
+    model_used: "local-search",
+    language,
+    cached: false,
+  };
+}
+
+export const search = async (query: string, language: Language, filters = {}): Promise<SearchResult> => {
+  // Try backend API first
+  try {
+    const res = await api.post<SearchResult>("/api/search/", { query, language, filters }, { timeout: 8000 });
+    return res.data;
+  } catch {
+    // Fallback to local client-side search
+    return localSearch(query, language);
+  }
+};
 
 export const getLawyers = async (q?: string, page = 1, limit?: number): Promise<Lawyer[]> => {
   // Try static data first

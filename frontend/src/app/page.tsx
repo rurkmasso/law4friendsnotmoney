@@ -100,8 +100,9 @@ export default function HomePage() {
       axios.post(`${API}/api/suggestions/log-search`, { query: finalQuery }).catch(() => {});
       const res = await search(finalQuery, lang);
       setResult(res);
-      const fu = await axios.get(`${API}/api/suggestions/smart-followups`, { params: { query: finalQuery, language: lang } });
-      setFollowUps(fu.data);
+      axios.get(`${API}/api/suggestions/smart-followups`, { params: { query: finalQuery, language: lang } })
+        .then((fu) => setFollowUps(fu.data))
+        .catch(() => {});
     } catch (e) {
       console.error(e);
     } finally {
@@ -265,16 +266,37 @@ export default function HomePage() {
               {result.sources?.length > 0 && (
                 <div className="mb-4">
                   <p className="text-xs text-[#9ca3af] uppercase tracking-widest mb-2 px-1">Sorsi / Sources</p>
-                  <CitationCard
-                    citations={result.sources.map((s) => ({
-                      type: s.type as any,
-                      title: s.title,
-                      url: s.url,
-                      score: s.score,
-                    }))}
-                    language={lang}
-                    onOpen={(c) => window.open(c.url, "_blank")}
-                  />
+                  <div className="flex flex-col gap-2">
+                    {result.sources.map((s, i) => {
+                      // Link to internal detail pages based on type
+                      const internalUrl = s.type === "law"
+                        ? `/detail?type=law&id=${encodeURIComponent(s.title.split(" — ")[0])}`
+                        : s.type === "judgment"
+                        ? `/detail?type=judgment&id=${encodeURIComponent(s.title.split(" — ")[0])}`
+                        : s.type === "lawyer"
+                        ? `/detail?type=lawyer&id=${encodeURIComponent(s.title)}`
+                        : s.url;
+                      const isInternal = ["law", "judgment", "lawyer"].includes(s.type);
+                      return (
+                        <Link
+                          key={i}
+                          href={isInternal ? internalUrl : s.url}
+                          target={isInternal ? undefined : "_blank"}
+                          className="flex items-center gap-3 px-4 py-3 bg-white border border-[#e5e0d5] hover:border-gold/30
+                                     rounded-xl transition-all group shadow-sm hover:shadow-md"
+                        >
+                          <span className={`w-2 h-2 rounded-full shrink-0 ${
+                            s.type === "law" ? "bg-[#4c9ac9]" : s.type === "judgment" ? "bg-gold" : "bg-emerald-500"
+                          }`} />
+                          <span className="flex-1 text-sm text-[#6b7280] group-hover:text-[#1a1a2e] truncate">{s.title}</span>
+                          <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#f5f3ee] text-[#9ca3af] shrink-0 uppercase font-medium">
+                            {s.type}
+                          </span>
+                          <span className="text-xs text-[#9ca3af] shrink-0">{Math.round(s.score * 100)}%</span>
+                        </Link>
+                      );
+                    })}
+                  </div>
                 </div>
               )}
 

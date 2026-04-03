@@ -226,7 +226,7 @@ export default function LawyersPage() {
           ) : (
             <div className="flex flex-col gap-2">
               {filtered.map((l) => (
-                <Link key={l.warrant_number} href={`/lawyers/${l.warrant_number}`}
+                <Link key={l.warrant_number} href={`/detail?type=lawyer&id=${encodeURIComponent(l.warrant_number)}`}
                   className="flex items-center gap-4 bg-white hover:shadow-md border border-[#e5e0d5]
                              hover:border-gold/30 rounded-2xl px-5 py-4 transition-all group shadow-sm">
                   {/* Avatar */}

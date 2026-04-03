@@ -155,21 +155,31 @@ export default function LawsPage() {
           ) : (
             <div className="flex flex-col gap-2">
               {filtered.map((law) => (
-                <a
+                <Link
                   key={law.chapter}
-                  href={law.source_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`/detail?type=law&id=${encodeURIComponent(law.chapter)}`}
                   className="flex items-center gap-4 px-4 py-3 bg-white hover:shadow-md border border-[#e5e0d5]
                              hover:border-[#4c9ac9]/30 rounded-xl transition-all group shadow-sm"
                 >
                   <span className="text-xs font-mono text-[#4c9ac9] w-20 shrink-0">{law.chapter}</span>
                   <span className="flex-1 text-sm text-[#6b7280] group-hover:text-[#1a1a2e] transition-colors truncate">{law.title}</span>
-                  {law.last_amended && (
-                    <span className="text-xs text-[#9ca3af] shrink-0">{law.last_amended.split("T")[0]}</span>
-                  )}
+                  <div className="flex items-center gap-2 shrink-0">
+                    {law.status && (
+                      <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium
+                        ${law.status.toLowerCase().includes("force") || law.status.toLowerCase().includes("seħħ")
+                          ? "bg-emerald-50 text-emerald-600" : "bg-red-50 text-red-600"}`}>
+                        {law.status}
+                      </span>
+                    )}
+                    {law.pdf_url && (
+                      <span className="text-[10px] bg-red-50 text-red-600 px-1.5 py-0.5 rounded font-semibold">PDF</span>
+                    )}
+                    {law.keywords && law.keywords.length > 0 && (
+                      <span className="text-[10px] text-[#9ca3af]">{law.keywords[0]}</span>
+                    )}
+                  </div>
                   <ChevronRight size={14} className="text-[#9ca3af] shrink-0 group-hover:text-[#6b7280] transition-colors" />
-                </a>
+                </Link>
               ))}
             </div>
           )}

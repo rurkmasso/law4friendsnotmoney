@@ -1,22 +1,12 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Scale, ExternalLink, FileText, Loader2 } from "lucide-react";
+import { Search, Scale, ExternalLink, FileText, Loader2, ArrowUpDown } from "lucide-react";
 import { useLanguage } from "@/lib/useLanguage";
+import { getJudgments, type Judgment } from "@/lib/api";
 import Link from "next/link";
-import axios from "axios";
 
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-
-interface Judgment {
-  reference: string;
-  court: string;
-  judge: string;
-  parties: string;
-  date: string;
-  outcome: string;
-  source_url: string;
-}
 
 const LABELS = {
   mt: {
@@ -98,6 +88,8 @@ export default function JudgmentsPage() {
   const [q, setQ] = useState("");
   const [court, setCourt] = useState("All");
   const [year, setYear] = useState("All");
+  const [sortKey, setSortKey] = useState<"date" | "reference" | "court" | "judge" | "parties">("date");
+  const [sortAsc, setSortAsc] = useState(false);
   const [data, setData] = useState<Judgment[]>([]);
   const [loading, setLoading] = useState(true);
   const [fetchFailed, setFetchFailed] = useState(false);
@@ -108,11 +100,8 @@ export default function JudgmentsPage() {
     (async () => {
       setLoading(true);
       try {
-        const res = await axios.get<Judgment[]>(`${API}/api/judgments/`, {
-          params: { limit: 200 },
-          timeout: 10000,
-        });
-        if (!cancelled) { setData(res.data || []); setFetchFailed(false); }
+        const results = await getJudgments();
+        if (!cancelled) { setData(results); setFetchFailed(results.length === 0); }
       } catch {
         if (!cancelled) { setData([]); setFetchFailed(true); }
       } finally {
@@ -141,8 +130,14 @@ export default function JudgmentsPage() {
     if (year !== "All") {
       results = results.filter((j) => j.date?.startsWith(year));
     }
+    // Sort
+    results.sort((a, b) => {
+      const va = (a[sortKey] || "").toLowerCase();
+      const vb = (b[sortKey] || "").toLowerCase();
+      return sortAsc ? (va > vb ? 1 : -1) : (va < vb ? 1 : -1);
+    });
     return results;
-  }, [data, q, court, year]);
+  }, [data, q, court, year, sortKey, sortAsc]);
 
   const formatDate = (dateStr: string) => {
     if (!dateStr) return "—";
@@ -269,11 +264,24 @@ export default function JudgmentsPage() {
           </div>
         </motion.div>
 
-        {/* Results Count */}
+        {/* Results Count + Sort */}
         {!loading && data.length > 0 && (
-          <p className="text-xs text-[#9ca3af] mb-4 px-1">
-            {t.showing} {filtered.length} {t.of} {data.length} {t.results}
-          </p>
+          <div className="flex items-center gap-2 mb-4 px-1 flex-wrap">
+            <p className="text-xs text-[#9ca3af]">
+              {t.showing} {filtered.length} {t.of} {data.length} {t.results}
+            </p>
+            <span className="text-xs text-[#9ca3af]">·</span>
+            <span className="text-xs text-[#9ca3af]">Sort:</span>
+            {(["date", "reference", "court", "judge", "parties"] as const).map((key) => (
+              <button key={key} onClick={() => { if (sortKey === key) setSortAsc(!sortAsc); else { setSortKey(key); setSortAsc(true); } }}
+                className={`flex items-center gap-1 px-2 py-0.5 rounded text-xs transition-all ${
+                  sortKey === key ? "text-gold bg-gold/10 font-medium" : "text-[#9ca3af] hover:text-[#6b7280]"
+                }`}>
+                {key.charAt(0).toUpperCase() + key.slice(1)}
+                {sortKey === key && <ArrowUpDown size={10} />}
+              </button>
+            ))}
+          </div>
         )}
 
         {/* Status States */}
@@ -342,80 +350,82 @@ export default function JudgmentsPage() {
               className="flex flex-col gap-3"
             >
               {filtered.map((j, i) => (
-                <motion.div
+                <Link
                   key={`${j.reference}-${i}`}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: Math.min(i * 0.02, 0.5), duration: 0.3 }}
-                  className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-5
-                             hover:border-gold/30 hover:shadow-md transition-all group"
+                  href={`/detail?type=judgment&id=${encodeURIComponent(j.reference)}`}
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1 min-w-0">
-                      {/* Reference */}
-                      <div className="flex items-center gap-2 mb-2">
-                        <span
-                          className="font-mono text-sm font-semibold px-2.5 py-0.5 rounded-lg
-                                     bg-gold/10 border border-gold/20"
-                          style={{ color: "#b8963a" }}
+                  <motion.div
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: Math.min(i * 0.02, 0.5), duration: 0.3 }}
+                    className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-5
+                               hover:border-gold/30 hover:shadow-md transition-all group cursor-pointer"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex-1 min-w-0">
+                        {/* Reference */}
+                        <div className="flex items-center gap-2 mb-2">
+                          <span
+                            className="font-mono text-sm font-semibold px-2.5 py-0.5 rounded-lg
+                                       bg-gold/10 border border-gold/20"
+                            style={{ color: "#b8963a" }}
+                          >
+                            {j.reference || "—"}
+                          </span>
+                          {j.outcome && (
+                            <span className="text-xs text-[#9ca3af] bg-[#f5f3ee] px-2 py-0.5 rounded-full border border-[#e5e0d5]">
+                              {j.outcome}
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Parties */}
+                        {j.parties && (
+                          <p className="text-[#1a1a2e] font-semibold text-base mb-1.5 leading-snug truncate group-hover:text-gold transition-colors">
+                            {j.parties}
+                          </p>
+                        )}
+
+                        {/* Meta row — each data point in its own labeled field */}
+                        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-[#6b7280]">
+                          {j.court && (
+                            <span className="flex items-center gap-1 bg-[#f5f3ee] px-2 py-0.5 rounded">
+                              <Scale size={11} className="text-[#9ca3af]" />
+                              {j.court}
+                            </span>
+                          )}
+                          {j.judge && (
+                            <span className="flex items-center gap-1 bg-[#f5f3ee] px-2 py-0.5 rounded">
+                              {t.judge}: {j.judge}
+                            </span>
+                          )}
+                          {j.date && (
+                            <span className="flex items-center gap-1 bg-[#f5f3ee] px-2 py-0.5 rounded">
+                              {formatDate(j.date)}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* External link */}
+                      {j.source_url && (
+                        <a
+                          href={j.source_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="shrink-0 flex items-center gap-1.5 text-xs font-medium
+                                     text-[#9ca3af] hover:text-gold transition-colors
+                                     px-3 py-2 rounded-xl border border-[#e5e0d5]
+                                     hover:border-gold/30 hover:bg-gold/5 group-hover:text-gold"
+                          onClick={(e) => e.stopPropagation()}
                         >
-                          {j.reference || "—"}
-                        </span>
-                        {j.outcome && (
-                          <span className="text-xs text-[#9ca3af] bg-[#f5f3ee] px-2 py-0.5 rounded-full border border-[#e5e0d5]">
-                            {j.outcome}
-                          </span>
-                        )}
-                      </div>
-
-                      {/* Parties */}
-                      {j.parties && (
-                        <p className="text-[#1a1a2e] font-semibold text-base mb-1.5 leading-snug truncate">
-                          {j.parties}
-                        </p>
+                          <ExternalLink size={12} />
+                          {t.viewSource}
+                        </a>
                       )}
-
-                      {/* Meta row */}
-                      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-[#6b7280]">
-                        {j.court && (
-                          <span className="flex items-center gap-1">
-                            <Scale size={11} className="text-[#9ca3af]" />
-                            {j.court}
-                          </span>
-                        )}
-                        {j.judge && (
-                          <span className="flex items-center gap-1">
-                            <span className="text-[#9ca3af]">·</span>
-                            {t.judge}: {j.judge}
-                          </span>
-                        )}
-                        {j.date && (
-                          <span className="flex items-center gap-1">
-                            <span className="text-[#9ca3af]">·</span>
-                            {formatDate(j.date)}
-                          </span>
-                        )}
-                      </div>
                     </div>
-
-                    {/* External link */}
-                    {j.source_url && (
-                      <a
-                        href={j.source_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="shrink-0 flex items-center gap-1.5 text-xs font-medium
-                                   text-[#9ca3af] hover:text-gold transition-colors
-                                   px-3 py-2 rounded-xl border border-[#e5e0d5]
-                                   hover:border-gold/30 hover:bg-gold/5 group-hover:text-gold"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <ExternalLink size={12} />
-                        {t.viewSource}
-                      </a>
-                    )}
-                  </div>
-                </motion.div>
+                  </motion.div>
+                </Link>
               ))}
             </motion.div>
           )}
