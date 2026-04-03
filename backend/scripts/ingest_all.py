@@ -22,11 +22,15 @@ from rag.embeddings import embed
 from scrapers.legislation import LegislationScraper
 from scrapers.ecourts import ECourtsScraper
 from scrapers.lawyers_register import LawyersRegisterScraper
+from scrapers.law_firms import LawFirmsScraper
 from scrapers.regulatory import RegulatoryScraper
 from scrapers.news import NewsScraper
+from scrapers.eurlex import EurLexScraper
+from scrapers.international import InternationalScraper
 from models.law import Law
 from models.judgment import Judgment
 from models.lawyer import Lawyer
+from models.law_firm import LawFirm
 from models.document import Document
 from rich import print
 from rich.progress import track
@@ -160,7 +164,7 @@ SOURCES = {
 
 
 async def main(source: str = "all"):
-    print("[bold green]LexMalta Ingestion Script[/bold green]")
+    print("[bold gold1]LexMalta Ingestion Script — Powered by Rark Musso[/bold gold1]")
     await init_db()
     async with AsyncSessionLocal() as db:
         if source == "all":

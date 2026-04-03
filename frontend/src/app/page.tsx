@@ -143,6 +143,7 @@ export default function HomePage() {
             Malta
           </h1>
           <p className="text-xl text-white/60 mb-1">{t.sub}</p>
+          <p className="text-xs text-white/20 mt-1">Powered by Rark Musso</p>
 
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-3 mt-5">
