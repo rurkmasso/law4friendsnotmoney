@@ -1,0 +1,40 @@
+name: Daily Scrape
+
+on:
+  schedule:
+    - cron: "0 2 * * *"  # 2am daily — keeps data fresh
+  workflow_dispatch:      # manual trigger
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install -r backend/requirements.txt
+      - name: Run scrapers
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          REDIS_URL: ${{ secrets.REDIS_URL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          cd backend
+          python -c "
+          import asyncio
+          from scrapers.legislation import LegislationScraper
+          from scrapers.ecourts import ECourtsScraper
+          from scrapers.regulatory import RegulatoryScraper
+          from scrapers.news import NewsScraper
+
+          async def main():
+              for Cls in [NewsScraper, RegulatoryScraper]:
+                  s = Cls()
+                  await s.scrape()
+                  await s.close()
+
+          asyncio.run(main())
+          "
