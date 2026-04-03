@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Search, Briefcase, Mail, Phone, Building2, SlidersHorizontal, ArrowUpDown } from "lucide-react";
+import { Search, Briefcase, Mail, Building2, SlidersHorizontal, ArrowUpDown, Scale } from "lucide-react";
 import { getLawyers, type Lawyer } from "@/lib/api";
+import { useLanguage } from "@/lib/useLanguage";
 import Link from "next/link";
 
 type SortKey = "name" | "case_count" | "firm";
@@ -15,7 +16,17 @@ const PRACTICE_AREAS = [
 
 const PROFESSIONS = ["Advocate", "Legal Procurator", "Notary"];
 
+const NAV_LINKS = [
+  { href: "/laws", label_mt: "Liġijiet", label_en: "Laws" },
+  { href: "/judgments", label_mt: "Sentenzi", label_en: "Judgments" },
+  { href: "/lawyers", label_mt: "Avukati", label_en: "Lawyers" },
+  { href: "/documents", label_mt: "Dokumenti", label_en: "Documents" },
+  { href: "/draft", label_mt: "Abbozza", label_en: "Draft" },
+  { href: "/case-builder", label_mt: "Ibni Każ", label_en: "Build Case" },
+];
+
 export default function LawyersPage() {
+  const [lang, setLang] = useLanguage();
   const [q, setQ] = useState("");
   const [lawyers, setLawyers] = useState<Lawyer[]>([]);
   const [filtered, setFiltered] = useState<Lawyer[]>([]);
@@ -57,40 +68,69 @@ export default function LawyersPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a14] text-white px-4 py-10">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-cream text-[#1a1a2e]">
+      {/* Nav */}
+      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#e5e0d5] shadow-sm">
+        <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2">
+            <Scale size={20} className="text-gold" />
+            <span className="text-lg font-display font-bold text-[#1a1a2e]">
+              <span className="text-gold">Lex</span>Malta
+            </span>
+          </Link>
+          <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
+            {NAV_LINKS.map((link) => (
+              <Link key={link.href} href={link.href}
+                className="hover:text-gold transition-colors font-medium">
+                {lang === "mt" ? link.label_mt : link.label_en}
+              </Link>
+            ))}
+          </div>
+          <button
+            onClick={() => setLang(lang === "mt" ? "en" : "mt")}
+            className="px-3 py-1.5 rounded-full border border-[#e5e0d5] hover:border-gold/50
+                       hover:bg-gold/5 text-xs font-mono text-[#6b7280] transition-all"
+          >
+            {lang === "mt" ? "EN" : "MT"}
+          </button>
+        </div>
+      </nav>
+
+      <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="flex items-center justify-between mb-8">
-          <Link href="/" className="text-sm text-white/40 hover:text-white/70">← Lura / Back</Link>
-          <Link href="/law-firms" className="text-sm text-[#c9a84c] hover:text-[#d4b356] transition-colors">
+          <Link href="/" className="text-sm text-[#9ca3af] hover:text-[#6b7280]">← Lura / Back</Link>
+          <Link href="/law-firms" className="text-sm text-gold hover:text-gold/80 transition-colors">
             Ara l-Firmi Legali →
           </Link>
         </div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <h1 className="text-3xl font-bold mb-1">
-            <span className="text-[#c9a84c]">Avukati</span> ta' Malta
+          <h1 className="text-3xl font-display font-bold mb-1 text-[#1a1a2e]">
+            <span className="text-gold">Avukati</span> ta' Malta
           </h1>
-          <p className="text-white/40 text-sm mb-6">
+          <p className="text-[#9ca3af] text-sm mb-6">
             Lista kompluta minn reġistru uffiċjali — aġġornata awtomatikament
           </p>
 
           {/* Search + Filter bar */}
           <div className="flex gap-2 mb-4">
             <div className="relative flex-1">
-              <Search size={15} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30" />
+              <Search size={15} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#9ca3af]" />
               <input value={q} onChange={(e) => setQ(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && fetchLawyers(q)}
                 placeholder="Fittex isem, firma, email..."
-                className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-sm
-                           focus:outline-none focus:border-[#c9a84c]/50 placeholder:text-white/20" />
+                className="w-full pl-10 pr-4 py-3 bg-white border border-[#e5e0d5] rounded-xl text-sm
+                           focus:outline-none focus:border-gold/50 placeholder:text-[#9ca3af] text-[#1a1a2e]" />
             </div>
             <button onClick={() => fetchLawyers(q)}
-              className="px-4 py-3 bg-[#c9a84c] hover:bg-[#b8963a] text-black rounded-xl font-bold">
+              className="px-4 py-3 bg-gold hover:bg-gold/90 text-white rounded-xl font-bold transition-colors">
               <Search size={16} />
             </button>
             <button onClick={() => setShowFilters(!showFilters)}
               className={`px-4 py-3 rounded-xl border transition-all flex items-center gap-2 text-sm ${
-                showFilters ? "border-[#c9a84c]/50 bg-[#c9a84c]/10 text-[#c9a84c]" : "border-white/10 bg-white/5 text-white/50"
+                showFilters
+                  ? "border-gold/50 bg-gold/10 text-gold"
+                  : "border-[#e5e0d5] bg-white text-[#6b7280] hover:border-gold/30"
               }`}>
               <SlidersHorizontal size={15} /> Filtra
             </button>
@@ -99,15 +139,17 @@ export default function LawyersPage() {
           {/* Filters */}
           {showFilters && (
             <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-4 mb-4">
+              className="bg-white border border-[#e5e0d5] rounded-2xl p-4 mb-4 shadow-sm">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <p className="text-xs text-white/40 mb-2">Professjoni</p>
+                  <p className="text-xs text-[#9ca3af] mb-2">Professjoni</p>
                   <div className="flex flex-wrap gap-2">
                     {PROFESSIONS.map((p) => (
                       <button key={p} onClick={() => setFilterProfession(filterProfession === p ? "" : p)}
                         className={`px-3 py-1 rounded-full text-xs transition-all border ${
-                          filterProfession === p ? "bg-[#c9a84c]/15 border-[#c9a84c]/40 text-[#c9a84c]" : "bg-white/5 border-white/10 text-white/50"
+                          filterProfession === p
+                            ? "bg-gold/15 border-gold/40 text-gold"
+                            : "bg-cream border-[#e5e0d5] text-[#6b7280] hover:border-gold/30"
                         }`}>
                         {p}
                       </button>
@@ -115,9 +157,9 @@ export default function LawyersPage() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-xs text-white/40 mb-2">Qasam tal-Prattika</p>
+                  <p className="text-xs text-[#9ca3af] mb-2">Qasam tal-Prattika</p>
                   <select value={filterArea} onChange={(e) => setFilterArea(e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-sm text-white/60">
+                    className="w-full bg-white border border-[#e5e0d5] rounded-xl px-3 py-2 text-sm text-[#6b7280] focus:outline-none focus:border-gold/50">
                     <option value="">Kollha</option>
                     {PRACTICE_AREAS.map((a) => <option key={a} value={a}>{a}</option>)}
                   </select>
@@ -127,14 +169,14 @@ export default function LawyersPage() {
           )}
 
           {/* Sort bar */}
-          <div className="flex items-center gap-1 mb-4 text-xs text-white/30">
+          <div className="flex items-center gap-1 mb-4 text-xs text-[#9ca3af]">
             <span>{filtered.length} avukati</span>
             <span className="mx-2">·</span>
             <span>Issortja:</span>
             {(["name", "case_count", "firm"] as SortKey[]).map((key) => (
               <button key={key} onClick={() => toggleSort(key)}
                 className={`flex items-center gap-1 px-2 py-1 rounded-lg transition-all ${
-                  sortKey === key ? "text-[#c9a84c] bg-[#c9a84c]/10" : "hover:text-white/60"
+                  sortKey === key ? "text-gold bg-gold/10" : "hover:text-[#6b7280]"
                 }`}>
                 {key === "name" ? "Isem" : key === "case_count" ? "Kawżi" : "Firma"}
                 {sortKey === key && <ArrowUpDown size={10} />}
@@ -144,52 +186,57 @@ export default function LawyersPage() {
 
           {/* Lawyer list */}
           {loading ? (
-            <p className="text-white/30 text-sm">Qed jgħabbi...</p>
+            <p className="text-[#9ca3af] text-sm">Qed jgħabbi...</p>
           ) : (
             <div className="flex flex-col gap-2">
               {filtered.map((l) => (
                 <Link key={l.warrant_number} href={`/lawyers/${l.warrant_number}`}
-                  className="flex items-center gap-4 bg-white/5 hover:bg-white/10 border border-white/8
-                             hover:border-[#c9a84c]/20 rounded-2xl px-5 py-4 transition-all group">
+                  className="flex items-center gap-4 bg-white hover:shadow-md border border-[#e5e0d5]
+                             hover:border-gold/30 rounded-2xl px-5 py-4 transition-all group shadow-sm">
                   {/* Avatar */}
-                  <div className="w-10 h-10 rounded-full bg-[#c9a84c]/10 border border-[#c9a84c]/20
-                                  flex items-center justify-center shrink-0 text-[#c9a84c] font-bold text-sm">
+                  <div className="w-10 h-10 rounded-full bg-gold/10 border border-gold/20
+                                  flex items-center justify-center shrink-0 text-gold font-bold text-sm">
                     {l.full_name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-sm group-hover:text-[#c9a84c] transition-colors">
+                    <p className="font-semibold text-sm text-[#1a1a2e] group-hover:text-gold transition-colors">
                       {l.full_name}
                     </p>
-                    <div className="flex items-center gap-3 mt-1 text-xs text-white/40">
+                    <div className="flex items-center gap-3 mt-1 text-xs text-[#9ca3af]">
                       <span>{l.profession}</span>
                       {l.firm && <><span>·</span><span className="flex items-center gap-1"><Building2 size={11} />{l.firm}</span></>}
                     </div>
                   </div>
                   <div className="flex flex-col items-end gap-1 shrink-0">
                     {l.case_count > 0 && (
-                      <span className="flex items-center gap-1 text-xs text-white/30">
+                      <span className="flex items-center gap-1 text-xs text-[#9ca3af]">
                         <Briefcase size={11} /> {l.case_count} kawżi
                       </span>
                     )}
                     {l.email && (
-                      <span className="flex items-center gap-1 text-xs text-white/20">
+                      <span className="flex items-center gap-1 text-xs text-[#9ca3af]">
                         <Mail size={11} /> {l.email}
                       </span>
                     )}
                   </div>
                   <div className="flex flex-wrap gap-1 max-w-32">
                     {l.practice_areas?.slice(0, 2).map((a) => (
-                      <span key={a} className="px-2 py-0.5 bg-[#c9a84c]/8 text-[#c9a84c]/60 rounded-full text-xs">{a}</span>
+                      <span key={a} className="px-2 py-0.5 bg-gold/8 text-gold/70 rounded-full text-xs border border-gold/15">{a}</span>
                     ))}
                   </div>
                 </Link>
               ))}
               {filtered.length === 0 && !loading && (
-                <p className="text-white/30 text-sm py-4">L-ebda avukat ma nstab.</p>
+                <p className="text-[#9ca3af] text-sm py-4">L-ebda avukat ma nstab.</p>
               )}
             </div>
           )}
         </motion.div>
+
+        {/* Footer */}
+        <div className="py-10 mt-10 text-center text-xs text-[#9ca3af] border-t border-[#e5e0d5]">
+          <p>LexMalta — Powered by Rark Musso · B&apos;Xejn għal Dejjem</p>
+        </div>
       </div>
     </div>
   );

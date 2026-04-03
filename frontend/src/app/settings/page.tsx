@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Settings, Bell, Globe, Scale, BookOpen, Save, Check } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/lib/useLanguage";
 
 interface UserSettings {
-  language: "mt" | "en";
   practiceAreas: string[];
   emailAlerts: boolean;
   alertFrequency: "instant" | "daily" | "weekly";
@@ -17,7 +17,6 @@ interface UserSettings {
 }
 
 const DEFAULT_SETTINGS: UserSettings = {
-  language: "mt",
   practiceAreas: [],
   emailAlerts: false,
   alertFrequency: "daily",
@@ -38,6 +37,7 @@ const PRACTICE_AREAS = [
 const SECTORS = ["legal", "tax", "maritime", "planning", "compliance", "fintech"];
 
 export default function SettingsPage() {
+  const [lang, setLang] = useLanguage();
   const [settings, setSettings] = useState<UserSettings>(DEFAULT_SETTINGS);
   const [saved, setSaved] = useState(false);
 
@@ -68,31 +68,59 @@ export default function SettingsPage() {
     setSettings((s) => ({ ...s, [key]: !s[key as keyof UserSettings] }));
 
   return (
-    <div className="min-h-screen bg-[#0a0a14] text-white px-4 py-10">
-      <div className="max-w-2xl mx-auto">
-        <Link href="/" className="text-sm text-white/40 hover:text-white/70">← Lura / Back</Link>
+    <div className="min-h-screen bg-[#f5f3ee]">
+      {/* Nav */}
+      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#e5e0d5] shadow-sm">
+        <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
+          <Link href="/" className="font-display text-lg font-bold text-navy">
+            LexMalta
+          </Link>
+          <div className="flex items-center gap-6">
+            <Link href="/sectors" className="text-sm text-[#6b7280] hover:text-[#1a1a2e] transition-colors">
+              {lang === "mt" ? "Setturi" : "Sectors"}
+            </Link>
+            <Link href="/matter" className="text-sm text-[#6b7280] hover:text-[#1a1a2e] transition-colors">
+              Matters
+            </Link>
+            <Link href="/settings" className="text-sm text-gold font-medium">
+              Settings
+            </Link>
+            <button
+              onClick={() => setLang(lang === "mt" ? "en" : "mt")}
+              className="px-3 py-1 rounded-full border border-[#e5e0d5] text-xs font-mono text-[#6b7280] hover:border-gold/50 transition-colors"
+            >
+              {lang === "mt" ? "EN" : "MT"}
+            </button>
+          </div>
+        </div>
+      </nav>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-8">
+      <div className="max-w-2xl mx-auto px-4 py-10">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-4">
           <div className="flex items-center gap-3 mb-8">
-            <Settings size={28} className="text-[#c9a84c]" />
+            <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center">
+              <Settings size={20} className="text-gold" />
+            </div>
             <div>
-              <h1 className="text-2xl font-bold">Settings</h1>
-              <p className="text-white/40 text-sm">Personalizza l-esperjenza tiegħek</p>
+              <h1 className="font-display text-2xl font-bold text-[#1a1a2e]">Settings</h1>
+              <p className="text-sm text-[#6b7280]">
+                {lang === "mt" ? "Personalizza l-esperjenza tiegħek" : "Personalise your experience"}
+              </p>
             </div>
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
 
             {/* Language */}
-            <Section icon={Globe} title="Lingwa / Language">
+            <Section icon={Globe} title={lang === "mt" ? "Lingwa / Language" : "Language"}>
               <div className="flex gap-2">
                 {(["mt", "en"] as const).map((l) => (
                   <button key={l}
-                    onClick={() => setSettings((s) => ({ ...s, language: l }))}
+                    onClick={() => setLang(l)}
                     className={`flex-1 py-3 rounded-xl font-medium text-sm transition-all ${
-                      settings.language === l
-                        ? "bg-[#c9a84c] text-black"
-                        : "bg-white/5 text-white/60 hover:bg-white/10"
+                      lang === l
+                        ? "bg-gold text-white shadow-sm"
+                        : "bg-[#f5f3ee] text-[#6b7280] hover:bg-[#ede9e0] border border-[#e5e0d5]"
                     }`}
                   >
                     {l === "mt" ? "🇲🇹 Malti" : "🇬🇧 English"}
@@ -102,9 +130,11 @@ export default function SettingsPage() {
             </Section>
 
             {/* Practice areas */}
-            <Section icon={Scale} title="Oqsma tal-Prattika / Practice Areas">
-              <p className="text-xs text-white/30 mb-3">
-                Agħżel l-oqsma tiegħek — il-feed u s-suġġerimenti jiġu personalizzati
+            <Section icon={Scale} title={lang === "mt" ? "Oqsma tal-Prattika" : "Practice Areas"}>
+              <p className="text-xs text-[#9ca3af] mb-3">
+                {lang === "mt"
+                  ? "Agħżel l-oqsma tiegħek — il-feed u s-suġġerimenti jiġu personalizzati"
+                  : "Choose your areas — the feed and suggestions will be personalised"}
               </p>
               <div className="flex flex-wrap gap-2">
                 {PRACTICE_AREAS.map((area) => (
@@ -113,8 +143,8 @@ export default function SettingsPage() {
                     onClick={() => toggleArea(area)}
                     className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all ${
                       settings.practiceAreas.includes(area)
-                        ? "bg-[#c9a84c]/15 border-[#c9a84c]/40 text-[#c9a84c]"
-                        : "bg-white/5 border-white/10 text-white/50 hover:bg-white/10"
+                        ? "bg-gold/10 border-gold/40 text-gold"
+                        : "bg-[#f5f3ee] border-[#e5e0d5] text-[#6b7280] hover:bg-[#ede9e0]"
                     }`}
                   >
                     {area}
@@ -124,15 +154,15 @@ export default function SettingsPage() {
             </Section>
 
             {/* Default sector */}
-            <Section icon={BookOpen} title="Settur Awtomatiku / Default Sector">
+            <Section icon={BookOpen} title={lang === "mt" ? "Settur Awtomatiku" : "Default Sector"}>
               <div className="grid grid-cols-3 gap-2">
                 {SECTORS.map((s) => (
                   <button key={s}
                     onClick={() => setSettings((prev) => ({ ...prev, defaultSector: s }))}
-                    className={`py-2 rounded-xl text-sm capitalize transition-all ${
+                    className={`py-2 rounded-xl text-sm capitalize transition-all border ${
                       settings.defaultSector === s
-                        ? "bg-[#c9a84c]/15 border border-[#c9a84c]/40 text-[#c9a84c]"
-                        : "bg-white/5 border border-white/10 text-white/50 hover:bg-white/10"
+                        ? "bg-gold/10 border-gold/40 text-gold font-medium"
+                        : "bg-[#f5f3ee] border-[#e5e0d5] text-[#6b7280] hover:bg-[#ede9e0]"
                     }`}
                   >
                     {s}
@@ -142,17 +172,17 @@ export default function SettingsPage() {
             </Section>
 
             {/* Alerts */}
-            <Section icon={Bell} title="Allerts bl-Email">
+            <Section icon={Bell} title={lang === "mt" ? "Allerts bl-Email" : "Email Alerts"}>
               <input
                 type="email"
                 value={settings.email}
                 onChange={(e) => setSettings((s) => ({ ...s, email: e.target.value }))}
-                placeholder="email@tiegħek.com"
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 mb-3
-                           focus:outline-none focus:border-[#c9a84c]/60 placeholder:text-white/20 text-sm"
+                placeholder="email@example.com"
+                className="w-full bg-white border border-[#e5e0d5] rounded-xl px-4 py-3 mb-3
+                           focus:outline-none focus:border-gold/50 placeholder:text-[#9ca3af] text-sm text-[#1a1a2e]"
               />
               <Toggle
-                label="Irċievi allerts bl-email"
+                label={lang === "mt" ? "Irċievi allerts bl-email" : "Receive email alerts"}
                 value={settings.emailAlerts}
                 onChange={() => toggle("emailAlerts")}
               />
@@ -161,13 +191,17 @@ export default function SettingsPage() {
                   {(["instant", "daily", "weekly"] as const).map((f) => (
                     <button key={f}
                       onClick={() => setSettings((s) => ({ ...s, alertFrequency: f }))}
-                      className={`flex-1 py-2 rounded-xl text-xs capitalize transition-all ${
+                      className={`flex-1 py-2 rounded-xl text-xs capitalize transition-all border ${
                         settings.alertFrequency === f
-                          ? "bg-[#c9a84c] text-black font-semibold"
-                          : "bg-white/5 text-white/50 hover:bg-white/10"
+                          ? "bg-gold text-white font-semibold border-gold"
+                          : "bg-[#f5f3ee] text-[#6b7280] border-[#e5e0d5] hover:bg-[#ede9e0]"
                       }`}
                     >
-                      {f === "instant" ? "Immedjat" : f === "daily" ? "Kuljum" : "Kull Ġimgħa"}
+                      {f === "instant"
+                        ? (lang === "mt" ? "Immedjat" : "Instant")
+                        : f === "daily"
+                        ? (lang === "mt" ? "Kuljum" : "Daily")
+                        : (lang === "mt" ? "Kull Ġimgħa" : "Weekly")}
                     </button>
                   ))}
                 </div>
@@ -175,11 +209,23 @@ export default function SettingsPage() {
             </Section>
 
             {/* Display */}
-            <Section icon={Settings} title="Wiri / Display">
+            <Section icon={Settings} title={lang === "mt" ? "Wiri / Display" : "Display"}>
               <div className="flex flex-col gap-3">
-                <Toggle label="Uri t-tfittxijiet trending" value={settings.showTrending} onChange={() => toggle("showTrending")} />
-                <Toggle label="Uri l-feed tal-ġurnata" value={settings.showDailyFeed} onChange={() => toggle("showDailyFeed")} />
-                <Toggle label="Mod kompatt" value={settings.compactMode} onChange={() => toggle("compactMode")} />
+                <Toggle
+                  label={lang === "mt" ? "Uri t-tfittxijiet trending" : "Show trending searches"}
+                  value={settings.showTrending}
+                  onChange={() => toggle("showTrending")}
+                />
+                <Toggle
+                  label={lang === "mt" ? "Uri l-feed tal-ġurnata" : "Show daily feed"}
+                  value={settings.showDailyFeed}
+                  onChange={() => toggle("showDailyFeed")}
+                />
+                <Toggle
+                  label={lang === "mt" ? "Mod kompatt" : "Compact mode"}
+                  value={settings.compactMode}
+                  onChange={() => toggle("compactMode")}
+                />
               </div>
             </Section>
 
@@ -188,11 +234,12 @@ export default function SettingsPage() {
           {/* Save */}
           <button
             onClick={save}
-            className="w-full mt-8 py-4 bg-gradient-to-r from-[#c9a84c] to-[#b8963a]
-                       hover:from-[#d4b356] hover:to-[#c9a84c] text-black font-bold rounded-2xl
-                       transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#c9a84c]/10"
+            className="w-full mt-6 py-4 bg-gold hover:bg-[#a8852f] text-white font-bold rounded-2xl
+                       transition-all flex items-center justify-center gap-2 shadow-sm"
           >
-            {saved ? <><Check size={18} /> Salvat!</> : <><Save size={18} /> Salva s-Settings</>}
+            {saved
+              ? <><Check size={18} /> {lang === "mt" ? "Salvat!" : "Saved!"}</>
+              : <><Save size={18} /> {lang === "mt" ? "Salva s-Settings" : "Save Settings"}</>}
           </button>
         </motion.div>
       </div>
@@ -202,10 +249,10 @@ export default function SettingsPage() {
 
 function Section({ icon: Icon, title, children }: { icon: any; title: string; children: React.ReactNode }) {
   return (
-    <div className="bg-white/5 border border-white/8 rounded-2xl p-5">
+    <div className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-5">
       <div className="flex items-center gap-2 mb-4">
-        <Icon size={16} className="text-[#c9a84c]" />
-        <p className="font-semibold text-sm">{title}</p>
+        <Icon size={16} className="text-gold" />
+        <p className="font-semibold text-sm text-[#1a1a2e]">{title}</p>
       </div>
       {children}
     </div>
@@ -215,12 +262,12 @@ function Section({ icon: Icon, title, children }: { icon: any; title: string; ch
 function Toggle({ label, value, onChange }: { label: string; value: boolean; onChange: () => void }) {
   return (
     <div className="flex items-center justify-between">
-      <span className="text-sm text-white/60">{label}</span>
+      <span className="text-sm text-[#6b7280]">{label}</span>
       <button
         onClick={onChange}
-        className={`relative w-11 h-6 rounded-full transition-all ${value ? "bg-[#c9a84c]" : "bg-white/10"}`}
+        className={`relative w-11 h-6 rounded-full transition-all ${value ? "bg-gold" : "bg-[#e5e0d5]"}`}
       >
-        <span className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-all ${value ? "left-6" : "left-1"}`} />
+        <span className={`absolute top-1 w-4 h-4 rounded-full bg-white shadow-sm transition-all ${value ? "left-6" : "left-1"}`} />
       </button>
     </div>
   );

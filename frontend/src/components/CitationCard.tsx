@@ -28,10 +28,10 @@ const TYPE_LABEL = {
 };
 
 const TYPE_COLOR = {
-  law: "text-[#4c9ac9] bg-[#4c9ac9]/10 border-[#4c9ac9]/20",
-  judgment: "text-[#c9a84c] bg-[#c9a84c]/10 border-[#c9a84c]/20",
-  document: "text-[#4cc9a8] bg-[#4cc9a8]/10 border-[#4cc9a8]/20",
-  news: "text-[#c94c4c] bg-[#c94c4c]/10 border-[#c94c4c]/20",
+  law: "text-navy bg-navy/8 border-navy/20",
+  judgment: "text-gold bg-gold/8 border-gold/20",
+  document: "text-[#0d9488] bg-[#0d9488]/8 border-[#0d9488]/20",
+  news: "text-[#dc2626] bg-[#dc2626]/8 border-[#dc2626]/20",
 };
 
 export default function CitationCard({ citations, onOpen, language = "mt" }: Props) {
@@ -47,25 +47,25 @@ export default function CitationCard({ citations, onOpen, language = "mt" }: Pro
         return (
           <div
             key={i}
-            className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10
-                       rounded-xl px-4 py-3 transition-all group cursor-pointer"
+            className="flex items-center gap-3 bg-white hover:shadow-md border border-[#e5e0d5]
+                       hover:border-gold/30 rounded-xl px-4 py-3 transition-all group cursor-pointer shadow-sm"
             onClick={() => onOpen?.(c)}
           >
-            <span className="text-xs text-white/30 font-mono w-5 shrink-0">[{i + 1}]</span>
+            <span className="text-xs text-[#9ca3af] font-mono w-5 shrink-0">[{i + 1}]</span>
             <Icon size={15} className={colorClass.split(" ")[0]} />
             <div className="flex-1 min-w-0">
-              <p className="text-sm text-white/80 group-hover:text-white truncate transition-colors">
+              <p className="text-sm text-[#6b7280] group-hover:text-[#1a1a2e] truncate transition-colors">
                 {c.title}
               </p>
               {c.meta && (
-                <p className="text-xs text-white/30 mt-0.5 truncate">{c.meta}</p>
+                <p className="text-xs text-[#9ca3af] mt-0.5 truncate">{c.meta}</p>
               )}
             </div>
             <span className={`text-xs px-2 py-0.5 rounded-full border shrink-0 ${colorClass}`}>
               {typeLabel}
             </span>
             {c.score != null && (
-              <span className="text-xs text-white/20 font-mono shrink-0">
+              <span className="text-xs text-[#9ca3af] font-mono shrink-0">
                 {Math.round(c.score * 100)}%
               </span>
             )}
@@ -74,7 +74,7 @@ export default function CitationCard({ citations, onOpen, language = "mt" }: Pro
               target="_blank"
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
-              className="shrink-0 p-1 text-white/20 hover:text-white/60 transition-colors"
+              className="shrink-0 p-1 text-[#9ca3af] hover:text-gold transition-colors"
             >
               <ExternalLink size={13} />
             </a>

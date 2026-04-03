@@ -9,6 +9,7 @@ Usage:
     python scripts/ingest_all.py --source lawyers
     python scripts/ingest_all.py --source regulatory
     python scripts/ingest_all.py --source news
+    python scripts/ingest_all.py --source igaming
 """
 import asyncio
 import argparse
@@ -27,7 +28,9 @@ from scrapers.regulatory import RegulatoryScraper
 from scrapers.news import NewsScraper
 from scrapers.eurlex import EurLexScraper
 from scrapers.international import InternationalScraper
+from scrapers.igaming import IGamingScraper
 from models.law import Law
+from models.igaming_operator import IGamingOperator
 from models.judgment import Judgment
 from models.lawyer import Lawyer
 from models.law_firm import LawFirm
@@ -154,12 +157,57 @@ async def ingest_news(db: AsyncSession):
     print(f"[green]News articles ingested: {count}[/green]")
 
 
+async def ingest_igaming(db: AsyncSession):
+    print("\n[bold cyan]Scraping MGA iGaming data...[/bold cyan]")
+    scraper = IGamingScraper()
+    result = await scraper.scrape()
+    await scraper.close()
+
+    # Store operators
+    count = 0
+    for item in track(result.get("operators", []), description="Storing MGA operators..."):
+        import hashlib
+        op_id = hashlib.md5(f"{item['company_name']}{item.get('licence_number','')}".encode()).hexdigest()[:16]
+        op = IGamingOperator(
+            id=op_id,
+            company_name=item["company_name"],
+            licence_number=item.get("licence_number") or op_id,
+            licence_type=item.get("licence_type", "B2C Gaming Service"),
+            status=item.get("status", "Active"),
+            source_url=item.get("source_url", ""),
+            embedding=embed(f"{item['company_name']} {item.get('licence_type','')} MGA Malta iGaming"),
+        )
+        db.add(op)
+        count += 1
+    await db.commit()
+    print(f"[green]MGA operators ingested: {count}[/green]")
+
+    # Store regulatory docs
+    count = 0
+    for item in track(result.get("documents", []), description="Storing MGA documents..."):
+        d = Document(
+            title=item["title"],
+            source="MGA",
+            doc_type=item.get("doc_type", "regulation"),
+            body=item.get("body", ""),
+            full_text=item.get("full_text", ""),
+            source_url=item.get("source_url", ""),
+            pdf_url=item.get("pdf_url"),
+            embedding=embed(f"{item['title']} {item.get('full_text', '')[:2000]}"),
+        )
+        db.add(d)
+        count += 1
+    await db.commit()
+    print(f"[green]MGA documents ingested: {count}[/green]")
+
+
 SOURCES = {
     "legislation": ingest_legislation,
     "ecourts": ingest_ecourts,
     "lawyers": ingest_lawyers,
     "regulatory": ingest_regulatory,
     "news": ingest_news,
+    "igaming": ingest_igaming,
 }
 
 
