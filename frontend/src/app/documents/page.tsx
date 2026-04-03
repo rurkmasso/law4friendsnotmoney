@@ -1,13 +1,10 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { FileText, Search, ExternalLink, Scale } from "lucide-react";
-import { type Law, type Judgment } from "@/lib/api";
+import { FileText, Search, ExternalLink, Scale, ArrowUpDown } from "lucide-react";
+import { getLaws, getJudgments, getRegulatoryDocs, type Law, type Judgment, type RegulatoryDoc } from "@/lib/api";
 import { useLanguage } from "@/lib/useLanguage";
 import Link from "next/link";
-import axios from "axios";
-
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 type Tab = "laws" | "judgments" | "regulatory";
 
@@ -25,25 +22,29 @@ export default function DocumentsPage() {
   const [q, setQ] = useState("");
   const [laws, setLaws] = useState<Law[]>([]);
   const [judgments, setJudgments] = useState<Judgment[]>([]);
+  const [regDocs, setRegDocs] = useState<RegulatoryDoc[]>([]);
   const [loading, setLoading] = useState(true);
   const [fetchFailed, setFetchFailed] = useState(false);
+  const [regFilter, setRegFilter] = useState("All");
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       setLoading(true);
       try {
-        const [lawsRes, judgmentsRes] = await Promise.allSettled([
-          axios.get<Law[]>(`${API}/api/laws/`, { params: { limit: 100 }, timeout: 10000 }),
-          axios.get<Judgment[]>(`${API}/api/judgments/`, { params: { limit: 100 }, timeout: 10000 }),
+        const [lawsData, judgmentsData, regData] = await Promise.all([
+          getLaws(),
+          getJudgments(),
+          getRegulatoryDocs(),
         ]);
         if (!cancelled) {
-          setLaws(lawsRes.status === "fulfilled" ? lawsRes.value.data || [] : []);
-          setJudgments(judgmentsRes.status === "fulfilled" ? judgmentsRes.value.data || [] : []);
-          setFetchFailed(lawsRes.status === "rejected" && judgmentsRes.status === "rejected");
+          setLaws(lawsData);
+          setJudgments(judgmentsData);
+          setRegDocs(regData);
+          setFetchFailed(lawsData.length === 0 && judgmentsData.length === 0);
         }
       } catch {
-        if (!cancelled) { setLaws([]); setJudgments([]); setFetchFailed(true); }
+        if (!cancelled) { setLaws([]); setJudgments([]); setRegDocs([]); setFetchFailed(true); }
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -179,7 +180,7 @@ export default function DocumentsPage() {
               <p className="text-[#1a1a2e] font-semibold mb-1">Il-backend qed jgħabbi... / Backend loading...</p>
               <p className="text-[#6b7280] text-sm mb-3">Run the backend server to see data here</p>
               <p className="text-xs text-[#9ca3af] font-mono">Run: python3 main.py in /backend</p>
-              <p className="text-xs text-[#9ca3af] font-mono mt-1">API: {API}/api/laws/ and {API}/api/judgments/</p>
+              <p className="text-xs text-[#9ca3af] font-mono mt-1">Data loads from static JSON files</p>
             </div>
           )}
 
@@ -191,7 +192,7 @@ export default function DocumentsPage() {
                   <p className="text-[#9ca3af] text-sm py-4">L-ebda riżultat.</p>
                 ) :
                 filteredLaws.map((law) => (
-                  <Link key={law.chapter} href={`/view?url=${encodeURIComponent(law.source_url)}&title=${encodeURIComponent(law.chapter + ' ' + law.title)}`}
+                  <Link key={law.chapter} href={`/detail?type=law&id=${encodeURIComponent(law.chapter)}`}
                     className="flex items-center gap-4 px-4 py-3 bg-white hover:shadow-md border border-[#e5e0d5]
                                hover:border-navy/30 rounded-xl transition-all group shadow-sm">
                     <span className="text-xs font-mono text-navy w-16 shrink-0">{law.chapter}</span>
@@ -212,7 +213,7 @@ export default function DocumentsPage() {
                   <p className="text-[#9ca3af] text-sm py-4">L-ebda riżultat.</p>
                 ) :
                 filteredJudgments.map((j) => (
-                  <Link key={j.reference} href={`/judgments/${j.reference}`}
+                  <Link key={j.reference} href={`/detail?type=judgment&id=${encodeURIComponent(j.reference)}`}
                     className="flex items-center gap-4 px-4 py-3 bg-white hover:shadow-md border border-[#e5e0d5]
                                hover:border-gold/30 rounded-xl transition-all group shadow-sm">
                     <span className="text-xs font-mono text-gold w-28 shrink-0 truncate">{j.reference}</span>
@@ -230,16 +231,78 @@ export default function DocumentsPage() {
 
           {/* Regulatory */}
           {tab === "regulatory" && (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {REGULATORY_BODIES.map((body) => (
-                <a key={body.name} href={body.url} target="_blank" rel="noopener noreferrer"
-                  className="bg-white hover:shadow-md border border-[#e5e0d5] hover:border-gold/30
-                             rounded-2xl p-4 transition-all group shadow-sm">
-                  <p className={`font-bold text-sm mb-1 ${body.color}`}>{body.name}</p>
-                  <p className="text-xs text-[#6b7280] group-hover:text-[#1a1a2e] transition-colors">{body.desc}</p>
-                  <ExternalLink size={12} className="text-[#9ca3af] mt-2" />
-                </a>
-              ))}
+            <div>
+              {/* Source filter */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["All", ...REGULATORY_BODIES.map(b => b.name)].map(src => (
+                  <button key={src} onClick={() => setRegFilter(src)}
+                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all border ${
+                      regFilter === src
+                        ? "bg-gold/10 border-gold/30 text-gold"
+                        : "bg-white border-[#e5e0d5] text-[#6b7280] hover:border-gold/20"
+                    }`}>{src}</button>
+                ))}
+              </div>
+
+              {/* Search in regulatory */}
+              <div className="relative mb-4">
+                <Search size={15} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#9ca3af]" />
+                <input value={q} onChange={(e) => setQ(e.target.value)}
+                  placeholder={lang === "mt" ? "Fittex dokumenti regolatorji..." : "Search regulatory documents..."}
+                  className="w-full pl-10 pr-4 py-3 bg-white border border-[#e5e0d5] rounded-xl text-sm
+                             focus:outline-none focus:border-gold/50 placeholder:text-[#9ca3af] text-[#1a1a2e]" />
+              </div>
+
+              {/* Scraped regulatory docs */}
+              {regDocs.length > 0 && (
+                <>
+                  <p className="text-xs text-[#9ca3af] mb-3">
+                    {regDocs.filter(d => (regFilter === "All" || d.source === regFilter) && (!q.trim() || d.title.toLowerCase().includes(q.toLowerCase()))).length} {lang === "mt" ? "dokumenti" : "documents"}
+                  </p>
+                  <div className="flex flex-col gap-2 mb-6">
+                    {regDocs
+                      .filter(d => regFilter === "All" || d.source === regFilter)
+                      .filter(d => !q.trim() || d.title.toLowerCase().includes(q.toLowerCase()) || d.description.toLowerCase().includes(q.toLowerCase()))
+                      .slice(0, 100)
+                      .map((doc, i) => (
+                        <a key={i} href={doc.url} target="_blank" rel="noopener noreferrer"
+                          className="flex items-center gap-3 px-4 py-3 bg-white hover:shadow-md border border-[#e5e0d5]
+                                     hover:border-gold/30 rounded-xl transition-all group shadow-sm">
+                          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0 ${
+                            doc.source === "FIAU" ? "bg-gold/10 text-gold border border-gold/20" :
+                            doc.source === "MFSA" ? "bg-navy/10 text-navy border border-navy/20" :
+                            doc.source === "MGA" ? "bg-emerald-50 text-emerald-700 border border-emerald-200" :
+                            doc.source === "IDPC" ? "bg-orange-50 text-orange-600 border border-orange-200" :
+                            "bg-[#f5f3ee] text-[#6b7280] border border-[#e5e0d5]"
+                          }`}>{doc.source}</span>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm text-[#6b7280] group-hover:text-[#1a1a2e] truncate transition-colors">{doc.title}</p>
+                            {doc.date && <p className="text-xs text-[#9ca3af] mt-0.5">{doc.date}</p>}
+                          </div>
+                          <span className="text-[10px] text-[#9ca3af] px-2 py-0.5 rounded bg-[#f5f3ee] shrink-0">{doc.doc_type}</span>
+                          {doc.pdf_url && <span className="text-[10px] bg-red-50 text-red-600 px-1.5 py-0.5 rounded font-semibold shrink-0">PDF</span>}
+                          <ExternalLink size={12} className="text-[#9ca3af] shrink-0" />
+                        </a>
+                      ))}
+                  </div>
+                </>
+              )}
+
+              {/* Regulatory body links */}
+              <p className="text-xs text-[#9ca3af] uppercase tracking-widest mb-3">
+                {lang === "mt" ? "Korpi Regolatorji" : "Regulatory Bodies"}
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {REGULATORY_BODIES.map((body) => (
+                  <a key={body.name} href={body.url} target="_blank" rel="noopener noreferrer"
+                    className="bg-white hover:shadow-md border border-[#e5e0d5] hover:border-gold/30
+                               rounded-2xl p-4 transition-all group shadow-sm">
+                    <p className={`font-bold text-sm mb-1 ${body.color}`}>{body.name}</p>
+                    <p className="text-xs text-[#6b7280] group-hover:text-[#1a1a2e] transition-colors">{body.desc}</p>
+                    <ExternalLink size={12} className="text-[#9ca3af] mt-2" />
+                  </a>
+                ))}
+              </div>
             </div>
           )}
         </motion.div>

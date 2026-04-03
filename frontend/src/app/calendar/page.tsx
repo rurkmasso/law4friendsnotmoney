@@ -14,6 +14,7 @@ import {
   Users,
 } from "lucide-react";
 import { useLanguage } from "@/lib/useLanguage";
+import { getJudgments, type Judgment } from "@/lib/api";
 import Link from "next/link";
 import {
   format,
@@ -135,9 +136,11 @@ function generateId() {
 export default function CalendarPage() {
   const [lang, setLang] = useLanguage();
   const [events, setEvents] = useState<CalendarEvent[]>([]);
+  const [courtEvents, setCourtEvents] = useState<CalendarEvent[]>([]);
   const [currentMonth, setCurrentMonth] = useState(new Date());
   const [showForm, setShowForm] = useState(false);
   const [selectedDate, setSelectedDate] = useState<string>("");
+  const [selectedDayEvents, setSelectedDayEvents] = useState<CalendarEvent[]>([]);
 
   // Form state
   const [formName, setFormName] = useState("");
@@ -148,7 +151,7 @@ export default function CalendarPage() {
 
   const t = LABELS[lang];
 
-  // Load from localStorage
+  // Load user events from localStorage
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
@@ -156,6 +159,33 @@ export default function CalendarPage() {
     } catch {
       setEvents([]);
     }
+  }, []);
+
+  // Load real court judgment dates from static data
+  useEffect(() => {
+    (async () => {
+      const judgments = await getJudgments();
+      const courtEvts: CalendarEvent[] = judgments
+        .filter((j: Judgment) => j.date)
+        .map((j: Judgment) => {
+          // Normalize date: could be DD/MM/YYYY or YYYY-MM-DD
+          let isoDate = j.date;
+          if (j.date.includes("/")) {
+            const parts = j.date.split("/");
+            if (parts.length === 3) {
+              isoDate = `${parts[2]}-${parts[1].padStart(2, "0")}-${parts[0].padStart(2, "0")}`;
+            }
+          }
+          return {
+            id: `court-${j.reference}`,
+            name: `${j.reference} — ${j.parties}`,
+            date: isoDate,
+            type: "court" as EventType,
+            notes: `${j.court || ""} · ${j.judge || ""}`,
+          };
+        });
+      setCourtEvents(courtEvts);
+    })();
   }, []);
 
   const saveEvents = useCallback((updated: CalendarEvent[]) => {
@@ -206,12 +236,15 @@ export default function CalendarPage() {
   const calEnd = endOfWeek(monthEnd, { weekStartsOn: 0 });
   const calDays = eachDayOfInterval({ start: calStart, end: calEnd });
 
+  // Merge user events + court events
+  const allEvents = [...events, ...courtEvents];
+
   const eventsOnDay = (day: Date) =>
-    events.filter((e) => {
+    allEvents.filter((e) => {
       try { return isSameDay(parseISO(e.date), day); } catch { return false; }
     });
 
-  // Upcoming events — sorted by date, only future or today
+  // Upcoming user events — sorted by date, only future or today
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const upcomingEvents = [...events]
@@ -336,7 +369,11 @@ export default function CalendarPage() {
                   return (
                     <button
                       key={idx}
-                      onClick={() => handleOpenForm(format(day, "yyyy-MM-dd"))}
+                      onClick={() => {
+                        const dateStr = format(day, "yyyy-MM-dd");
+                        setSelectedDate(dateStr);
+                        setSelectedDayEvents(eventsOnDay(day));
+                      }}
                       className={`relative min-h-[64px] p-1.5 border-b border-r border-[#e5e0d5] text-left
                                   transition-all hover:bg-gold/5 group
                                   ${!inMonth ? "opacity-30" : ""}
@@ -586,6 +623,50 @@ export default function CalendarPage() {
                 </div>
               )}
             </motion.div>
+
+            {/* Selected Day Court Activity */}
+            {selectedDate && selectedDayEvents.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm overflow-hidden"
+              >
+                <div className="px-5 py-4 border-b border-[#e5e0d5] flex items-center gap-2">
+                  <Scale size={15} className="text-gold" />
+                  <h3 className="font-display font-bold text-[#1a1a2e] text-sm">
+                    {selectedDate} — {selectedDayEvents.length} {lang === "mt" ? "avvenimenti" : "events"}
+                  </h3>
+                </div>
+                <div className="divide-y divide-[#e5e0d5] max-h-[300px] overflow-y-auto">
+                  {selectedDayEvents.map((ev) => {
+                    const colors = EVENT_COLORS[ev.type];
+                    const Icon = EVENT_ICONS[ev.type];
+                    const isCourtCase = ev.id.startsWith("court-");
+                    const ref = isCourtCase ? ev.id.replace("court-", "") : "";
+                    return (
+                      <div key={ev.id} className="px-4 py-3 hover:bg-[#f5f3ee]/60 transition-colors">
+                        <div className="flex items-start gap-2">
+                          <div className={`p-1 rounded-lg ${colors.bg} border ${colors.border} shrink-0 mt-0.5`}>
+                            <Icon size={10} className={colors.text} />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            {isCourtCase ? (
+                              <Link href={`/detail?type=judgment&id=${encodeURIComponent(ref)}`}
+                                className="text-xs font-semibold text-[#1a1a2e] hover:text-gold truncate block">
+                                {ev.name}
+                              </Link>
+                            ) : (
+                              <p className="text-xs font-semibold text-[#1a1a2e] truncate">{ev.name}</p>
+                            )}
+                            {ev.notes && <p className="text-[10px] text-[#9ca3af] mt-0.5 truncate">{ev.notes}</p>}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            )}
           </div>
         </div>
 

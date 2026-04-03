@@ -226,6 +226,22 @@ export const getJudgments = async (params: Record<string, string | number> = {})
   } catch { return []; }
 };
 
+export interface RegulatoryDoc {
+  title: string;
+  source: string;
+  doc_type: string;
+  url: string;
+  pdf_url: string;
+  date: string;
+  description: string;
+}
+
+export const getRegulatoryDocs = async (): Promise<RegulatoryDoc[]> => {
+  const staticData = await loadStaticData<RegulatoryDoc>("regulatory_docs.json");
+  if (staticData.length > 0) return staticData;
+  return [];
+};
+
 export const getTemplates = () =>
   api.get<{ id: string; title: string }[]>("/api/draft/templates").then((r) => r.data);
 
