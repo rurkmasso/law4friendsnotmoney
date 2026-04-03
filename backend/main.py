@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import redis.asyncio as aioredis
 from database import init_db
 from config import settings
-from api import search, lawyers, laws, judgments, draft, alerts
+from api import search, lawyers, laws, judgments, draft, alerts, matter, scrape
 
 _redis: aioredis.Redis = None
 
@@ -40,6 +40,8 @@ app.include_router(laws.router, prefix="/api/laws", tags=["Liġijiet"])
 app.include_router(judgments.router, prefix="/api/judgments", tags=["Sentenzi"])
 app.include_router(draft.router, prefix="/api/draft", tags=["Abbozzar"])
 app.include_router(alerts.router, prefix="/api/alerts", tags=["Allerts"])
+app.include_router(matter.router, prefix="/api/matter", tags=["Matters"])
+app.include_router(scrape.router, prefix="/api/scrape", tags=["Admin"])
 
 
 @app.get("/")
