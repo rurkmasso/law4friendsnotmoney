@@ -29,7 +29,7 @@ jobs:
       - name: Build
         run: cd frontend && npm run build
         env:
-          NEXT_PUBLIC_API_URL: https://law4friendsnotmoney-production.up.railway.app
+          NEXT_PUBLIC_API_URL: https://ligi4friends-api.onrender.com
       - uses: actions/upload-pages-artifact@v3
         with:
           path: frontend/out
