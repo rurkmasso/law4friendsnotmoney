@@ -165,7 +165,8 @@ SOURCES = {
 
 async def main(source: str = "all"):
     print("[bold gold1]LexMalta Ingestion Script — Powered by Rark Musso[/bold gold1]")
-    await init_db()
+    # Tables already created — skip init_db() to avoid race conditions
+    # Run: python3 -c "from database import init_db; import asyncio; asyncio.run(init_db())" first
     async with AsyncSessionLocal() as db:
         if source == "all":
             for name, fn in SOURCES.items():

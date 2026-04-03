@@ -4,3 +4,4 @@ from .lawyer import Lawyer
 from .document import Document
 from .alert import Alert
 from .matter import Matter
+from .law_firm import LawFirm

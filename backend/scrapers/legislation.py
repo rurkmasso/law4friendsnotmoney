@@ -1,70 +1,118 @@
 """
-Scraper for legislation.mt — all chapters of the Laws of Malta.
-Respects ToS by crawling slowly and for public-interest research only.
+Scraper for legislation.mt — all Malta laws.
+Site uses AJAX DataTables — we POST to the partial endpoints directly.
 """
 import re
+import asyncio
 from bs4 import BeautifulSoup
 from scrapers.base import BaseScraper
 from rich import print
 
 BASE_URL = "https://legislation.mt"
-INDEX_URL = f"{BASE_URL}/en/legislation/primary"
+
+# All AJAX endpoints for different legislation types
+ENDPOINTS = [
+    {"name": "Acts",          "url": f"{BASE_URL}/Acts/ActsPartial2",         "params": {"YearString": "", "AgentString": "", "FilterString": "", "TitleString": ""}},
+    {"name": "Legal Notices", "url": f"{BASE_URL}/LegalNotices/LegalNoticesPartial", "params": {"YearString": "", "AgentString": "", "FilterString": "", "TitleString": ""}},
+]
+
+LEGISLATION_AJAX = f"{BASE_URL}/Legislations/LegislationPartialGet"
 
 
 class LegislationScraper(BaseScraper):
 
     async def scrape(self) -> list[dict]:
         laws = []
-        chapters = await self._get_chapter_list()
-        print(f"[green]Found {len(chapters)} chapters on legislation.mt[/green]")
-        for chapter_url, chapter_ref, title in chapters:
-            try:
-                law = await self._scrape_chapter(chapter_url, chapter_ref, title)
-                if law:
-                    laws.append(law)
-                    print(f"[cyan]  Scraped {chapter_ref}: {title[:60]}[/cyan]")
-            except Exception as e:
-                print(f"[red]  Failed {chapter_ref}: {e}[/red]")
+
+        # Main consolidated chapters via the legislation index page
+        chapters = await self._get_chapters_from_index()
+        laws.extend(chapters)
+        print(f"[green]Chapters scraped: {len(chapters)}[/green]")
+
+        # Acts by year (going back as far as possible)
+        acts = await self._get_acts()
+        laws.extend(acts)
+        print(f"[green]Acts scraped: {len(acts)}[/green]")
+
         return laws
 
-    async def _get_chapter_list(self) -> list[tuple]:
-        resp = await self.get(INDEX_URL)
-        soup = BeautifulSoup(resp.text, "lxml")
-        chapters = []
-        for row in soup.select("table tr, .legislation-list li, a[href*='/legislation/']"):
-            href = row.get("href", "")
-            if not href:
+    async def _get_chapters_from_index(self) -> list[dict]:
+        """Scrape the main legislation index — tries multiple URL patterns."""
+        laws = []
+        urls_to_try = [
+            f"{BASE_URL}/Legislation",
+            f"{BASE_URL}/legislation",
+            f"{BASE_URL}/en/Legislation",
+        ]
+        for url in urls_to_try:
+            try:
+                resp = await self.get(url)
+                soup = BeautifulSoup(resp.text, "lxml")
+                rows = soup.select("#mainTable tbody tr, table.dataTable tr, tr[data-pdflink], tr[pdfLink]")
+                if not rows:
+                    # Try getting all table rows
+                    rows = soup.select("table tr")
+                for row in rows:
+                    cells = row.select("td")
+                    if len(cells) < 2:
+                        continue
+                    chapter = cells[0].get_text(strip=True) if cells else ""
+                    title = cells[1].get_text(strip=True) if len(cells) > 1 else ""
+                    pdf_link = row.get("data-pdflink") or row.get("pdfLink") or ""
+                    if chapter and title:
+                        laws.append({
+                            "chapter": chapter,
+                            "title": title,
+                            "full_text": f"{chapter} {title}",
+                            "source_url": url,
+                            "pdf_url": f"{BASE_URL}{pdf_link}" if pdf_link else None,
+                        })
+                if laws:
+                    break
+            except Exception as e:
+                print(f"[yellow]{url}: {e}[/yellow]")
                 continue
-            full_url = BASE_URL + href if href.startswith("/") else href
-            text = row.get_text(strip=True)
-            match = re.search(r"(CAP\.?\s*\d+[A-Z]?)", text, re.IGNORECASE)
-            chapter_ref = match.group(1).upper() if match else text[:20]
-            title = text.replace(chapter_ref, "").strip(" -–")
-            chapters.append((full_url, chapter_ref, title))
-        return chapters
+        return laws
 
-    async def _scrape_chapter(self, url: str, chapter_ref: str, title: str) -> dict | None:
-        resp = await self.get(url)
-        soup = BeautifulSoup(resp.text, "lxml")
+    async def _get_acts(self) -> list[dict]:
+        """Scrape Acts by POSTing to the AJAX endpoint."""
+        acts = []
+        from datetime import datetime
+        current_year = datetime.now().year
 
-        # Extract full text from main content area
-        content = soup.select_one("main, .legislation-content, article, #content")
-        full_text = content.get_text(separator="\n", strip=True) if content else ""
-
-        # Get PDF link if available
-        pdf_link = soup.find("a", href=re.compile(r"\.pdf", re.I))
-        pdf_url = (BASE_URL + pdf_link["href"] if pdf_link and pdf_link["href"].startswith("/") else
-                   pdf_link["href"] if pdf_link else None)
-
-        # Get last amended date
-        amended_text = soup.find(string=re.compile(r"amended|updated|revised", re.I))
-        last_amended = str(amended_text).strip() if amended_text else None
-
-        return {
-            "chapter": chapter_ref,
-            "title": title,
-            "full_text": full_text,
-            "source_url": url,
-            "pdf_url": pdf_url,
-            "last_amended_raw": last_amended,
-        }
+        for year in range(current_year, 1900, -1):
+            try:
+                resp = await self.client.post(
+                    f"{BASE_URL}/Acts/ActsPartial2",
+                    data={"YearString": str(year), "AgentString": "", "FilterString": "", "TitleString": ""},
+                    headers={**self.headers, "X-Requested-With": "XMLHttpRequest"},
+                )
+                soup = BeautifulSoup(resp.text, "lxml")
+                rows = soup.select("tr")
+                year_acts = []
+                for row in rows:
+                    cells = row.select("td")
+                    if not cells:
+                        continue
+                    title = cells[0].get_text(strip=True) if cells else ""
+                    if not title or len(title) < 5:
+                        continue
+                    pdf_link = row.get("data-url", "") or ""
+                    year_acts.append({
+                        "chapter": f"ACT/{year}",
+                        "title": title,
+                        "full_text": title,
+                        "source_url": f"{BASE_URL}/Acts",
+                        "pdf_url": f"{BASE_URL}{pdf_link}" if pdf_link else None,
+                    })
+                if year_acts:
+                    acts.extend(year_acts)
+                    print(f"[cyan]Acts {year}: {len(year_acts)}[/cyan]")
+                elif year < current_year - 5:
+                    # Stop if no acts found for older years
+                    break
+            except Exception as e:
+                if year > current_year - 3:
+                    print(f"[yellow]Acts {year}: {e}[/yellow]")
+                continue
+        return acts
