@@ -667,6 +667,70 @@ async def scrape_regulatory(page):
 
 
 # ────────────────────────────────────────────────────────────
+# STEP 6: Scrape MGA licensed operators
+# ────────────────────────────────────────────────────────────
+async def scrape_mga_operators(page):
+    print("\n" + "=" * 60)
+    print("  STEP 6: Scraping MGA licensed operators")
+    print("=" * 60)
+
+    operators = load("igaming_operators.json")
+    existing_licences = {o["licence_number"] for o in operators}
+
+    try:
+        await page.goto("https://www.mga.org.mt/licensee-register/", wait_until="networkidle", timeout=30000)
+        await page.wait_for_timeout(5000)
+
+        content = await page.content()
+        soup = BeautifulSoup(content, "lxml")
+
+        for row in soup.select("table tbody tr, .licensee-item, .operator-row"):
+            cells = row.select("td")
+            if len(cells) >= 3:
+                texts = [c.get_text(strip=True) for c in cells]
+                licence = texts[0] if texts[0] else ""
+                company = texts[1] if len(texts) > 1 else ""
+                lic_type = texts[2] if len(texts) > 2 else ""
+                status = texts[3] if len(texts) > 3 else "Active"
+
+                if licence and licence not in existing_licences:
+                    existing_licences.add(licence)
+                    operators.append({
+                        "company_name": company,
+                        "licence_number": licence,
+                        "licence_type": lic_type,
+                        "status": status,
+                        "source_url": "https://www.mga.org.mt/licensee-register/",
+                    })
+
+        # Also try links approach
+        for a in soup.select("a[href]"):
+            text = a.get_text(strip=True)
+            if "MGA" in text and "/" in text and len(text) < 50:
+                # Looks like a licence number
+                if text not in existing_licences:
+                    existing_licences.add(text)
+                    parent = a.find_parent("tr") or a.find_parent("li") or a.find_parent("div")
+                    company = ""
+                    if parent:
+                        company = parent.get_text(strip=True).replace(text, "").strip().strip("-–·").strip()
+                    operators.append({
+                        "company_name": company[:200],
+                        "licence_number": text,
+                        "licence_type": "B2C" if "B2C" in text else "B2B" if "B2B" in text else "",
+                        "status": "Active",
+                        "source_url": "https://www.mga.org.mt/licensee-register/",
+                    })
+
+        print(f"  MGA: {len(operators)} operators")
+    except Exception as e:
+        print(f"  MGA operators: {str(e)[:50]}")
+
+    save("igaming_operators.json", operators)
+    return operators
+
+
+# ────────────────────────────────────────────────────────────
 # MAIN
 # ────────────────────────────────────────────────────────────
 async def main():
@@ -706,13 +770,16 @@ async def main():
         # Step 5: Regulatory docs
         await scrape_regulatory(page)
 
+        # Step 6: MGA operators
+        await scrape_mga_operators(page)
+
         await browser.close()
 
     # Final summary
     print("\n" + "=" * 60)
     print("  ✅ SCRAPING COMPLETE!")
     print("=" * 60)
-    for fname in ["legislation.json", "ecourts_judgments.json", "lawyers.json", "regulatory_docs.json"]:
+    for fname in ["legislation.json", "ecourts_judgments.json", "lawyers.json", "regulatory_docs.json", "igaming_operators.json"]:
         data = load(fname)
         print(f"  {fname}: {len(data)} records")
     print()
