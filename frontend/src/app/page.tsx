@@ -7,9 +7,21 @@ import { useLanguage } from "@/lib/useLanguage";
 import CitationCard from "@/components/CitationCard";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
-import axios from "axios";
 
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
+// Lightweight fetch wrapper for optional backend features (trending, autocomplete)
+const tryGet = async (url: string, params?: Record<string, string>) => {
+  try {
+    const qs = params ? "?" + new URLSearchParams(params).toString() : "";
+    const res = await fetch(url + qs, { signal: AbortSignal.timeout(5000) });
+    if (res.ok) return await res.json();
+  } catch {}
+  return null;
+};
+const tryPost = (url: string, body: any) => {
+  fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }).catch(() => {});
+};
 
 const LABELS = {
   mt: {
@@ -73,18 +85,18 @@ export default function HomePage() {
   const t = LABELS[lang];
 
   useEffect(() => {
-    axios.get(`${API}/api/suggestions/trending`).then((r) => setTrending(r.data)).catch(() => {});
-    axios.get(`${API}/api/suggestions/daily-feed`).then((r) => {
-      setFeed([...r.data.judgments, ...r.data.documents].slice(0, 5));
-    }).catch(() => {});
+    tryGet(`${API}/api/suggestions/trending`).then(d => { if (d) setTrending(d); });
+    tryGet(`${API}/api/suggestions/daily-feed`).then(d => {
+      if (d) setFeed([...(d.judgments || []), ...(d.documents || [])].slice(0, 5));
+    });
   }, []);
 
   const handleQueryChange = async (val: string) => {
     setQuery(val);
     if (val.length < 2) { setSuggestions([]); return; }
     try {
-      const res = await axios.get(`${API}/api/suggestions/autocomplete`, { params: { q: val } });
-      setSuggestions(res.data);
+      const data = await tryGet(`${API}/api/suggestions/autocomplete`, { q: val });
+      setSuggestions(data || []);
     } catch { setSuggestions([]); }
   };
 
@@ -97,12 +109,11 @@ export default function HomePage() {
     setResult(null);
     setFollowUps([]);
     try {
-      axios.post(`${API}/api/suggestions/log-search`, { query: finalQuery }).catch(() => {});
+      tryPost(`${API}/api/suggestions/log-search`, { query: finalQuery });
       const res = await search(finalQuery, lang);
       setResult(res);
-      axios.get(`${API}/api/suggestions/smart-followups`, { params: { query: finalQuery, language: lang } })
-        .then((fu) => setFollowUps(fu.data))
-        .catch(() => {});
+      tryGet(`${API}/api/suggestions/smart-followups`, { query: finalQuery, language: lang })
+        .then(d => { if (d) setFollowUps(d); });
     } catch (e) {
       console.error(e);
     } finally {
