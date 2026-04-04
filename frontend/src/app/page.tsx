@@ -131,7 +131,7 @@ export default function HomePage() {
           <Link href="/" className="flex items-center gap-2">
             <Scale size={20} className="text-gold" />
             <span className="text-lg font-display font-bold text-[#1a1a2e]">
-              <span className="text-gold">Ligi</span>4Friends
+              <span className="text-gold">Sac</span>Ligi
             </span>
           </Link>
           <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
@@ -171,7 +171,7 @@ export default function HomePage() {
           </motion.div>
 
           <h1 className="text-5xl font-display font-bold tracking-tight mb-3 text-[#1a1a2e]">
-            <span className="text-gold">Ligi</span>4Friends
+            <span className="text-gold">Sac</span>Ligi
           </h1>
           <p className="text-lg text-[#6b7280] mb-1">{t.sub}</p>
           <p className="text-xs text-[#9ca3af] mt-1">Powered by Rark Musso</p>
@@ -418,7 +418,7 @@ export default function HomePage() {
 
         {/* Footer */}
         <div className="py-10 text-center text-xs text-[#9ca3af] border-t border-[#e5e0d5]">
-          <p>Ligi4Friends — Powered by Rark Musso · Miftuħa għal Kulħadd · B'Xejn għal Dejjem</p>
+          <p>SacLigi — Powered by Rark Musso · Miftuħa għal Kulħadd · B'Xejn għal Dejjem</p>
           <p className="mt-1">Mhux parir legali. For legal research only.</p>
         </div>
       </div>

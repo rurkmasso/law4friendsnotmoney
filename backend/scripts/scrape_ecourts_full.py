@@ -306,7 +306,7 @@ async def paginate_and_collect(page):
 
 async def main(resume=False, test=False):
     print("=" * 60)
-    print("  Ligi4Friends — eCourts Full Scraper v2")
+    print("  SacLigi — eCourts Full Scraper v2")
     print("  Target: ALL ~77,500 judgments")
     print("  Strategy: Search by court, paginate all results")
     print("  Powered by Rark Musso")

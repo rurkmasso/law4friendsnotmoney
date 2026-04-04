@@ -344,7 +344,7 @@ function DetailContent() {
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
           <NextLink href="/" className="flex items-center gap-2">
             <Scale size={20} className="text-gold" />
-            <span className="text-lg font-display font-bold"><span className="text-gold">Ligi</span>4Friends</span>
+            <span className="text-lg font-display font-bold"><span className="text-gold">Sac</span>Ligi</span>
           </NextLink>
           <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
             {NAV_LINKS.map(link => (
@@ -379,7 +379,7 @@ function DetailContent() {
         )}
 
         <div className="py-10 mt-10 text-center text-xs text-[#9ca3af] border-t border-[#e5e0d5]">
-          <p>Ligi4Friends — Powered by Rark Musso</p>
+          <p>SacLigi — Powered by Rark Musso</p>
         </div>
       </div>
     </div>

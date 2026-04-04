@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Ligi4Friends — Il-Liġi Maltija Miftuħa għal Kulħadd",
+  title: "SacLigi — Il-Liġi Maltija Miftuħa għal Kulħadd",
   description: "Free Maltese legal intelligence. 77,000+ judgments, 500+ law chapters, lawyer profiles, document drafting. B'xejn għal dejjem. Powered by Rark Musso.",
   keywords: "Malta law, Maltese law, legal research Malta, avukati Malta, liġi Malta",
 };
