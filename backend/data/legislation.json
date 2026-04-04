@@ -1,562 +1,5 @@
 [
   {
-    "chapter": "RLS",
-    "title": "L-Att tal-2021 dwar r-Reviżjoni tal-Liġijiet Statutarji",
-    "title_en": "",
-    "title_mt": "L-Att tal-2021 dwar r-Reviżjoni tal-Liġijiet Statutarji",
-    "type": "",
-    "eli_link": "eli/slra",
-    "keywords": [],
-    "languages": [
-      "English",
-      "Maltese"
-    ],
-    "format": "PDF",
-    "status": "",
-    "effective_date": "",
-    "publication_date": "",
-    "indicative_publication_date": "",
-    "pdf_url": "",
-    "pdf_url_en": "",
-    "pdf_url_mt": "",
-    "source_url": "https://legislation.mt/eli/slra/mlt",
-    "relationships": [],
-    "timeline": [
-      {
-        "text": "Tfittxija avvanzata"
-      },
-      {
-        "text": "Tfittxija avvanzata",
-        "url": "https://legislation.mt/Search"
-      },
-      {
-        "text": "FAQs"
-      },
-      {
-        "text": "FAQs",
-        "url": "https://legislation.mt/Home/FAQList"
-      },
-      {
-        "text": "Ikkuntattjana"
-      },
-      {
-        "text": "Ikkuntattjana",
-        "url": "https://legislation.mt/Home/ContactUs"
-      },
-      {
-        "text": "eCourts"
-      },
-      {
-        "text": "eCourts",
-        "url": "https://ecourts.gov.mt"
-      },
-      {
-        "text": "Sign up/in"
-      },
-      {
-        "text": "Sign up/in",
-        "url": "https://legislation.mt/Authentication/Authenticate"
-      },
-      {
-        "text": "Liġijiet konsolidati"
-      },
-      {
-        "text": "Liġijiet konsolidati",
-        "url": "https://legislation.mt/Legislation"
-      },
-      {
-        "text": "PubblikazzjonijietAttiAvviżi LegaliBye-LawsAbbozzi Parlamentari"
-      },
-      {
-        "text": "Pubblikazzjonijiet",
-        "url": "https://legislation.mt#"
-      },
-      {
-        "text": "Atti",
-        "url": "https://legislation.mt/Acts"
-      },
-      {
-        "text": "Avviżi Legali",
-        "url": "https://legislation.mt/LegalNotices"
-      },
-      {
-        "text": "Bye-Laws",
-        "url": "https://legislation.mt/ByLaws"
-      },
-      {
-        "text": "Abbozzi Parlamentari",
-        "url": "https://parlament.mt/en/14th-leg/bills"
-      },
-      {
-        "text": "Liġijiet tal-UE"
-      },
-      {
-        "text": "Liġijiet tal-UE",
-        "url": "https://legislation.mt/EULaw"
-      },
-      {
-        "text": "Followed Laws"
-      },
-      {
-        "text": "Sign in to view your followed laws!",
-        "url": "https://legislation.mt/Authentication/AuthenticateWithoutRedirect"
-      },
-      {
-        "text": "L-AĦĦAR AĠĠORNAMENTI"
-      },
-      {
-        "text": "Att dwar l-Eko-Kontribuzzjoni"
-      },
-      {
-        "text": "Kodiċi Kriminali"
-      },
-      {
-        "text": "Ordinanza dwar ir-Regolament tat-Traffiku"
-      },
-      {
-        "text": "Att dwar l-Amministrazzjoni tat-Taxxa"
-      },
-      {
-        "text": "Kodiċi Ċivili"
-      },
-      {
-        "text": "FAQs"
-      },
-      {
-        "text": "X’tip ta’ leġiżlazzjoni issib f'din il-website?",
-        "url": "https://legislation.mt/Home/FAQList#FAQ_0"
-      },
-      {
-        "text": "Nista' insib leġiżlazzjoni ġdida fuq il-website?",
-        "url": "https://legislation.mt/Home/FAQList#FAQ_1"
-      },
-      {
-        "text": "Kemm huwa aġġornat il-kontenut konsolidat ta’ din il-website?",
-        "url": "https://legislation.mt/Home/FAQList#FAQ_2"
-      },
-      {
-        "text": "Uri iktar...",
-        "url": "https://legislation.mt/Home/FAQList"
-      },
-      {
-        "text": "GWIDI BIL-VIDJO"
-      },
-      {
-        "text": "Liġijiet Konsolidati"
-      },
-      {
-        "text": "Pubblikazzjonijiet"
-      },
-      {
-        "text": "Liġijiet tal-Unjoni Ewropea"
-      },
-      {
-        "text": "Tfitxxija avvanzata"
-      },
-      {
-        "text": "Filmat għal Tfittxija Avvanzata fl-Ontoloġija"
-      },
-      {
-        "text": "Filmat dwar il-Linja Kronoloġika"
-      },
-      {
-        "text": "Client Notifications video tutorial"
-      },
-      {
-        "text": "Kollu(ha) fis-seħħ"
-      },
-      {
-        "text": "eli/slra",
-        "url": "https://legislation.mt/eli/slra"
-      },
-      {
-        "text": "16/07/2021",
-        "url": "https://legislation.mt#",
-        "date": "16/07/2021"
-      },
-      {
-        "text": "Ingliż",
-        "url": "https://legislation.mt/eli/slra/20210716/eng"
-      },
-      {
-        "text": "Status"
-      },
-      {
-        "text": "Data ta' dħul fis-seħħ"
-      },
-      {
-        "text": "Data tal-pubblikazzjoni"
-      },
-      {
-        "text": "Att Bażiku"
-      },
-      {
-        "text": "Regoli tal-Privatezza"
-      },
-      {
-        "text": "Regoli tal-Privatezza",
-        "url": "https://legislation.mt/Home/PrivacyPolicy"
-      },
-      {
-        "text": "Cookie Policy"
-      },
-      {
-        "text": "Cookie Policy",
-        "url": "https://legislation.mt/Home/CookiePolicy"
-      },
-      {
-        "text": "Accessibility Statement"
-      },
-      {
-        "text": "Accessibility Statement",
-        "url": "https://legislation.mt/Home/AccessibilityStatement"
-      }
-    ]
-  },
-  {
-    "chapter": "Kostituzzjoni",
-    "title": "Kostituzzjoni ta' Malta",
-    "title_en": "",
-    "title_mt": "Kostituzzjoni ta' Malta",
-    "type": "",
-    "eli_link": "eli/const",
-    "keywords": [],
-    "languages": [
-      "English",
-      "Maltese"
-    ],
-    "format": "PDF",
-    "status": "",
-    "effective_date": "",
-    "publication_date": "",
-    "indicative_publication_date": "",
-    "pdf_url": "",
-    "pdf_url_en": "",
-    "pdf_url_mt": "",
-    "source_url": "https://legislation.mt/eli/const/mlt",
-    "relationships": [],
-    "timeline": [
-      {
-        "text": "Tfittxija avvanzata"
-      },
-      {
-        "text": "Tfittxija avvanzata",
-        "url": "https://legislation.mt/Search"
-      },
-      {
-        "text": "FAQs"
-      },
-      {
-        "text": "FAQs",
-        "url": "https://legislation.mt/Home/FAQList"
-      },
-      {
-        "text": "Ikkuntattjana"
-      },
-      {
-        "text": "Ikkuntattjana",
-        "url": "https://legislation.mt/Home/ContactUs"
-      },
-      {
-        "text": "eCourts"
-      },
-      {
-        "text": "eCourts",
-        "url": "https://ecourts.gov.mt"
-      },
-      {
-        "text": "Sign up/in"
-      },
-      {
-        "text": "Sign up/in",
-        "url": "https://legislation.mt/Authentication/Authenticate"
-      },
-      {
-        "text": "Liġijiet konsolidati"
-      },
-      {
-        "text": "Liġijiet konsolidati",
-        "url": "https://legislation.mt/Legislation"
-      },
-      {
-        "text": "PubblikazzjonijietAttiAvviżi LegaliBye-LawsAbbozzi Parlamentari"
-      },
-      {
-        "text": "Pubblikazzjonijiet",
-        "url": "https://legislation.mt#"
-      },
-      {
-        "text": "Atti",
-        "url": "https://legislation.mt/Acts"
-      },
-      {
-        "text": "Avviżi Legali",
-        "url": "https://legislation.mt/LegalNotices"
-      },
-      {
-        "text": "Bye-Laws",
-        "url": "https://legislation.mt/ByLaws"
-      },
-      {
-        "text": "Abbozzi Parlamentari",
-        "url": "https://parlament.mt/en/14th-leg/bills"
-      },
-      {
-        "text": "Liġijiet tal-UE"
-      },
-      {
-        "text": "Liġijiet tal-UE",
-        "url": "https://legislation.mt/EULaw"
-      },
-      {
-        "text": "Followed Laws"
-      },
-      {
-        "text": "Sign in to view your followed laws!",
-        "url": "https://legislation.mt/Authentication/AuthenticateWithoutRedirect"
-      },
-      {
-        "text": "L-AĦĦAR AĠĠORNAMENTI"
-      },
-      {
-        "text": "Att dwar l-Eko-Kontribuzzjoni"
-      },
-      {
-        "text": "Kodiċi Kriminali"
-      },
-      {
-        "text": "Ordinanza dwar ir-Regolament tat-Traffiku"
-      },
-      {
-        "text": "Att dwar l-Amministrazzjoni tat-Taxxa"
-      },
-      {
-        "text": "Kodiċi Ċivili"
-      },
-      {
-        "text": "FAQs"
-      },
-      {
-        "text": "X’tip ta’ leġiżlazzjoni issib f'din il-website?",
-        "url": "https://legislation.mt/Home/FAQList#FAQ_0"
-      },
-      {
-        "text": "Nista' insib leġiżlazzjoni ġdida fuq il-website?",
-        "url": "https://legislation.mt/Home/FAQList#FAQ_1"
-      },
-      {
-        "text": "Kemm huwa aġġornat il-kontenut konsolidat ta’ din il-website?",
-        "url": "https://legislation.mt/Home/FAQList#FAQ_2"
-      },
-      {
-        "text": "Uri iktar...",
-        "url": "https://legislation.mt/Home/FAQList"
-      },
-      {
-        "text": "GWIDI BIL-VIDJO"
-      },
-      {
-        "text": "Liġijiet Konsolidati"
-      },
-      {
-        "text": "Pubblikazzjonijiet"
-      },
-      {
-        "text": "Liġijiet tal-Unjoni Ewropea"
-      },
-      {
-        "text": "Tfitxxija avvanzata"
-      },
-      {
-        "text": "Filmat għal Tfittxija Avvanzata fl-Ontoloġija"
-      },
-      {
-        "text": "Filmat dwar il-Linja Kronoloġika"
-      },
-      {
-        "text": "Client Notifications video tutorial"
-      },
-      {
-        "text": "Kollu(ha) fis-seħħ"
-      },
-      {
-        "text": "eli/const",
-        "url": "https://legislation.mt/eli/const"
-      },
-      {
-        "text": "18/12/2025",
-        "url": "https://legislation.mt#",
-        "date": "18/12/2025"
-      },
-      {
-        "text": "Ingliż",
-        "url": "https://legislation.mt/eli/const/20251218/eng"
-      },
-      {
-        "text": "Status"
-      },
-      {
-        "text": "Data ta' dħul fis-seħħ"
-      },
-      {
-        "text": "Data tal-pubblikazzjoni"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Emendat minn"
-      },
-      {
-        "text": "Regoli tal-Privatezza"
-      },
-      {
-        "text": "Regoli tal-Privatezza",
-        "url": "https://legislation.mt/Home/PrivacyPolicy"
-      },
-      {
-        "text": "Cookie Policy"
-      },
-      {
-        "text": "Cookie Policy",
-        "url": "https://legislation.mt/Home/CookiePolicy"
-      },
-      {
-        "text": "Accessibility Statement"
-      },
-      {
-        "text": "Accessibility Statement",
-        "url": "https://legislation.mt/Home/AccessibilityStatement"
-      }
-    ]
-  },
-  {
     "chapter": "Kap. 1",
     "title": "Liġi dwar il-Kostituzzjoni u Ġurisduzzjoni tal-Qrati Ekklesjastiċi",
     "title_en": "",
@@ -14260,5 +13703,2974 @@
     "format": "pdf",
     "local_pdf_en": "cap_465_en.pdf",
     "local_pdf_mt": "cap_465_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 466",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/466",
+    "source_url": "https://legislation.mt/eli/cap/466",
+    "pdf_url_en": "https://legislation.mt/eli/cap/466/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/466/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_466_en.pdf",
+    "local_pdf_mt": "cap_466_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 467",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/467",
+    "source_url": "https://legislation.mt/eli/cap/467",
+    "pdf_url_en": "https://legislation.mt/eli/cap/467/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/467/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_467_en.pdf",
+    "local_pdf_mt": "cap_467_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 468",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/468",
+    "source_url": "https://legislation.mt/eli/cap/468",
+    "pdf_url_en": "https://legislation.mt/eli/cap/468/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/468/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_468_en.pdf",
+    "local_pdf_mt": "cap_468_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 469",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/469",
+    "source_url": "https://legislation.mt/eli/cap/469",
+    "pdf_url_en": "https://legislation.mt/eli/cap/469/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/469/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_469_en.pdf",
+    "local_pdf_mt": "cap_469_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 470",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/470",
+    "source_url": "https://legislation.mt/eli/cap/470",
+    "pdf_url_en": "https://legislation.mt/eli/cap/470/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/470/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_470_en.pdf",
+    "local_pdf_mt": "cap_470_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 471",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/471",
+    "source_url": "https://legislation.mt/eli/cap/471",
+    "pdf_url_en": "https://legislation.mt/eli/cap/471/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/471/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_471_en.pdf",
+    "local_pdf_mt": "cap_471_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 472",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/472",
+    "source_url": "https://legislation.mt/eli/cap/472",
+    "pdf_url_en": "https://legislation.mt/eli/cap/472/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/472/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_472_en.pdf",
+    "local_pdf_mt": "cap_472_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 473",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/473",
+    "source_url": "https://legislation.mt/eli/cap/473",
+    "pdf_url_en": "https://legislation.mt/eli/cap/473/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/473/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_473_en.pdf",
+    "local_pdf_mt": "cap_473_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 474",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/474",
+    "source_url": "https://legislation.mt/eli/cap/474",
+    "pdf_url_en": "https://legislation.mt/eli/cap/474/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/474/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_474_en.pdf",
+    "local_pdf_mt": "cap_474_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 476",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/476",
+    "source_url": "https://legislation.mt/eli/cap/476",
+    "pdf_url_en": "https://legislation.mt/eli/cap/476/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/476/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_476_en.pdf",
+    "local_pdf_mt": "cap_476_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 477",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/477",
+    "source_url": "https://legislation.mt/eli/cap/477",
+    "pdf_url_en": "https://legislation.mt/eli/cap/477/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/477/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_477_en.pdf",
+    "local_pdf_mt": "cap_477_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 478",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/478",
+    "source_url": "https://legislation.mt/eli/cap/478",
+    "pdf_url_en": "https://legislation.mt/eli/cap/478/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/478/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_478_en.pdf",
+    "local_pdf_mt": "cap_478_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 479",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/479",
+    "source_url": "https://legislation.mt/eli/cap/479",
+    "pdf_url_en": "https://legislation.mt/eli/cap/479/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/479/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_479_en.pdf",
+    "local_pdf_mt": "cap_479_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 480",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/480",
+    "source_url": "https://legislation.mt/eli/cap/480",
+    "pdf_url_en": "https://legislation.mt/eli/cap/480/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/480/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_480_en.pdf",
+    "local_pdf_mt": "cap_480_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 481",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/481",
+    "source_url": "https://legislation.mt/eli/cap/481",
+    "pdf_url_en": "https://legislation.mt/eli/cap/481/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/481/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_481_en.pdf",
+    "local_pdf_mt": "cap_481_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 482",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/482",
+    "source_url": "https://legislation.mt/eli/cap/482",
+    "pdf_url_en": "https://legislation.mt/eli/cap/482/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/482/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_482_en.pdf",
+    "local_pdf_mt": "cap_482_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 483",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/483",
+    "source_url": "https://legislation.mt/eli/cap/483",
+    "pdf_url_en": "https://legislation.mt/eli/cap/483/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/483/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_483_en.pdf",
+    "local_pdf_mt": "cap_483_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 484",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/484",
+    "source_url": "https://legislation.mt/eli/cap/484",
+    "pdf_url_en": "https://legislation.mt/eli/cap/484/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/484/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_484_en.pdf",
+    "local_pdf_mt": "cap_484_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 485",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/485",
+    "source_url": "https://legislation.mt/eli/cap/485",
+    "pdf_url_en": "https://legislation.mt/eli/cap/485/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/485/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_485_en.pdf",
+    "local_pdf_mt": "cap_485_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 486",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/486",
+    "source_url": "https://legislation.mt/eli/cap/486",
+    "pdf_url_en": "https://legislation.mt/eli/cap/486/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/486/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_486_en.pdf",
+    "local_pdf_mt": "cap_486_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 487",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/487",
+    "source_url": "https://legislation.mt/eli/cap/487",
+    "pdf_url_en": "https://legislation.mt/eli/cap/487/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/487/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_487_en.pdf",
+    "local_pdf_mt": "cap_487_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 488",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/488",
+    "source_url": "https://legislation.mt/eli/cap/488",
+    "pdf_url_en": "https://legislation.mt/eli/cap/488/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/488/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_488_en.pdf",
+    "local_pdf_mt": "cap_488_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 489",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/489",
+    "source_url": "https://legislation.mt/eli/cap/489",
+    "pdf_url_en": "https://legislation.mt/eli/cap/489/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/489/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_489_en.pdf",
+    "local_pdf_mt": "cap_489_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 490",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/490",
+    "source_url": "https://legislation.mt/eli/cap/490",
+    "pdf_url_en": "https://legislation.mt/eli/cap/490/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/490/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_490_en.pdf",
+    "local_pdf_mt": "cap_490_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 491",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/491",
+    "source_url": "https://legislation.mt/eli/cap/491",
+    "pdf_url_en": "https://legislation.mt/eli/cap/491/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/491/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_491_en.pdf",
+    "local_pdf_mt": "cap_491_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 492",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/492",
+    "source_url": "https://legislation.mt/eli/cap/492",
+    "pdf_url_en": "https://legislation.mt/eli/cap/492/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/492/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_492_en.pdf",
+    "local_pdf_mt": "cap_492_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 493",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/493",
+    "source_url": "https://legislation.mt/eli/cap/493",
+    "pdf_url_en": "https://legislation.mt/eli/cap/493/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/493/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_493_en.pdf",
+    "local_pdf_mt": "cap_493_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 494",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/494",
+    "source_url": "https://legislation.mt/eli/cap/494",
+    "pdf_url_en": "https://legislation.mt/eli/cap/494/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/494/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_494_en.pdf",
+    "local_pdf_mt": "cap_494_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 495",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/495",
+    "source_url": "https://legislation.mt/eli/cap/495",
+    "pdf_url_en": "https://legislation.mt/eli/cap/495/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/495/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_495_en.pdf",
+    "local_pdf_mt": "cap_495_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 496",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/496",
+    "source_url": "https://legislation.mt/eli/cap/496",
+    "pdf_url_en": "https://legislation.mt/eli/cap/496/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/496/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_496_en.pdf",
+    "local_pdf_mt": "cap_496_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 497",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/497",
+    "source_url": "https://legislation.mt/eli/cap/497",
+    "pdf_url_en": "https://legislation.mt/eli/cap/497/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/497/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_497_en.pdf",
+    "local_pdf_mt": "cap_497_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 498",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/498",
+    "source_url": "https://legislation.mt/eli/cap/498",
+    "pdf_url_en": "https://legislation.mt/eli/cap/498/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/498/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_498_en.pdf",
+    "local_pdf_mt": "cap_498_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 499",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/499",
+    "source_url": "https://legislation.mt/eli/cap/499",
+    "pdf_url_en": "https://legislation.mt/eli/cap/499/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/499/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_499_en.pdf",
+    "local_pdf_mt": "cap_499_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 500",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/500",
+    "source_url": "https://legislation.mt/eli/cap/500",
+    "pdf_url_en": "https://legislation.mt/eli/cap/500/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/500/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_500_en.pdf",
+    "local_pdf_mt": "cap_500_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 501",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/501",
+    "source_url": "https://legislation.mt/eli/cap/501",
+    "pdf_url_en": "https://legislation.mt/eli/cap/501/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/501/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_501_en.pdf",
+    "local_pdf_mt": "cap_501_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 502",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/502",
+    "source_url": "https://legislation.mt/eli/cap/502",
+    "pdf_url_en": "https://legislation.mt/eli/cap/502/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/502/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_502_en.pdf",
+    "local_pdf_mt": "cap_502_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 503",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/503",
+    "source_url": "https://legislation.mt/eli/cap/503",
+    "pdf_url_en": "https://legislation.mt/eli/cap/503/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/503/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_503_en.pdf",
+    "local_pdf_mt": "cap_503_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 504",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/504",
+    "source_url": "https://legislation.mt/eli/cap/504",
+    "pdf_url_en": "https://legislation.mt/eli/cap/504/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/504/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_504_en.pdf",
+    "local_pdf_mt": "cap_504_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 505",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/505",
+    "source_url": "https://legislation.mt/eli/cap/505",
+    "pdf_url_en": "https://legislation.mt/eli/cap/505/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/505/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_505_en.pdf",
+    "local_pdf_mt": "cap_505_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 506",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/506",
+    "source_url": "https://legislation.mt/eli/cap/506",
+    "pdf_url_en": "https://legislation.mt/eli/cap/506/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/506/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_506_en.pdf",
+    "local_pdf_mt": "cap_506_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 507",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/507",
+    "source_url": "https://legislation.mt/eli/cap/507",
+    "pdf_url_en": "https://legislation.mt/eli/cap/507/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/507/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_507_en.pdf",
+    "local_pdf_mt": "cap_507_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 508",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/508",
+    "source_url": "https://legislation.mt/eli/cap/508",
+    "pdf_url_en": "https://legislation.mt/eli/cap/508/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/508/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_508_en.pdf",
+    "local_pdf_mt": "cap_508_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 509",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/509",
+    "source_url": "https://legislation.mt/eli/cap/509",
+    "pdf_url_en": "https://legislation.mt/eli/cap/509/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/509/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_509_en.pdf",
+    "local_pdf_mt": "cap_509_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 510",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/510",
+    "source_url": "https://legislation.mt/eli/cap/510",
+    "pdf_url_en": "https://legislation.mt/eli/cap/510/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/510/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_510_en.pdf",
+    "local_pdf_mt": "cap_510_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 511",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/511",
+    "source_url": "https://legislation.mt/eli/cap/511",
+    "pdf_url_en": "https://legislation.mt/eli/cap/511/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/511/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_511_en.pdf",
+    "local_pdf_mt": "cap_511_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 512",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/512",
+    "source_url": "https://legislation.mt/eli/cap/512",
+    "pdf_url_en": "https://legislation.mt/eli/cap/512/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/512/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_512_en.pdf",
+    "local_pdf_mt": "cap_512_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 513",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/513",
+    "source_url": "https://legislation.mt/eli/cap/513",
+    "pdf_url_en": "https://legislation.mt/eli/cap/513/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/513/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_513_en.pdf",
+    "local_pdf_mt": "cap_513_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 514",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/514",
+    "source_url": "https://legislation.mt/eli/cap/514",
+    "pdf_url_en": "https://legislation.mt/eli/cap/514/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/514/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_514_en.pdf",
+    "local_pdf_mt": "cap_514_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 515",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/515",
+    "source_url": "https://legislation.mt/eli/cap/515",
+    "pdf_url_en": "https://legislation.mt/eli/cap/515/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/515/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_515_en.pdf",
+    "local_pdf_mt": "cap_515_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 516",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/516",
+    "source_url": "https://legislation.mt/eli/cap/516",
+    "pdf_url_en": "https://legislation.mt/eli/cap/516/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/516/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_516_en.pdf",
+    "local_pdf_mt": "cap_516_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 517",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/517",
+    "source_url": "https://legislation.mt/eli/cap/517",
+    "pdf_url_en": "https://legislation.mt/eli/cap/517/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/517/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_517_en.pdf",
+    "local_pdf_mt": "cap_517_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 518",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/518",
+    "source_url": "https://legislation.mt/eli/cap/518",
+    "pdf_url_en": "https://legislation.mt/eli/cap/518/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/518/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_518_en.pdf",
+    "local_pdf_mt": "cap_518_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 519",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/519",
+    "source_url": "https://legislation.mt/eli/cap/519",
+    "pdf_url_en": "https://legislation.mt/eli/cap/519/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/519/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_519_en.pdf",
+    "local_pdf_mt": "cap_519_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 520",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/520",
+    "source_url": "https://legislation.mt/eli/cap/520",
+    "pdf_url_en": "https://legislation.mt/eli/cap/520/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/520/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_520_en.pdf",
+    "local_pdf_mt": "cap_520_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 521",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/521",
+    "source_url": "https://legislation.mt/eli/cap/521",
+    "pdf_url_en": "https://legislation.mt/eli/cap/521/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/521/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_521_en.pdf",
+    "local_pdf_mt": "cap_521_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 522",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/522",
+    "source_url": "https://legislation.mt/eli/cap/522",
+    "pdf_url_en": "https://legislation.mt/eli/cap/522/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/522/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_522_en.pdf",
+    "local_pdf_mt": "cap_522_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 523",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/523",
+    "source_url": "https://legislation.mt/eli/cap/523",
+    "pdf_url_en": "https://legislation.mt/eli/cap/523/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/523/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_523_en.pdf",
+    "local_pdf_mt": "cap_523_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 524",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/524",
+    "source_url": "https://legislation.mt/eli/cap/524",
+    "pdf_url_en": "https://legislation.mt/eli/cap/524/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/524/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_524_en.pdf",
+    "local_pdf_mt": "cap_524_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 525",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/525",
+    "source_url": "https://legislation.mt/eli/cap/525",
+    "pdf_url_en": "https://legislation.mt/eli/cap/525/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/525/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_525_en.pdf",
+    "local_pdf_mt": "cap_525_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 526",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/526",
+    "source_url": "https://legislation.mt/eli/cap/526",
+    "pdf_url_en": "https://legislation.mt/eli/cap/526/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/526/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_526_en.pdf",
+    "local_pdf_mt": "cap_526_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 527",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/527",
+    "source_url": "https://legislation.mt/eli/cap/527",
+    "pdf_url_en": "https://legislation.mt/eli/cap/527/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/527/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_527_en.pdf",
+    "local_pdf_mt": "cap_527_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 528",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/528",
+    "source_url": "https://legislation.mt/eli/cap/528",
+    "pdf_url_en": "https://legislation.mt/eli/cap/528/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/528/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_528_en.pdf",
+    "local_pdf_mt": "cap_528_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 529",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/529",
+    "source_url": "https://legislation.mt/eli/cap/529",
+    "pdf_url_en": "https://legislation.mt/eli/cap/529/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/529/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_529_en.pdf",
+    "local_pdf_mt": "cap_529_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 530",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/530",
+    "source_url": "https://legislation.mt/eli/cap/530",
+    "pdf_url_en": "https://legislation.mt/eli/cap/530/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/530/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_530_en.pdf",
+    "local_pdf_mt": "cap_530_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 531",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/531",
+    "source_url": "https://legislation.mt/eli/cap/531",
+    "pdf_url_en": "https://legislation.mt/eli/cap/531/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/531/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_531_en.pdf",
+    "local_pdf_mt": "cap_531_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 532",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/532",
+    "source_url": "https://legislation.mt/eli/cap/532",
+    "pdf_url_en": "https://legislation.mt/eli/cap/532/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/532/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_532_en.pdf",
+    "local_pdf_mt": "cap_532_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 533",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/533",
+    "source_url": "https://legislation.mt/eli/cap/533",
+    "pdf_url_en": "https://legislation.mt/eli/cap/533/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/533/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_533_en.pdf",
+    "local_pdf_mt": "cap_533_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 534",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/534",
+    "source_url": "https://legislation.mt/eli/cap/534",
+    "pdf_url_en": "https://legislation.mt/eli/cap/534/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/534/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_534_en.pdf",
+    "local_pdf_mt": "cap_534_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 535",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/535",
+    "source_url": "https://legislation.mt/eli/cap/535",
+    "pdf_url_en": "https://legislation.mt/eli/cap/535/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/535/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_535_en.pdf",
+    "local_pdf_mt": "cap_535_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 536",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/536",
+    "source_url": "https://legislation.mt/eli/cap/536",
+    "pdf_url_en": "https://legislation.mt/eli/cap/536/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/536/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_536_en.pdf",
+    "local_pdf_mt": "cap_536_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 537",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/537",
+    "source_url": "https://legislation.mt/eli/cap/537",
+    "pdf_url_en": "https://legislation.mt/eli/cap/537/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/537/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_537_en.pdf",
+    "local_pdf_mt": "cap_537_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 538",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/538",
+    "source_url": "https://legislation.mt/eli/cap/538",
+    "pdf_url_en": "https://legislation.mt/eli/cap/538/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/538/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_538_en.pdf",
+    "local_pdf_mt": "cap_538_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 539",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/539",
+    "source_url": "https://legislation.mt/eli/cap/539",
+    "pdf_url_en": "https://legislation.mt/eli/cap/539/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/539/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_539_en.pdf",
+    "local_pdf_mt": "cap_539_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 540",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/540",
+    "source_url": "https://legislation.mt/eli/cap/540",
+    "pdf_url_en": "https://legislation.mt/eli/cap/540/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/540/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_540_en.pdf",
+    "local_pdf_mt": "cap_540_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 541",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/541",
+    "source_url": "https://legislation.mt/eli/cap/541",
+    "pdf_url_en": "https://legislation.mt/eli/cap/541/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/541/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_541_en.pdf",
+    "local_pdf_mt": "cap_541_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 542",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/542",
+    "source_url": "https://legislation.mt/eli/cap/542",
+    "pdf_url_en": "https://legislation.mt/eli/cap/542/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/542/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_542_en.pdf",
+    "local_pdf_mt": "cap_542_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 543",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/543",
+    "source_url": "https://legislation.mt/eli/cap/543",
+    "pdf_url_en": "https://legislation.mt/eli/cap/543/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/543/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_543_en.pdf",
+    "local_pdf_mt": "cap_543_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 544",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/544",
+    "source_url": "https://legislation.mt/eli/cap/544",
+    "pdf_url_en": "https://legislation.mt/eli/cap/544/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/544/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_544_en.pdf",
+    "local_pdf_mt": "cap_544_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 545",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/545",
+    "source_url": "https://legislation.mt/eli/cap/545",
+    "pdf_url_en": "https://legislation.mt/eli/cap/545/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/545/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_545_en.pdf",
+    "local_pdf_mt": "cap_545_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 546",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/546",
+    "source_url": "https://legislation.mt/eli/cap/546",
+    "pdf_url_en": "https://legislation.mt/eli/cap/546/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/546/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_546_en.pdf",
+    "local_pdf_mt": "cap_546_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 547",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/547",
+    "source_url": "https://legislation.mt/eli/cap/547",
+    "pdf_url_en": "https://legislation.mt/eli/cap/547/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/547/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_547_en.pdf",
+    "local_pdf_mt": "cap_547_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 548",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/548",
+    "source_url": "https://legislation.mt/eli/cap/548",
+    "pdf_url_en": "https://legislation.mt/eli/cap/548/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/548/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_548_en.pdf",
+    "local_pdf_mt": "cap_548_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 549",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/549",
+    "source_url": "https://legislation.mt/eli/cap/549",
+    "pdf_url_en": "https://legislation.mt/eli/cap/549/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/549/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_549_en.pdf",
+    "local_pdf_mt": "cap_549_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 550",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/550",
+    "source_url": "https://legislation.mt/eli/cap/550",
+    "pdf_url_en": "https://legislation.mt/eli/cap/550/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/550/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_550_en.pdf",
+    "local_pdf_mt": "cap_550_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 551",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/551",
+    "source_url": "https://legislation.mt/eli/cap/551",
+    "pdf_url_en": "https://legislation.mt/eli/cap/551/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/551/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_551_en.pdf",
+    "local_pdf_mt": "cap_551_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 552",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/552",
+    "source_url": "https://legislation.mt/eli/cap/552",
+    "pdf_url_en": "https://legislation.mt/eli/cap/552/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/552/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_552_en.pdf",
+    "local_pdf_mt": "cap_552_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 553",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/553",
+    "source_url": "https://legislation.mt/eli/cap/553",
+    "pdf_url_en": "https://legislation.mt/eli/cap/553/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/553/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_553_en.pdf",
+    "local_pdf_mt": "cap_553_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 554",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/554",
+    "source_url": "https://legislation.mt/eli/cap/554",
+    "pdf_url_en": "https://legislation.mt/eli/cap/554/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/554/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_554_en.pdf",
+    "local_pdf_mt": "cap_554_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 555",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/555",
+    "source_url": "https://legislation.mt/eli/cap/555",
+    "pdf_url_en": "https://legislation.mt/eli/cap/555/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/555/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_555_en.pdf",
+    "local_pdf_mt": "cap_555_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 556",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/556",
+    "source_url": "https://legislation.mt/eli/cap/556",
+    "pdf_url_en": "https://legislation.mt/eli/cap/556/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/556/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_556_en.pdf",
+    "local_pdf_mt": "cap_556_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 557",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/557",
+    "source_url": "https://legislation.mt/eli/cap/557",
+    "pdf_url_en": "https://legislation.mt/eli/cap/557/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/557/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_557_en.pdf",
+    "local_pdf_mt": "cap_557_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 558",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/558",
+    "source_url": "https://legislation.mt/eli/cap/558",
+    "pdf_url_en": "https://legislation.mt/eli/cap/558/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/558/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_558_en.pdf",
+    "local_pdf_mt": "cap_558_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 559",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/559",
+    "source_url": "https://legislation.mt/eli/cap/559",
+    "pdf_url_en": "https://legislation.mt/eli/cap/559/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/559/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_559_en.pdf",
+    "local_pdf_mt": "cap_559_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 560",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/560",
+    "source_url": "https://legislation.mt/eli/cap/560",
+    "pdf_url_en": "https://legislation.mt/eli/cap/560/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/560/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_560_en.pdf",
+    "local_pdf_mt": "cap_560_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 561",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/561",
+    "source_url": "https://legislation.mt/eli/cap/561",
+    "pdf_url_en": "https://legislation.mt/eli/cap/561/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/561/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_561_en.pdf",
+    "local_pdf_mt": "cap_561_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 562",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/562",
+    "source_url": "https://legislation.mt/eli/cap/562",
+    "pdf_url_en": "https://legislation.mt/eli/cap/562/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/562/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_562_en.pdf",
+    "local_pdf_mt": "cap_562_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 563",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/563",
+    "source_url": "https://legislation.mt/eli/cap/563",
+    "pdf_url_en": "https://legislation.mt/eli/cap/563/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/563/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_563_en.pdf",
+    "local_pdf_mt": "cap_563_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 564",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/564",
+    "source_url": "https://legislation.mt/eli/cap/564",
+    "pdf_url_en": "https://legislation.mt/eli/cap/564/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/564/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_564_en.pdf",
+    "local_pdf_mt": "cap_564_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 565",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/565",
+    "source_url": "https://legislation.mt/eli/cap/565",
+    "pdf_url_en": "https://legislation.mt/eli/cap/565/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/565/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_565_en.pdf",
+    "local_pdf_mt": "cap_565_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 566",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/566",
+    "source_url": "https://legislation.mt/eli/cap/566",
+    "pdf_url_en": "https://legislation.mt/eli/cap/566/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/566/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_566_en.pdf",
+    "local_pdf_mt": "cap_566_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 567",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/567",
+    "source_url": "https://legislation.mt/eli/cap/567",
+    "pdf_url_en": "https://legislation.mt/eli/cap/567/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/567/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_567_en.pdf",
+    "local_pdf_mt": "cap_567_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 568",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/568",
+    "source_url": "https://legislation.mt/eli/cap/568",
+    "pdf_url_en": "https://legislation.mt/eli/cap/568/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/568/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_568_en.pdf",
+    "local_pdf_mt": "cap_568_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 569",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/569",
+    "source_url": "https://legislation.mt/eli/cap/569",
+    "pdf_url_en": "https://legislation.mt/eli/cap/569/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/569/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_569_en.pdf",
+    "local_pdf_mt": "cap_569_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 570",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/570",
+    "source_url": "https://legislation.mt/eli/cap/570",
+    "pdf_url_en": "https://legislation.mt/eli/cap/570/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/570/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_570_en.pdf",
+    "local_pdf_mt": "cap_570_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 571",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/571",
+    "source_url": "https://legislation.mt/eli/cap/571",
+    "pdf_url_en": "https://legislation.mt/eli/cap/571/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/571/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_571_en.pdf",
+    "local_pdf_mt": "cap_571_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 572",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/572",
+    "source_url": "https://legislation.mt/eli/cap/572",
+    "pdf_url_en": "https://legislation.mt/eli/cap/572/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/572/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_572_en.pdf",
+    "local_pdf_mt": "cap_572_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 573",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/573",
+    "source_url": "https://legislation.mt/eli/cap/573",
+    "pdf_url_en": "https://legislation.mt/eli/cap/573/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/573/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_573_en.pdf",
+    "local_pdf_mt": "cap_573_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 574",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/574",
+    "source_url": "https://legislation.mt/eli/cap/574",
+    "pdf_url_en": "https://legislation.mt/eli/cap/574/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/574/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_574_en.pdf",
+    "local_pdf_mt": "cap_574_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 575",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/575",
+    "source_url": "https://legislation.mt/eli/cap/575",
+    "pdf_url_en": "https://legislation.mt/eli/cap/575/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/575/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_575_en.pdf",
+    "local_pdf_mt": "cap_575_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 576",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/576",
+    "source_url": "https://legislation.mt/eli/cap/576",
+    "pdf_url_en": "https://legislation.mt/eli/cap/576/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/576/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_576_en.pdf",
+    "local_pdf_mt": "cap_576_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 577",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/577",
+    "source_url": "https://legislation.mt/eli/cap/577",
+    "pdf_url_en": "https://legislation.mt/eli/cap/577/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/577/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_577_en.pdf",
+    "local_pdf_mt": "cap_577_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 578",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/578",
+    "source_url": "https://legislation.mt/eli/cap/578",
+    "pdf_url_en": "https://legislation.mt/eli/cap/578/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/578/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_578_en.pdf",
+    "local_pdf_mt": "cap_578_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 579",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/579",
+    "source_url": "https://legislation.mt/eli/cap/579",
+    "pdf_url_en": "https://legislation.mt/eli/cap/579/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/579/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_579_en.pdf",
+    "local_pdf_mt": "cap_579_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 580",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/580",
+    "source_url": "https://legislation.mt/eli/cap/580",
+    "pdf_url_en": "https://legislation.mt/eli/cap/580/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/580/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_580_en.pdf",
+    "local_pdf_mt": "cap_580_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 581",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/581",
+    "source_url": "https://legislation.mt/eli/cap/581",
+    "pdf_url_en": "https://legislation.mt/eli/cap/581/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/581/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_581_en.pdf",
+    "local_pdf_mt": "cap_581_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 582",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/582",
+    "source_url": "https://legislation.mt/eli/cap/582",
+    "pdf_url_en": "https://legislation.mt/eli/cap/582/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/582/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_582_en.pdf",
+    "local_pdf_mt": "cap_582_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 583",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/583",
+    "source_url": "https://legislation.mt/eli/cap/583",
+    "pdf_url_en": "https://legislation.mt/eli/cap/583/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/583/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_583_en.pdf",
+    "local_pdf_mt": "cap_583_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 584",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/584",
+    "source_url": "https://legislation.mt/eli/cap/584",
+    "pdf_url_en": "https://legislation.mt/eli/cap/584/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/584/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_584_en.pdf",
+    "local_pdf_mt": "cap_584_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 585",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/585",
+    "source_url": "https://legislation.mt/eli/cap/585",
+    "pdf_url_en": "https://legislation.mt/eli/cap/585/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/585/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_585_en.pdf",
+    "local_pdf_mt": "cap_585_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 586",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/586",
+    "source_url": "https://legislation.mt/eli/cap/586",
+    "pdf_url_en": "https://legislation.mt/eli/cap/586/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/586/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_586_en.pdf",
+    "local_pdf_mt": "cap_586_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 587",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/587",
+    "source_url": "https://legislation.mt/eli/cap/587",
+    "pdf_url_en": "https://legislation.mt/eli/cap/587/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/587/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_587_en.pdf",
+    "local_pdf_mt": "cap_587_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 588",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/588",
+    "source_url": "https://legislation.mt/eli/cap/588",
+    "pdf_url_en": "https://legislation.mt/eli/cap/588/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/588/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_588_en.pdf",
+    "local_pdf_mt": "cap_588_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 589",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/589",
+    "source_url": "https://legislation.mt/eli/cap/589",
+    "pdf_url_en": "https://legislation.mt/eli/cap/589/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/589/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_589_en.pdf",
+    "local_pdf_mt": "cap_589_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 590",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/590",
+    "source_url": "https://legislation.mt/eli/cap/590",
+    "pdf_url_en": "https://legislation.mt/eli/cap/590/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/590/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_590_en.pdf",
+    "local_pdf_mt": "cap_590_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 591",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/591",
+    "source_url": "https://legislation.mt/eli/cap/591",
+    "pdf_url_en": "https://legislation.mt/eli/cap/591/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/591/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_591_en.pdf",
+    "local_pdf_mt": "cap_591_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 592",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/592",
+    "source_url": "https://legislation.mt/eli/cap/592",
+    "pdf_url_en": "https://legislation.mt/eli/cap/592/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/592/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_592_en.pdf",
+    "local_pdf_mt": "cap_592_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 593",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/593",
+    "source_url": "https://legislation.mt/eli/cap/593",
+    "pdf_url_en": "https://legislation.mt/eli/cap/593/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/593/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_593_en.pdf",
+    "local_pdf_mt": "cap_593_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 594",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/594",
+    "source_url": "https://legislation.mt/eli/cap/594",
+    "pdf_url_en": "https://legislation.mt/eli/cap/594/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/594/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_594_en.pdf",
+    "local_pdf_mt": "cap_594_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 595",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/595",
+    "source_url": "https://legislation.mt/eli/cap/595",
+    "pdf_url_en": "https://legislation.mt/eli/cap/595/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/595/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_595_en.pdf",
+    "local_pdf_mt": "cap_595_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 596",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/596",
+    "source_url": "https://legislation.mt/eli/cap/596",
+    "pdf_url_en": "https://legislation.mt/eli/cap/596/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/596/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_596_en.pdf",
+    "local_pdf_mt": "cap_596_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 597",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/597",
+    "source_url": "https://legislation.mt/eli/cap/597",
+    "pdf_url_en": "https://legislation.mt/eli/cap/597/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/597/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_597_en.pdf",
+    "local_pdf_mt": "cap_597_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 598",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/598",
+    "source_url": "https://legislation.mt/eli/cap/598",
+    "pdf_url_en": "https://legislation.mt/eli/cap/598/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/598/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_598_en.pdf",
+    "local_pdf_mt": "cap_598_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 599",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/599",
+    "source_url": "https://legislation.mt/eli/cap/599",
+    "pdf_url_en": "https://legislation.mt/eli/cap/599/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/599/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_599_en.pdf",
+    "local_pdf_mt": "cap_599_mt.pdf"
+  },
+  {
+    "chapter": "Kap. 600",
+    "title": ".",
+    "title_en": ".",
+    "title_mt": ".",
+    "type": "Principal",
+    "eli_link": "https://legislation.mt/eli/cap/600",
+    "source_url": "https://legislation.mt/eli/cap/600",
+    "pdf_url_en": "https://legislation.mt/eli/cap/600/eng/pdf",
+    "pdf_url_mt": "https://legislation.mt/eli/cap/600/mlt/pdf",
+    "languages": [
+      "en",
+      "mt"
+    ],
+    "format": "pdf",
+    "local_pdf_en": "cap_600_en.pdf",
+    "local_pdf_mt": "cap_600_mt.pdf"
+  },
+  {
+    "chapter": "RLS",
+    "title": "L-Att tal-2021 dwar r-Reviżjoni tal-Liġijiet Statutarji",
+    "title_en": "",
+    "title_mt": "L-Att tal-2021 dwar r-Reviżjoni tal-Liġijiet Statutarji",
+    "type": "",
+    "eli_link": "eli/slra",
+    "keywords": [],
+    "languages": [
+      "English",
+      "Maltese"
+    ],
+    "format": "PDF",
+    "status": "",
+    "effective_date": "",
+    "publication_date": "",
+    "indicative_publication_date": "",
+    "pdf_url": "",
+    "pdf_url_en": "",
+    "pdf_url_mt": "",
+    "source_url": "https://legislation.mt/eli/slra/mlt",
+    "relationships": [],
+    "timeline": [
+      {
+        "text": "Tfittxija avvanzata"
+      },
+      {
+        "text": "Tfittxija avvanzata",
+        "url": "https://legislation.mt/Search"
+      },
+      {
+        "text": "FAQs"
+      },
+      {
+        "text": "FAQs",
+        "url": "https://legislation.mt/Home/FAQList"
+      },
+      {
+        "text": "Ikkuntattjana"
+      },
+      {
+        "text": "Ikkuntattjana",
+        "url": "https://legislation.mt/Home/ContactUs"
+      },
+      {
+        "text": "eCourts"
+      },
+      {
+        "text": "eCourts",
+        "url": "https://ecourts.gov.mt"
+      },
+      {
+        "text": "Sign up/in"
+      },
+      {
+        "text": "Sign up/in",
+        "url": "https://legislation.mt/Authentication/Authenticate"
+      },
+      {
+        "text": "Liġijiet konsolidati"
+      },
+      {
+        "text": "Liġijiet konsolidati",
+        "url": "https://legislation.mt/Legislation"
+      },
+      {
+        "text": "PubblikazzjonijietAttiAvviżi LegaliBye-LawsAbbozzi Parlamentari"
+      },
+      {
+        "text": "Pubblikazzjonijiet",
+        "url": "https://legislation.mt#"
+      },
+      {
+        "text": "Atti",
+        "url": "https://legislation.mt/Acts"
+      },
+      {
+        "text": "Avviżi Legali",
+        "url": "https://legislation.mt/LegalNotices"
+      },
+      {
+        "text": "Bye-Laws",
+        "url": "https://legislation.mt/ByLaws"
+      },
+      {
+        "text": "Abbozzi Parlamentari",
+        "url": "https://parlament.mt/en/14th-leg/bills"
+      },
+      {
+        "text": "Liġijiet tal-UE"
+      },
+      {
+        "text": "Liġijiet tal-UE",
+        "url": "https://legislation.mt/EULaw"
+      },
+      {
+        "text": "Followed Laws"
+      },
+      {
+        "text": "Sign in to view your followed laws!",
+        "url": "https://legislation.mt/Authentication/AuthenticateWithoutRedirect"
+      },
+      {
+        "text": "L-AĦĦAR AĠĠORNAMENTI"
+      },
+      {
+        "text": "Att dwar l-Eko-Kontribuzzjoni"
+      },
+      {
+        "text": "Kodiċi Kriminali"
+      },
+      {
+        "text": "Ordinanza dwar ir-Regolament tat-Traffiku"
+      },
+      {
+        "text": "Att dwar l-Amministrazzjoni tat-Taxxa"
+      },
+      {
+        "text": "Kodiċi Ċivili"
+      },
+      {
+        "text": "FAQs"
+      },
+      {
+        "text": "X’tip ta’ leġiżlazzjoni issib f'din il-website?",
+        "url": "https://legislation.mt/Home/FAQList#FAQ_0"
+      },
+      {
+        "text": "Nista' insib leġiżlazzjoni ġdida fuq il-website?",
+        "url": "https://legislation.mt/Home/FAQList#FAQ_1"
+      },
+      {
+        "text": "Kemm huwa aġġornat il-kontenut konsolidat ta’ din il-website?",
+        "url": "https://legislation.mt/Home/FAQList#FAQ_2"
+      },
+      {
+        "text": "Uri iktar...",
+        "url": "https://legislation.mt/Home/FAQList"
+      },
+      {
+        "text": "GWIDI BIL-VIDJO"
+      },
+      {
+        "text": "Liġijiet Konsolidati"
+      },
+      {
+        "text": "Pubblikazzjonijiet"
+      },
+      {
+        "text": "Liġijiet tal-Unjoni Ewropea"
+      },
+      {
+        "text": "Tfitxxija avvanzata"
+      },
+      {
+        "text": "Filmat għal Tfittxija Avvanzata fl-Ontoloġija"
+      },
+      {
+        "text": "Filmat dwar il-Linja Kronoloġika"
+      },
+      {
+        "text": "Client Notifications video tutorial"
+      },
+      {
+        "text": "Kollu(ha) fis-seħħ"
+      },
+      {
+        "text": "eli/slra",
+        "url": "https://legislation.mt/eli/slra"
+      },
+      {
+        "text": "16/07/2021",
+        "url": "https://legislation.mt#",
+        "date": "16/07/2021"
+      },
+      {
+        "text": "Ingliż",
+        "url": "https://legislation.mt/eli/slra/20210716/eng"
+      },
+      {
+        "text": "Status"
+      },
+      {
+        "text": "Data ta' dħul fis-seħħ"
+      },
+      {
+        "text": "Data tal-pubblikazzjoni"
+      },
+      {
+        "text": "Att Bażiku"
+      },
+      {
+        "text": "Regoli tal-Privatezza"
+      },
+      {
+        "text": "Regoli tal-Privatezza",
+        "url": "https://legislation.mt/Home/PrivacyPolicy"
+      },
+      {
+        "text": "Cookie Policy"
+      },
+      {
+        "text": "Cookie Policy",
+        "url": "https://legislation.mt/Home/CookiePolicy"
+      },
+      {
+        "text": "Accessibility Statement"
+      },
+      {
+        "text": "Accessibility Statement",
+        "url": "https://legislation.mt/Home/AccessibilityStatement"
+      }
+    ]
+  },
+  {
+    "chapter": "Kostituzzjoni",
+    "title": "Kostituzzjoni ta' Malta",
+    "title_en": "",
+    "title_mt": "Kostituzzjoni ta' Malta",
+    "type": "",
+    "eli_link": "eli/const",
+    "keywords": [],
+    "languages": [
+      "English",
+      "Maltese"
+    ],
+    "format": "PDF",
+    "status": "",
+    "effective_date": "",
+    "publication_date": "",
+    "indicative_publication_date": "",
+    "pdf_url": "",
+    "pdf_url_en": "",
+    "pdf_url_mt": "",
+    "source_url": "https://legislation.mt/eli/const/mlt",
+    "relationships": [],
+    "timeline": [
+      {
+        "text": "Tfittxija avvanzata"
+      },
+      {
+        "text": "Tfittxija avvanzata",
+        "url": "https://legislation.mt/Search"
+      },
+      {
+        "text": "FAQs"
+      },
+      {
+        "text": "FAQs",
+        "url": "https://legislation.mt/Home/FAQList"
+      },
+      {
+        "text": "Ikkuntattjana"
+      },
+      {
+        "text": "Ikkuntattjana",
+        "url": "https://legislation.mt/Home/ContactUs"
+      },
+      {
+        "text": "eCourts"
+      },
+      {
+        "text": "eCourts",
+        "url": "https://ecourts.gov.mt"
+      },
+      {
+        "text": "Sign up/in"
+      },
+      {
+        "text": "Sign up/in",
+        "url": "https://legislation.mt/Authentication/Authenticate"
+      },
+      {
+        "text": "Liġijiet konsolidati"
+      },
+      {
+        "text": "Liġijiet konsolidati",
+        "url": "https://legislation.mt/Legislation"
+      },
+      {
+        "text": "PubblikazzjonijietAttiAvviżi LegaliBye-LawsAbbozzi Parlamentari"
+      },
+      {
+        "text": "Pubblikazzjonijiet",
+        "url": "https://legislation.mt#"
+      },
+      {
+        "text": "Atti",
+        "url": "https://legislation.mt/Acts"
+      },
+      {
+        "text": "Avviżi Legali",
+        "url": "https://legislation.mt/LegalNotices"
+      },
+      {
+        "text": "Bye-Laws",
+        "url": "https://legislation.mt/ByLaws"
+      },
+      {
+        "text": "Abbozzi Parlamentari",
+        "url": "https://parlament.mt/en/14th-leg/bills"
+      },
+      {
+        "text": "Liġijiet tal-UE"
+      },
+      {
+        "text": "Liġijiet tal-UE",
+        "url": "https://legislation.mt/EULaw"
+      },
+      {
+        "text": "Followed Laws"
+      },
+      {
+        "text": "Sign in to view your followed laws!",
+        "url": "https://legislation.mt/Authentication/AuthenticateWithoutRedirect"
+      },
+      {
+        "text": "L-AĦĦAR AĠĠORNAMENTI"
+      },
+      {
+        "text": "Att dwar l-Eko-Kontribuzzjoni"
+      },
+      {
+        "text": "Kodiċi Kriminali"
+      },
+      {
+        "text": "Ordinanza dwar ir-Regolament tat-Traffiku"
+      },
+      {
+        "text": "Att dwar l-Amministrazzjoni tat-Taxxa"
+      },
+      {
+        "text": "Kodiċi Ċivili"
+      },
+      {
+        "text": "FAQs"
+      },
+      {
+        "text": "X’tip ta’ leġiżlazzjoni issib f'din il-website?",
+        "url": "https://legislation.mt/Home/FAQList#FAQ_0"
+      },
+      {
+        "text": "Nista' insib leġiżlazzjoni ġdida fuq il-website?",
+        "url": "https://legislation.mt/Home/FAQList#FAQ_1"
+      },
+      {
+        "text": "Kemm huwa aġġornat il-kontenut konsolidat ta’ din il-website?",
+        "url": "https://legislation.mt/Home/FAQList#FAQ_2"
+      },
+      {
+        "text": "Uri iktar...",
+        "url": "https://legislation.mt/Home/FAQList"
+      },
+      {
+        "text": "GWIDI BIL-VIDJO"
+      },
+      {
+        "text": "Liġijiet Konsolidati"
+      },
+      {
+        "text": "Pubblikazzjonijiet"
+      },
+      {
+        "text": "Liġijiet tal-Unjoni Ewropea"
+      },
+      {
+        "text": "Tfitxxija avvanzata"
+      },
+      {
+        "text": "Filmat għal Tfittxija Avvanzata fl-Ontoloġija"
+      },
+      {
+        "text": "Filmat dwar il-Linja Kronoloġika"
+      },
+      {
+        "text": "Client Notifications video tutorial"
+      },
+      {
+        "text": "Kollu(ha) fis-seħħ"
+      },
+      {
+        "text": "eli/const",
+        "url": "https://legislation.mt/eli/const"
+      },
+      {
+        "text": "18/12/2025",
+        "url": "https://legislation.mt#",
+        "date": "18/12/2025"
+      },
+      {
+        "text": "Ingliż",
+        "url": "https://legislation.mt/eli/const/20251218/eng"
+      },
+      {
+        "text": "Status"
+      },
+      {
+        "text": "Data ta' dħul fis-seħħ"
+      },
+      {
+        "text": "Data tal-pubblikazzjoni"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Emendat minn"
+      },
+      {
+        "text": "Regoli tal-Privatezza"
+      },
+      {
+        "text": "Regoli tal-Privatezza",
+        "url": "https://legislation.mt/Home/PrivacyPolicy"
+      },
+      {
+        "text": "Cookie Policy"
+      },
+      {
+        "text": "Cookie Policy",
+        "url": "https://legislation.mt/Home/CookiePolicy"
+      },
+      {
+        "text": "Accessibility Statement"
+      },
+      {
+        "text": "Accessibility Statement",
+        "url": "https://legislation.mt/Home/AccessibilityStatement"
+      }
+    ]
   }
 ]
