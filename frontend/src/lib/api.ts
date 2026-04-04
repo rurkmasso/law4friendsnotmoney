@@ -242,6 +242,22 @@ export const getRegulatoryDocs = async (): Promise<RegulatoryDoc[]> => {
   return [];
 };
 
+export interface IGamingOperator {
+  company_name: string;
+  licence_number: string;
+  licence_type: string;
+  status: string;
+  source_url: string;
+}
+
+export const getIGamingOperators = async (): Promise<IGamingOperator[]> => {
+  const staticData = await loadStaticData<IGamingOperator>("igaming_operators.json");
+  if (staticData.length > 0) return staticData;
+  try {
+    return (await api.get<IGamingOperator[]>("/api/igaming/operators/", { params: { limit: 500 } })).data;
+  } catch { return []; }
+};
+
 export const getTemplates = () =>
   api.get<{ id: string; title: string }[]>("/api/draft/templates").then((r) => r.data);
 

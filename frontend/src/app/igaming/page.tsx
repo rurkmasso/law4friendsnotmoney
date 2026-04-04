@@ -13,18 +13,10 @@ import {
   MinusCircle,
 } from "lucide-react";
 import { useLanguage } from "@/lib/useLanguage";
+import { getIGamingOperators, type IGamingOperator } from "@/lib/api";
 import Link from "next/link";
-import axios from "axios";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-
-interface Operator {
-  company_name: string;
-  licence_number: string;
-  licence_type: string;
-  status: string;
-  source_url: string;
-}
+type Operator = IGamingOperator;
 
 type FilterKey = "All" | "B2C" | "B2B" | "Active" | "Suspended";
 
@@ -203,17 +195,8 @@ export default function IGamingPage() {
     let cancelled = false;
     (async () => {
       setLoading(true);
-      try {
-        const res = await axios.get<Operator[]>(`${API}/api/igaming/operators/`, {
-          params: { limit: 200 },
-          timeout: 10000,
-        });
-        if (!cancelled) { setData(res.data || []); setFetchFailed(false); }
-      } catch {
-        if (!cancelled) { setData([]); setFetchFailed(true); }
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
+      const results = await getIGamingOperators();
+      if (!cancelled) { setData(results); setFetchFailed(results.length === 0); setLoading(false); }
     })();
     return () => { cancelled = true; };
   }, []);
@@ -375,10 +358,12 @@ export default function IGamingPage() {
                 className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-10 text-center"
               >
                 <Shield size={36} className="text-[#9ca3af] mx-auto mb-3" />
-                <p className="text-[#1a1a2e] font-semibold mb-1">{t.backendTitle}</p>
-                <p className="text-[#6b7280] text-sm mb-3">{t.backendSub}</p>
-                <p className="text-xs text-[#9ca3af] font-mono">Run: python3 main.py in /backend</p>
-                <p className="text-xs text-[#9ca3af] font-mono mt-1">API: {API}/api/igaming/operators/</p>
+                <p className="text-[#1a1a2e] font-semibold mb-1">
+                  {lang === "mt" ? "L-ebda data tal-operaturi għadha" : "No operator data yet"}
+                </p>
+                <p className="text-[#6b7280] text-sm">
+                  {lang === "mt" ? "Ħaddex l-MGA scraper biex tniżżel id-data" : "Run the MGA scraper to download operator data"}
+                </p>
               </motion.div>
             )}
 
