@@ -56,9 +56,10 @@ function LawDetail({ law, lang }: { law: Law; lang: string }) {
   const [pdfLang, setPdfLang] = useState<"en" | "mt">("en");
 
   const pdfUrl = pdfLang === "en" ? (law.pdf_url_en || law.pdf_url) : (law.pdf_url_mt || law.pdf_url);
-  // Try local PDF first (if downloaded), otherwise use source URL directly
+  // Use local PDF from data if the scraper downloaded it, otherwise derive from chapter number
+  const localFromData = pdfLang === "en" ? law.local_pdf_en : law.local_pdf_mt;
   const capNum = law.chapter?.match(/\d+/)?.[0];
-  const localPdfPath = capNum ? `cap_${capNum}_${pdfLang}.pdf` : undefined;
+  const localPdfPath = localFromData || (capNum ? `cap_${capNum}_${pdfLang}.pdf` : undefined);
 
   const tabs: { key: Tab; label: string }[] = [
     { key: "details", label: lang === "mt" ? "Dettalji" : "Details" },

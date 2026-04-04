@@ -33,8 +33,8 @@ The definitive open-source Maltese legal intelligence platform. Built for lawyer
 ### Maltese Law
 | Source | Coverage |
 |--------|----------|
-| legislation.mt | All 654+ chapters of the Laws of Malta (with PDF links) |
-| eCourts.gov.mt | Court judgments 1944 – present (7,500+ scraped, 77,000+ target) |
+| legislation.mt | All 654+ chapters of the Laws of Malta (1,005 PDFs downloaded locally) |
+| eCourts.gov.mt | Court judgments 1944 – present (77,000+ target, scraping by court) |
 | lawyersregister.gov.mt | All warranted legal professionals |
 
 ### Regulatory Bodies
@@ -168,6 +168,9 @@ uvicorn main:app --reload
 | `scripts/scrape_all_data.py --source lawyers` | Scrape lawyer register + law firms |
 | `scripts/scrape_law_details.py` | Enhanced scraper — metadata, PDF links, ELI, keywords, timeline |
 | `scripts/scrape_law_details.py --resume` | Resume from last checkpoint |
+| `scripts/scrape_ecourts_full.py` | Full eCourts scraper — all 77K+ judgments, by court, with resume |
+| `scripts/scrape_ecourts_full.py --resume` | Resume from last checkpoint |
+| `scripts/download_pdfs_v3.py` | Download all law PDFs (EN + MT) from legislation.mt |
 | `scripts/scrape_lawyers_enhanced.py` | Extract lawyers from judgments + Chamber of Advocates + register |
 | `scripts/scrape_regulatory_docs.py` | Scrape FIAU, MFSA, MGA, IDPC, CFR regulatory documents |
 | `scripts/scrape_regulatory_docs.py --source fiau` | Scrape just FIAU |

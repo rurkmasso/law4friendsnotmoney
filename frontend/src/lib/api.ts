@@ -75,6 +75,8 @@ export interface Law {
   relationships?: LawRelationship[];
   timeline?: LawTimelineEntry[];
   last_amended?: string | null;
+  local_pdf_en?: string;
+  local_pdf_mt?: string;
 }
 
 /**
