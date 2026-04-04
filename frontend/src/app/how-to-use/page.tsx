@@ -86,7 +86,7 @@ export default function HowToUsePage() {
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#e5e0d5] shadow-sm">
         <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
           <Link href="/" className="font-display text-lg font-bold text-navy">
-            SacLigi
+            Tizzju
           </Link>
           <div className="flex items-center gap-6">
             <Link href="/sectors" className="text-sm text-[#6b7280] hover:text-[#1a1a2e] transition-colors">
@@ -112,7 +112,7 @@ export default function HowToUsePage() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-4">
           <h1 className="font-display text-3xl font-bold text-[#1a1a2e] mb-2">
             <span className="text-gold">{lang === "mt" ? "Kif Tuża" : "How to Use"}</span>
-            {lang === "mt" ? " SacLigi" : " SacLigi"}
+            {lang === "mt" ? " Tizzju" : " Tizzju"}
           </h1>
           <p className="text-[#6b7280] text-sm mb-10">
             {lang === "mt" ? "il-liġi Maltija f'idejk, b'xejn" : "Maltese law at your fingertips, free"}

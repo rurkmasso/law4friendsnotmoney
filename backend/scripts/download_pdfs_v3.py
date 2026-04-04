@@ -109,7 +109,7 @@ async def download_pdf_binary(page, getpdf_url, dest):
 
 async def main(max_chapters=None, start=1):
     print("=" * 60)
-    print("  SacLigi — PDF Downloader v3 (Extract getpdf URLs)")
+    print("  Tizzju — PDF Downloader v3 (Extract getpdf URLs)")
     print("  Powered by Rark Musso")
     print("=" * 60)
 

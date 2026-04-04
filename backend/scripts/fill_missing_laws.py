@@ -46,7 +46,7 @@ def is_valid_pdf(path):
 
 async def main():
     print("=" * 60)
-    print("  SacLigi — Fill Missing Law Entries")
+    print("  Tizzju — Fill Missing Law Entries")
     print("  Powered by Rark Musso")
     print("=" * 60)
 

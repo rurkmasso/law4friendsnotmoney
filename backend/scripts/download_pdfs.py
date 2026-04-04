@@ -82,7 +82,7 @@ async def download_pdf_via_browser(page, url, dest):
 
 async def main(max_chapters=None, start=1):
     print("=" * 60)
-    print("  SacLigi — PDF Downloader (Playwright)")
+    print("  Tizzju — PDF Downloader (Playwright)")
     print("  Powered by Rark Musso")
     print("=" * 60)
 

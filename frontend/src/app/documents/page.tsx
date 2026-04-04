@@ -106,7 +106,7 @@ export default function DocumentsPage() {
           <Link href="/" className="flex items-center gap-2">
             <Scale size={20} className="text-gold" />
             <span className="text-lg font-display font-bold text-[#1a1a2e]">
-              <span className="text-gold">Sac</span>Ligi
+              <span className="text-gold">Tizz</span>ju
             </span>
           </Link>
           <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
@@ -309,7 +309,7 @@ export default function DocumentsPage() {
 
         {/* Footer */}
         <div className="py-10 mt-10 text-center text-xs text-[#9ca3af] border-t border-[#e5e0d5]">
-          <p>SacLigi — Powered by Rark Musso · B&apos;Xejn għal Dejjem</p>
+          <p>Tizzju — Powered by Rark Musso · B&apos;Xejn għal Dejjem</p>
         </div>
       </div>
     </div>

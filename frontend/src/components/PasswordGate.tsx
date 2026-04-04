@@ -50,7 +50,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl">
           <div className="text-center mb-8">
             <div className="text-3xl font-bold text-white mb-1">
-              Sac<span className="text-[#e2b659]">Ligi</span>
+              Tizz<span className="text-[#e2b659]">ju</span>
             </div>
             <p className="text-white/40 text-sm">Il-Liġi Maltija — Private Beta</p>
           </div>

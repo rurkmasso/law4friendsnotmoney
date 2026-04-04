@@ -1,4 +1,4 @@
-# SacLigi — Il-Liġi Maltija Miftuħa għal Kulħadd
+# Tizzju — Il-Liġi Maltija Miftuħa għal Kulħadd
 
 > **Free. Forever. Powered by Rark Musso.**
 
@@ -261,7 +261,7 @@ PRs welcome. If you find a missing data source, a broken scraper, or a wrong leg
 
 ## Disclaimer
 
-SacLigi is a legal research tool. Responses are for information only and do not constitute legal advice. Always consult a warranted advocate for legal matters.
+Tizzju is a legal research tool. Responses are for information only and do not constitute legal advice. Always consult a warranted advocate for legal matters.
 
 *Dan is għar-riċerka legali biss. Mhux parir legali.*
 

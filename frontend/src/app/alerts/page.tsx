@@ -40,7 +40,7 @@ export default function AlertsPage() {
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#e5e0d5] shadow-sm">
         <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
           <Link href="/" className="font-display text-lg font-bold text-navy">
-            SacLigi
+            Tizzju
           </Link>
           <div className="flex items-center gap-6">
             <Link href="/sectors" className="text-sm text-[#6b7280] hover:text-[#1a1a2e] transition-colors">
