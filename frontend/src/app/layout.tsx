@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Suspense } from "react";
 import SpaRedirect from "@/components/SpaRedirect";
-import PasswordGate from "@/components/PasswordGate";
 import "./globals.css";
 
 const inter = Inter({
@@ -28,9 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="mt" className={`${inter.variable} ${playfair.variable}`}>
       <body className="antialiased font-inter">
         <Suspense><SpaRedirect /></Suspense>
-        <PasswordGate>
-          {children}
-        </PasswordGate>
+        {children}
       </body>
     </html>
   );
