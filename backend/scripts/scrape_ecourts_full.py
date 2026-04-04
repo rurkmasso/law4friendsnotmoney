@@ -385,9 +385,9 @@ async def main(resume=False, test=False):
                     f.write(content)
                 print(f"    Debug: saved screenshot and HTML to /tmp/ecourts_first_court.*")
 
-            if total > 10000:
-                # Too many — break down by year
-                print(f"    Large court — breaking down by year...")
+            if total >= 1000:
+                # DataTables caps at ~1000 results — break down by year to get them all
+                print(f"    Large court ({total}+) — breaking down by year...")
                 court_new = 0
 
                 for year in range(2026, 1943, -1):

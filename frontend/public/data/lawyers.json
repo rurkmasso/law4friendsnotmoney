@@ -1,1334 +1,3728 @@
 [
   {
-    "warrant_number": "JUD-0001",
-    "full_name": "AGIUS BONNICI ANTOINE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
+    "full_name": "Chetcuti Mark",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
     "email": "",
     "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 33,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0002",
-    "full_name": "AXIAK VICTOR GEORGE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 10,
-    "courts_active_in": [
-      "OF MAGISTRATES (CIVIL)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0003",
-    "full_name": "AZZOPARDI KEVAN",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 13,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0004",
-    "full_name": "BARTOLO NOEL",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 14,
-    "courts_active_in": [
-      "LAND ARBITRATION BOARD"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0005",
-    "full_name": "BIANCO INGRID",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 6,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0006",
-    "full_name": "BUGEJA AARON",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 14,
-    "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0007",
-    "full_name": "CALLEJA LEONTINE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 4,
-    "courts_active_in": [
-      "SMALL CLAIMS TRIBUNAL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0008",
-    "full_name": "CAMILLERI BUSUTTIL GIANNELLA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 8,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0009",
-    "full_name": "CAMILLERI NEVILLE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 34,
-    "courts_active_in": [
-      "OF CRIMINAL APPEAL (INFERIOR)",
-      "CRIMINAL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0010",
-    "full_name": "CARUANA LEONARD",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 11,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
-      "RENT REGULATION BOARD",
-      "OF MAGISTRATES (COMMITTAL)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0011",
-    "full_name": "CHETCUTI MARK , ELLUL ANTHONY , GRECH SIMONE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 1,
-    "courts_active_in": [
-      "OF APPEAL (CIVIL, SUPERIOR)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0012",
-    "full_name": "CHETCUTI MARK , ELLUL ANTHONY , MANGION ROBERT G",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 14,
-    "courts_active_in": [
-      "CONSTITUTIONAL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0013",
-    "full_name": "CHETCUTI MARK , FALZON SCERRI CHRISTIAN , DEMICOLI JOSETTE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 18,
-    "courts_active_in": [
-      "OF APPEAL (CIVIL, SUPERIOR)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0014",
-    "full_name": "CHETCUTI MARK , MANGION ROBERT G , GRECH SIMONE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 22,
-    "courts_active_in": [
-      "OF APPEAL (CIVIL, SUPERIOR)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0015",
-    "full_name": "CHIRCOP CHRISTOPHER",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 6,
-    "courts_active_in": [
-      "SMALL CLAIMS TRIBUNAL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0016",
-    "full_name": "CLARKE DOREEN",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 18,
-    "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0017",
-    "full_name": "CRITIEN ABIGAIL",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 24,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0018",
-    "full_name": "DEBONO MAROUSKA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 13,
-    "courts_active_in": [
-      "SMALL CLAIMS TRIBUNAL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0019",
-    "full_name": "DEMICOLI AUDREY",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 23,
-    "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0020",
-    "full_name": "DEPASQUALE FRANCESCO",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 14,
-    "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0021",
-    "full_name": "ELLUL ANTHONY , FALZON SCERRI CHRISTIAN , SIMIANA MARK",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 1,
-    "courts_active_in": [
-      "OF APPEAL (CIVIL, SUPERIOR)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0022",
-    "full_name": "ELLUL ANTHONY , MANGION ROBERT G , GRECH SIMONE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 1,
-    "courts_active_in": [
-      "OF APPEAL (CIVIL, SUPERIOR)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0023",
-    "full_name": "FALZON SCERRI CHRISTIAN , DEMICOLI JOSETTE , SIMIANA MARK",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 1,
-    "courts_active_in": [
-      "OF APPEAL (CIVIL, SUPERIOR)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0024",
-    "full_name": "FARRUGIA FRENDO CAROLINE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 33,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
-      "OF MAGISTRATES (CRIMINAL INQUIRY)",
-      "OF MAGISTRATES (CIVIL)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0025",
-    "full_name": "FARRUGIA MARSEANN",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 6,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0026",
-    "full_name": "FRENDO DIMECH DONATELLA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 15,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0027",
-    "full_name": "GALEA CHARMAINE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 1,
-    "courts_active_in": [
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0028",
-    "full_name": "GALEA SCIBERRAS NATASHA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 17,
-    "courts_active_in": [
-      "OF CRIMINAL APPEAL (INFERIOR)",
-      "CRIMINAL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0029",
-    "full_name": "GATT JOSEPH",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 44,
-    "courts_active_in": [
-      "RENT REGULATION BOARD",
-      "OF MAGISTRATES (CIVIL)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0030",
-    "full_name": "GIORDMAINA FRANCA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 2,
-    "courts_active_in": [
-      "THE ADMINISTRATIVE REVIEW TRIBUNAL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0031",
-    "full_name": "GRECH JEAN PAUL",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 8,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0032",
-    "full_name": "GRIMA ASTRID MAY",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 5,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0033",
-    "full_name": "GRIMA EDWINA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 18,
-    "courts_active_in": [
-      "OF CRIMINAL APPEAL (INFERIOR)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0034",
-    "full_name": "GRIXTI GIOVANNI",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 17,
-    "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0035",
-    "full_name": "HAYMAN MIRIAM",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 29,
-    "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0036",
-    "full_name": "LOFARO ABIGAIL",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 21,
-    "courts_active_in": [
-      "CIVIL - FAMILY"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0037",
-    "full_name": "MANGION ROBERT G , DEMICOLI AUDREY , DEMICOLI JOSETTE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 1,
-    "courts_active_in": [
-      "OF APPEAL (CIVIL, SUPERIOR)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0038",
-    "full_name": "MANGION ROBERT G , SIMIANA MARK , GRECH SIMONE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 1,
-    "courts_active_in": [
-      "OF APPEAL (CIVIL, SUPERIOR)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0039",
-    "full_name": "MICALLEF STAFRACE YANA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 40,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0040",
-    "full_name": "MINTOFF LAWRENCE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 34,
-    "courts_active_in": [
-      "OF APPEAL (CIVIL, INFERIOR)",
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0041",
-    "full_name": "MIZZI HENRI",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 26,
-    "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0042",
-    "full_name": "MONTEBELLO RACHEL",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 20,
-    "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0043",
-    "full_name": "PADOVANI GRIMA JACQUELINE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 31,
-    "courts_active_in": [
-      "CIVIL - FAMILY"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0044",
-    "full_name": "PORTELLI XERRI MARSETTE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 3,
-    "courts_active_in": [
-      "SMALL CLAIMS TRIBUNAL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0045",
-    "full_name": "RIZZO ELAINE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 3,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0046",
-    "full_name": "SAMMUT TANYA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 8,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
-      "OF MAGISTRATES (CRIMINAL INQUIRY)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0047",
-    "full_name": "SANT LIA NADINE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 13,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
-      "OF MAGISTRATES (CRIMINAL INQUIRY)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0048",
-    "full_name": "SCERRI HERRERA CONSUELO-PILAR",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 25,
-    "courts_active_in": [
-      "OF CRIMINAL APPEAL (INFERIOR)",
-      "CRIMINAL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0049",
-    "full_name": "SCHEMBRI ILONA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 6,
-    "courts_active_in": [
-      "SMALL CLAIMS TRIBUNAL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0050",
-    "full_name": "SIMIANA MARK",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 28,
-    "courts_active_in": [
-      "OF APPEAL (CIVIL, INFERIOR)",
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0051",
-    "full_name": "SPITERI BAILEY IAN",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 46,
+    "practice_areas": [],
+    "case_count": 1632,
     "courts_active_in": [
       "OF COMMERCE",
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+      "CONSTITUTIONAL",
+      "OF APPEAL (CIVIL, INFERIOR)",
+      "OF CRIMINAL APPEAL (SUPERIOR)",
+      "THE COMPETITION AND CONSUMER APPEALS TRIBUNAL"
     ],
-    "first_case_date": null,
-    "last_case_date": null,
+    "first_case_date": "01/12/2021",
+    "last_case_date": "31/08/2021",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "JUD-0052",
-    "full_name": "STAFRACE ZAMMIT CLAIRE-LOUISE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 12,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0053",
-    "full_name": "SULTANA BRIGITTE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 12,
-    "courts_active_in": [
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0054",
-    "full_name": "TANTI GRAZIELLA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 10,
-    "courts_active_in": [
-      "SMALL CLAIMS TRIBUNAL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0055",
-    "full_name": "THAKE ANN MARIE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 9,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0056",
-    "full_name": "VELLA ANTONIO GIOVANNI",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 20,
-    "courts_active_in": [
-      "CIVIL - FAMILY"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0057",
-    "full_name": "VELLA CUSCHIERI JOANNE",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 14,
-    "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
-      "CIVIL COURT, FIRST HALL"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0058",
-    "full_name": "VELLA GABRIELLA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 13,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0059",
-    "full_name": "VELLA MONICA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 20,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0060",
-    "full_name": "VELLA NADIA-HELENA",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 25,
-    "courts_active_in": [
-      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "JUD-0061",
-    "full_name": "ZAMMIT CLAUDIO",
-    "profession": "Judge / Magistrate",
-    "firm": "Judiciary of Malta",
-    "email": "",
-    "phone": "",
-    "practice_areas": [
-      "Judiciary"
-    ],
-    "case_count": 4,
-    "courts_active_in": [
-      "RENT REGULATION BOARD",
-      "OF MAGISTRATES (CIVIL)"
-    ],
-    "first_case_date": null,
-    "last_case_date": null,
-    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
-  },
-  {
-    "warrant_number": "ECT-61",
-    "full_name": "Tal-Istat Et",
-    "profession": "Advocate",
+    "full_name": "Caruana Demajo Giannino",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
     "firm": "",
     "email": "",
     "phone": "",
     "practice_areas": [],
-    "case_count": 60,
+    "case_count": 1021,
     "courts_active_in": [
       "CONSTITUTIONAL",
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+      "CRIMINAL",
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
     ],
-    "first_case_date": "02/03/2026",
-    "last_case_date": "27/03/2026",
+    "first_case_date": "01/12/2021",
+    "last_case_date": "31/08/2021",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-62",
-    "full_name": "Tal-Istat",
-    "profession": "Advocate",
+    "full_name": "Ellul Anthony",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 858,
+    "courts_active_in": [
+      "CONSTITUTIONAL",
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "RURAL LEASES CONTROL BOARD"
+    ],
+    "first_case_date": "01/12/2021",
+    "last_case_date": "31/08/2021",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Galea Charmaine",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 659,
+    "courts_active_in": [
+      "TAL-MAGISTRATI (CIVILI)",
+      "RENT REGULATION BOARD",
+      "THE ADMINISTRATIVE REVIEW TRIBUNAL",
+      "OF MAGISTRATES (COMMITTAL)",
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "first_case_date": "01/04/2019",
+    "last_case_date": "31/08/2024",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Farrugia Sacco Lino",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 656,
+    "courts_active_in": [
+      "TRIBUNAL FOR INVESTIGATIONS OF INJUSTICES",
+      "TRIBUNAL GHALL-INVESTIGAZZJONI TAL-INGUSTIZZJI"
+    ],
+    "first_case_date": "01/02/2001",
+    "last_case_date": "31/10/2002",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Mintoff Lawrence",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 473,
+    "courts_active_in": [
+      "OF COMMERCE",
+      "CIVIL COURT, FIRST HALL",
+      "OF APPEAL (CIVIL, INFERIOR)",
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "first_case_date": "01/11/2023",
+    "last_case_date": "31/01/2024",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Grixti Giovanni",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 448,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (INFERIOR)",
+      "CIVIL COURT (ASSET RECOVERY SECTION)",
+      "RURAL LEASES CONTROL BOARD",
+      "CRIMINAL",
+      "LAND ARBITRATION BOARD"
+    ],
+    "first_case_date": "01/02/2012",
+    "last_case_date": "31/10/2012",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Mangion Robert G",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 419,
+    "courts_active_in": [
+      "CONSTITUTIONAL",
+      "OF COMMERCE",
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "first_case_date": "02/02/2026",
+    "last_case_date": "30/07/2024",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Demicoli Josette",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 404,
+    "courts_active_in": [
+      "CONSTITUTIONAL",
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "01/07/2019",
+    "last_case_date": "31/05/2023",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Falzon Scerri Christian",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 392,
+    "courts_active_in": [
+      "CONSTITUTIONAL",
+      "OF COMMERCE",
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "first_case_date": "02/02/2026",
+    "last_case_date": "30/07/2024",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Vella Gabriella",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 384,
+    "courts_active_in": [
+      "THE ADMINISTRATIVE REVIEW TRIBUNAL",
+      "OF MAGISTRATES (COMMITTAL)",
+      "TRIBUNAL TA' REVIZJONI AMMINISTRATTIVA",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
+      "OF MAGISTRATES (CIVIL)"
+    ],
+    "first_case_date": "01/11/2022",
+    "last_case_date": "31/01/2017",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Mercieca Grazio",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 339,
+    "courts_active_in": [
+      "CONSTITUTIONAL",
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "first_case_date": "03/09/2024",
+    "last_case_date": "30/07/2024",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Grima Edwina",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 320,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF CRIMINAL APPEAL (INFERIOR)",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "01/12/2023",
+    "last_case_date": "31/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Camilleri Neville",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 307,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF CRIMINAL APPEAL (INFERIOR)",
+      "OF MAGISTRATES (COMMITTAL)"
+    ],
+    "first_case_date": "01/02/2024",
+    "last_case_date": "30/11/2023",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Gatt Joseph",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 293,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "EUROPEAN SMALL CLAIMS PROCEDURE",
+      "SMALL CLAIMS TRIBUNAL",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
+      "OF MAGISTRATES (CIVIL)"
+    ],
+    "first_case_date": "01/08/2024",
+    "last_case_date": "30/12/2022",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Scerri Herrera Consuelo-Pilar",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 291,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF CRIMINAL APPEAL (INFERIOR)"
+    ],
+    "first_case_date": "01/11/2024",
+    "last_case_date": "31/10/2023",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Depasquale Francesco",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 231,
+    "courts_active_in": [
+      "RURAL LEASES CONTROL BOARD",
+      "LAND ARBITRATION BOARD",
+      "OF MAGISTRATES (COMMITTAL)",
+      "CIVIL COURT, FIRST HALL",
+      "CONSTITUTIONAL"
+    ],
+    "first_case_date": "01/02/2017",
+    "last_case_date": "31/10/2018",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Cuschieri Noel",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 203,
+    "courts_active_in": [
+      "CONSTITUTIONAL",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "02/03/2018",
+    "last_case_date": "31/05/2019",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Scicluna David",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 201,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "01/12/2005",
+    "last_case_date": "31/10/2013",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Simiana Mark",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 200,
+    "courts_active_in": [
+      "CIVIL COURT, FIRST HALL",
+      "CONSTITUTIONAL",
+      "OF APPEAL (CIVIL, INFERIOR)",
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "first_case_date": "01/12/2025",
+    "last_case_date": "30/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Hayman Miriam",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 189,
+    "courts_active_in": [
+      "OF COMMERCE",
+      "CIVIL - FAMILY",
+      "CIVIL COURT, FIRST HALL",
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "first_case_date": "01/02/2005",
+    "last_case_date": "30/09/2024",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Spiteri Bailey Ian",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 180,
+    "courts_active_in": [
+      "OF COMMERCE",
+      "CIVIL - FAMILY",
+      "CIVIL COURT, FIRST HALL",
+      "EUROPEAN SMALL CLAIMS PROCEDURE",
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+    ],
+    "first_case_date": "01/03/2024",
+    "last_case_date": "31/01/2022",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Vella Cuschieri Joanne",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 175,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "OF COMMERCE",
+      "OF APPEAL (CIVIL, INFERIOR)",
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "first_case_date": "02/10/2025",
+    "last_case_date": "31/10/2024",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Lofaro Abigail",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 166,
+    "courts_active_in": [
+      "CIVIL - FAMILY",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "01/07/2025",
+    "last_case_date": "31/10/2018",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Zammit Mc Keon Joseph",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 158,
+    "courts_active_in": [
+      "OF COMMERCE",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "02/03/2010",
+    "last_case_date": "31/10/2019",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Demicoli Audrey",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 157,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF COMMERCE",
+      "CIVIL COURT, FIRST HALL",
+      "CONSTITUTIONAL",
+      "OF APPEAL (COMMERCIAL)"
+    ],
+    "first_case_date": "01/02/2024",
+    "last_case_date": "31/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "De Gaetano Vincent",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 154,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "01/02/2007",
+    "last_case_date": "31/10/2008",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Bugeja Aaron",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 150,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (INFERIOR)",
+      "CRIMINAL",
+      "OF COMMERCE",
+      "OF MAGISTRATES (COMMITTAL)",
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "first_case_date": "01/03/2022",
+    "last_case_date": "31/07/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Axiak Victor George",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 148,
+    "courts_active_in": [
+      "OF MAGISTRATES (CIVIL)",
+      "TAL-MAGISTRATI (CIVILI)",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "02/03/2026",
+    "last_case_date": "31/01/2022",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Azzopardi Joseph",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 146,
+    "courts_active_in": [
+      "CONSTITUTIONAL",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "03/10/2018",
+    "last_case_date": "31/10/2018",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Farrugia Frendo Caroline",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 142,
+    "courts_active_in": [
+      "OF MAGISTRATES (CIVIL)",
+      "TAL-MAGISTRATI (CIVILI)",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "02/03/2022",
+    "last_case_date": "31/12/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Mizzi Henri",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 130,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "OF COMMERCE",
+      "CIVIL COURT (ASSET RECOVERY SECTION)",
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "first_case_date": "01/07/2025",
+    "last_case_date": "31/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Mallia Michael",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 126,
+    "courts_active_in": [
+      "TRIBUNAL FOR INVESTIGATIONS OF INJUSTICES",
+      "CRIMINAL",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)"
+    ],
+    "first_case_date": "01/11/2010",
+    "last_case_date": "30/05/2013",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Montebello Rachel",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 124,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "CIVIL COURT, FIRST HALL",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
+      "OF MAGISTRATES (CIVIL)",
+      "TAL-MAGISTRATI (CIVILI)"
+    ],
+    "first_case_date": "02/05/2022",
+    "last_case_date": "31/05/2023",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Farrugia Marseann",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 122,
+    "courts_active_in": [
+      "OF MAGISTRATES (CIVIL)",
+      "TAL-MAGISTRATI (CIVILI)",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "02/02/2026",
+    "last_case_date": "31/08/2022",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Micallef Stafrace Yana",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 117,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "EUROPEAN SMALL CLAIMS PROCEDURE",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "01/12/2025",
+    "last_case_date": "30/11/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Camilleri Silvio",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 117,
+    "courts_active_in": [
+      "CONSTITUTIONAL",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "02/03/2018",
+    "last_case_date": "30/11/2017",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Vella Antonio Giovanni",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 115,
+    "courts_active_in": [
+      "CIVIL - FAMILY",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)"
+    ],
+    "first_case_date": "01/12/2025",
+    "last_case_date": "30/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Galea Sciberras Natasha",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 115,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF CRIMINAL APPEAL (INFERIOR)"
+    ],
+    "first_case_date": "01/08/2025",
+    "last_case_date": "30/04/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Cassar Joseph",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 109,
+    "courts_active_in": [
+      "LAND ARBITRATION BOARD",
+      "RURAL LEASES CONTROL BOARD"
+    ],
+    "first_case_date": "01/02/2006",
+    "last_case_date": "30/11/2006",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Padovani Grima Jacqueline",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 107,
+    "courts_active_in": [
+      "CIVIL - FAMILY"
+    ],
+    "first_case_date": "01/12/2025",
+    "last_case_date": "31/07/2024",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Frendo Dimech Donatella",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 99,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
+      "OF MAGISTRATES (COMMITTAL)"
+    ],
+    "first_case_date": "01/06/2017",
+    "last_case_date": "30/06/2022",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Apap Bologna Joseph A.",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 98,
+    "courts_active_in": [
+      "LAND ARBITRATION BOARD",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "RURAL LEASES CONTROL BOARD",
+      "OF MAGISTRATES (COMMITTAL)"
+    ],
+    "first_case_date": "01/06/2004",
+    "last_case_date": "31/08/2007",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Grech Simone",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 94,
+    "courts_active_in": [
+      "RURAL LEASES CONTROL BOARD",
+      "LAND ARBITRATION BOARD",
+      "THE ADMINISTRATIVE REVIEW TRIBUNAL",
+      "CIVIL COURT, FIRST HALL",
+      "TRIBUNAL TA' REVIZJONI AMMINISTRATTIVA"
+    ],
+    "first_case_date": "02/02/2026",
+    "last_case_date": "31/05/2023",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Clarke Doreen",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 90,
+    "courts_active_in": [
+      "CIVIL COURT, FIRST HALL",
+      "CONSTITUTIONAL",
+      "OF CRIMINAL APPEAL (SUPERIOR)",
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)"
+    ],
+    "first_case_date": "01/02/2024",
+    "last_case_date": "30/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Abela Toni",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 88,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "first_case_date": "01/08/2024",
+    "last_case_date": "30/06/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Vella Nadia-Helena",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 84,
+    "courts_active_in": [
+      "OF MAGISTRATES (CIVIL)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "01/12/2025",
+    "last_case_date": "31/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Agius Bonnici Antoine",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 81,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "05/02/2026",
+    "last_case_date": "30/03/2026",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Bartolo Noel",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 80,
+    "courts_active_in": [
+      "LAND ARBITRATION BOARD",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (COMMITTAL)",
+      "CIVIL COURT, FIRST HALL",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "02/09/2022",
+    "last_case_date": "31/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Felice Anna",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 78,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "OF CRIMINAL APPEAL (SUPERIOR)",
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "first_case_date": "02/04/2025",
+    "last_case_date": "30/06/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Galea Debono Joseph",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 76,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "02/06/2005",
+    "last_case_date": "31/01/2007",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Micallef Joseph R.",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 74,
+    "courts_active_in": [
+      "CONSTITUTIONAL",
+      "OF COMMERCE",
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "02/09/2010",
+    "last_case_date": "31/08/2020",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Filletti Joseph A.",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 73,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "01/12/2005",
+    "last_case_date": "30/10/2003",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Caruana Leonard",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 70,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (COMMITTAL)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
+      "OF MAGISTRATES (CIVIL)",
+      "TAL-MAGISTRATI (CIVILI)"
+    ],
+    "first_case_date": "01/03/2023",
+    "last_case_date": "29/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Calleja Leontine",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 58,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE",
+      "SMALL CLAIMS TRIBUNAL"
+    ],
+    "first_case_date": "01/02/2023",
+    "last_case_date": "30/11/2022",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Grech Jean Paul",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 56,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
+      "SMALL CLAIMS TRIBUNAL"
+    ],
+    "first_case_date": "03/02/2026",
+    "last_case_date": "31/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Schembri Ilona",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 55,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE",
+      "SMALL CLAIMS TRIBUNAL"
+    ],
+    "first_case_date": "02/03/2026",
+    "last_case_date": "29/07/2024",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Critien Abigail",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 54,
+    "courts_active_in": [
+      "JUVENILE COURT (Criminal Jurisdiction)",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "04/03/2026",
+    "last_case_date": "30/03/2026",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Vella Monica",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 49,
+    "courts_active_in": [
+      "RURAL LEASES CONTROL BOARD",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "CIVIL COURT, FIRST HALL",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
+      "OF MAGISTRATES (CIVIL)"
+    ],
+    "first_case_date": "02/07/2024",
+    "last_case_date": "30/01/2024",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Mallia Tonio",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 48,
+    "courts_active_in": [
+      "CONSTITUTIONAL",
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "first_case_date": "01/12/2021",
+    "last_case_date": "29/10/2018",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Azzopardi Kevan",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 45,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "04/02/2026",
+    "last_case_date": "30/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Sultana Brigitte",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 43,
+    "courts_active_in": [
+      "RURAL LEASES CONTROL BOARD",
+      "CIVIL COURT, FIRST HALL",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
+      "OF MAGISTRATES (CIVIL)",
+      "TAL-MAGISTRATI (CIVILI)"
+    ],
+    "first_case_date": "02/06/2023",
+    "last_case_date": "31/01/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Borg Myatt Duncan",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 43,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE",
+      "SMALL CLAIMS TRIBUNAL"
+    ],
+    "first_case_date": "02/02/2023",
+    "last_case_date": "31/10/2023",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Sant Lia Nadine",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 42,
+    "courts_active_in": [
+      "OF MAGISTRATES (COMMITTAL)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)",
+      "OF MAGISTRATES (CIVIL)",
+      "TAL-MAGISTRATI (CIVILI)",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)"
+    ],
+    "first_case_date": "01/12/2025",
+    "last_case_date": "26/02/2026",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Quintano Lawrence",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 42,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)"
+    ],
+    "first_case_date": "01/03/2004",
+    "last_case_date": "29/11/2011",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Grima Astrid May",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 39,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "01/12/2025",
+    "last_case_date": "30/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Scerri Ferrante Juliana",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 39,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE",
+      "SMALL CLAIMS TRIBUNAL"
+    ],
+    "first_case_date": "03/10/2022",
+    "last_case_date": "31/05/2022",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Stafrace Zammit Claire-Louise",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 37,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "01/12/2025",
+    "last_case_date": "27/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Debono Marouska",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 36,
+    "courts_active_in": [
+      "SMALL CLAIMS TRIBUNAL"
+    ],
+    "first_case_date": "01/02/2024",
+    "last_case_date": "30/01/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Camilleri Busuttil Giannella",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 32,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "01/07/2025",
+    "last_case_date": "30/01/2026",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Sammut Tanya",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 28,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "02/03/2026",
+    "last_case_date": "28/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Thake Ann Marie",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 22,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "01/10/2025",
+    "last_case_date": "30/10/2025",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Camilleri Xuereb Kevin",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 22,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE",
+      "SMALL CLAIMS TRIBUNAL"
+    ],
+    "first_case_date": "05/05/2021",
+    "last_case_date": "31/01/2018",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Chircop Christopher",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 20,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE",
+      "SMALL CLAIMS TRIBUNAL"
+    ],
+    "first_case_date": "02/03/2026",
+    "last_case_date": "28/10/2024",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Pace Raymond C.",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
     "firm": "",
     "email": "",
     "phone": "",
     "practice_areas": [],
     "case_count": 18,
     "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
-      "RENT REGULATION BOARD"
+      "OF CRIMINAL APPEAL (SUPERIOR)"
     ],
-    "first_case_date": "02/03/2026",
-    "last_case_date": "27/03/2026",
+    "first_case_date": "02/12/2010",
+    "last_case_date": "28/03/2007",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-63",
-    "full_name": "Generali Et",
-    "profession": "Advocate",
+    "full_name": "Coppini Paul",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
     "firm": "",
     "email": "",
     "phone": "",
     "practice_areas": [],
-    "case_count": 6,
+    "case_count": 18,
     "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+      "OF MAGISTRATES (CRIMINAL INQUIRY)",
+      "RURAL LEASES CONTROL BOARD"
     ],
-    "first_case_date": "04/03/2026",
-    "last_case_date": "26/03/2026",
+    "first_case_date": "04/10/2012",
+    "last_case_date": "27/04/2004",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-64",
-    "full_name": "Dottor Et Noe Vs Avukat Tal-Istat Et",
-    "profession": "Advocate",
+    "full_name": "Tanti Graziella",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
     "firm": "",
     "email": "",
     "phone": "",
     "practice_areas": [],
-    "case_count": 1,
+    "case_count": 17,
     "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+      "SMALL CLAIMS TRIBUNAL"
     ],
-    "first_case_date": "23/03/2026",
-    "last_case_date": "23/03/2026",
+    "first_case_date": "02/12/2025",
+    "last_case_date": "27/01/2026",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-65",
-    "full_name": "Ibtisam Et Noe",
-    "profession": "Advocate",
+    "full_name": "Arrigo Noel V.",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
     "firm": "",
     "email": "",
     "phone": "",
     "practice_areas": [],
-    "case_count": 1,
+    "case_count": 17,
     "courts_active_in": [
-      "CIVIL COURT, FIRST HALL"
+      "OF CRIMINAL APPEAL (SUPERIOR)"
     ],
-    "first_case_date": "23/03/2026",
-    "last_case_date": "23/03/2026",
+    "first_case_date": "04/06/2002",
+    "last_case_date": "30/10/2001",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-66",
-    "full_name": "Dr Et Noe",
-    "profession": "Advocate",
+    "full_name": "Montebello Denis",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
     "firm": "",
     "email": "",
     "phone": "",
     "practice_areas": [],
-    "case_count": 1,
+    "case_count": 17,
     "courts_active_in": [
-      "CIVIL COURT, FIRST HALL"
+      "LAND ARBITRATION BOARD",
+      "RURAL LEASES CONTROL BOARD"
     ],
-    "first_case_date": "13/03/2026",
-    "last_case_date": "13/03/2026",
+    "first_case_date": "08/04/2003",
+    "last_case_date": "30/05/2006",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-67",
-    "full_name": "Dottor Vs Cutajar Luke Reverendu Dun Noe Et",
-    "profession": "Advocate",
+    "full_name": "Said Pullicino Joseph",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
     "firm": "",
     "email": "",
     "phone": "",
     "practice_areas": [],
-    "case_count": 1,
+    "case_count": 15,
     "courts_active_in": [
-      "RENT REGULATION BOARD"
+      "OF CRIMINAL APPEAL (SUPERIOR)"
     ],
-    "first_case_date": "04/03/2026",
-    "last_case_date": "04/03/2026",
+    "first_case_date": "05/04/2001",
+    "last_case_date": "30/10/2001",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-68",
-    "full_name": "Generali",
-    "profession": "Advocate",
+    "full_name": "Agius Carmel A.",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
     "firm": "",
     "email": "",
     "phone": "",
     "practice_areas": [],
-    "case_count": 1,
+    "case_count": 14,
     "courts_active_in": [
-      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+      "OF APPEAL (COMMERCIAL)",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
     ],
-    "first_case_date": "27/02/2026",
+    "first_case_date": "05/04/2001",
+    "last_case_date": "30/10/2001",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Zammit Claudio",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 12,
+    "courts_active_in": [
+      "OF MAGISTRATES (CIVIL)",
+      "RENT REGULATION BOARD",
+      "EUROPEAN SMALL CLAIMS PROCEDURE"
+    ],
+    "first_case_date": "01/02/2021",
+    "last_case_date": "31/08/2021",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Camilleri Gino",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 12,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "02/06/2005",
+    "last_case_date": "30/10/2003",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Mizzi Antonio",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 11,
+    "courts_active_in": [
+      "CRIMINAL"
+    ],
+    "first_case_date": "03/05/2017",
+    "last_case_date": "30/01/2017",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Caruana Colombo Victor J.",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 11,
+    "courts_active_in": [
+      "TRIBUNAL FOR INVESTIGATIONS OF INJUSTICES"
+    ],
+    "first_case_date": "06/03/2003",
+    "last_case_date": "30/05/2000",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Rizzo Elaine",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 10,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "03/03/2026",
+    "last_case_date": "29/01/2026",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Bianco Ingrid",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 8,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL JUDICATURE)"
+    ],
+    "first_case_date": "03/03/2026",
     "last_case_date": "27/02/2026",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-69",
-    "full_name": "Noe Vs Papaya Limited",
-    "profession": "Advocate",
+    "full_name": "Magri Philip Mario",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 7,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE"
+    ],
+    "first_case_date": "02/03/2020",
+    "last_case_date": "30/08/2021",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Vella Patrick",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 6,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "first_case_date": "04/07/2002",
+    "last_case_date": "20/09/2001",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Lanfranco Lara",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 6,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)"
+    ],
+    "first_case_date": "09/08/2023",
+    "last_case_date": "19/07/2023",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Mallia Anna",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 5,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE"
+    ],
+    "first_case_date": "05/10/2018",
+    "last_case_date": "21/06/2018",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Portelli Xerri Marsette",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 4,
+    "courts_active_in": [
+      "SMALL CLAIMS TRIBUNAL"
+    ],
+    "first_case_date": "10/05/2024",
+    "last_case_date": "25/03/2026",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Galea Vincent",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 4,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE"
+    ],
+    "first_case_date": "02/11/2016",
+    "last_case_date": "23/04/2015",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Mifsud Joseph",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 4,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)"
+    ],
+    "first_case_date": "10/10/2023",
+    "last_case_date": "25/03/2021",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Giordmaina Franca",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 2,
+    "courts_active_in": [
+      "THE ADMINISTRATIVE REVIEW TRIBUNAL"
+    ],
+    "first_case_date": "23/03/2026",
+    "last_case_date": "23/03/2026",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Aquilina Phyllis",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 2,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE"
+    ],
+    "first_case_date": "03/04/2018",
+    "last_case_date": "09/01/2019",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Mompalao Kevin",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 2,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE"
+    ],
+    "first_case_date": "14/03/2012",
+    "last_case_date": "15/11/2016",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Bezzina Graziella",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 2,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE"
+    ],
+    "first_case_date": "03/04/2012",
+    "last_case_date": "03/04/2012",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Peralta Carol",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 2,
+    "courts_active_in": [
+      "CRIMINAL",
+      "OF MAGISTRATES (CRIMINAL INQUIRY)"
+    ],
+    "first_case_date": "07/05/2003",
+    "last_case_date": "21/10/2005",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Micallef Trigona Antonio",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 2,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)"
+    ],
+    "first_case_date": "07/12/2006",
+    "last_case_date": "31/07/2003",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Farrugia Ian",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 2,
+    "courts_active_in": [
+      "OF MAGISTRATES (COMMITTAL)"
+    ],
+    "first_case_date": "18/06/2014",
+    "last_case_date": "27/07/2018",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Details",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
     "firm": "",
     "email": "",
     "phone": "",
     "practice_areas": [],
     "case_count": 1,
     "courts_active_in": [
-      "CIVIL COURT, FIRST HALL"
+      "BUGEJA ABIGAIL AVUKAT DR NOE vs CHAIRPERSON TAL-UFFICCJU GHALL-IRKUPRU TAL-ASSI ET"
     ],
-    "first_case_date": "25/02/2026",
-    "last_case_date": "25/02/2026",
+    "first_case_date": "8/2025",
+    "last_case_date": "8/2025",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-70",
-    "full_name": "Martin Et Noe",
-    "profession": "Advocate",
+    "full_name": "Manduca Philip",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
     "firm": "",
     "email": "",
     "phone": "",
     "practice_areas": [],
     "case_count": 1,
     "courts_active_in": [
-      "CIVIL COURT, FIRST HALL"
+      "EUROPEAN SMALL CLAIMS PROCEDURE"
     ],
-    "first_case_date": "18/02/2026",
-    "last_case_date": "18/02/2026",
+    "first_case_date": "30/08/2021",
+    "last_case_date": "30/08/2021",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-71",
-    "full_name": "Tal-Istat  Et",
-    "profession": "Advocate",
+    "full_name": "Mifsud Greta",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
     "firm": "",
     "email": "",
     "phone": "",
     "practice_areas": [],
     "case_count": 1,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE"
+    ],
+    "first_case_date": "16/06/2011",
+    "last_case_date": "16/06/2011",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Scerri Mario",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 1,
+    "courts_active_in": [
+      "EUROPEAN SMALL CLAIMS PROCEDURE"
+    ],
+    "first_case_date": "07/02/2011",
+    "last_case_date": "07/02/2011",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Harding Hugh",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (COMMERCIAL)"
+    ],
+    "first_case_date": "21/06/2000",
+    "last_case_date": "21/06/2000",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Herrera Joseph A.",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (COMMERCIAL)"
+    ],
+    "first_case_date": "21/06/2000",
+    "last_case_date": "21/06/2000",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Demicoli Saviour",
+    "warrant_number": "",
+    "profession": "Judge/Magistrate",
+    "firm": "",
+    "email": "",
+    "phone": "",
+    "practice_areas": [],
+    "case_count": 1,
+    "courts_active_in": [
+      "OF MAGISTRATES (CRIMINAL INQUIRY)"
+    ],
+    "first_case_date": "27/04/2007",
+    "last_case_date": "27/04/2007",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Chetcuti Mark , Caruana Demajo Giannino , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 732,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "01/12/2021",
+    "last_case_date": "31/08/2021"
+  },
+  {
+    "full_name": "Tal-Istat Et",
+    "profession": "Advocate",
+    "case_count": 627,
+    "courts_active_in": [
+      "RENT REGULATION BOARD",
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "CIVIL COURT, FIRST HALL",
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Chetcuti Mark , Falzon Scerri Christian , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 351,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "02/02/2026",
+    "last_case_date": "30/07/2024"
+  },
+  {
+    "full_name": "Chetcuti Mark , Mangion Robert G , Mercieca Grazio",
+    "profession": "Judge/Magistrate",
+    "case_count": 305,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "03/09/2024",
+    "last_case_date": "30/07/2024"
+  },
+  {
+    "full_name": "Generali Et",
+    "profession": "Advocate",
+    "case_count": 178,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "LAND ARBITRATION BOARD",
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Tal-Istat",
+    "profession": "Advocate",
+    "case_count": 160,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "CONSTITUTIONAL",
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "RENT REGULATION BOARD"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Azzopardi Joseph , Caruana Demajo Giannino , Cuschieri Noel",
+    "profession": "Judge/Magistrate",
+    "case_count": 105,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "05/10/2018",
+    "last_case_date": "31/05/2019"
+  },
+  {
+    "full_name": "Generali",
+    "profession": "Advocate",
+    "case_count": 103,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "CONSTITUTIONAL",
+      "TRIBUNAL FOR INVESTIGATIONS OF INJUSTICES"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Camilleri Silvio , Caruana Demajo Giannino , Cuschieri Noel",
+    "profession": "Judge/Magistrate",
+    "case_count": 76,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "02/03/2018",
+    "last_case_date": "28/04/2017"
+  },
+  {
+    "full_name": "Chetcuti Mark , Grima Edwina , Grixti Giovanni",
+    "profession": "Judge/Magistrate",
+    "case_count": 55,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "04/05/2022",
+    "last_case_date": "26/11/2025"
+  },
+  {
+    "full_name": "De Gaetano Vincent , Filletti Joseph A. , Scicluna David",
+    "profession": "Judge/Magistrate",
+    "case_count": 49,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "01/12/2005",
+    "last_case_date": "29/07/2004"
+  },
+  {
+    "full_name": "Chetcuti Mark , Mangion Robert G , Grech Simone",
+    "profession": "Judge/Magistrate",
+    "case_count": 48,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "02/02/2026",
+    "last_case_date": "29/01/2026"
+  },
+  {
+    "full_name": "Camilleri Silvio , Scicluna David , Zammit Mc Keon Joseph",
+    "profession": "Judge/Magistrate",
+    "case_count": 40,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "02/05/2013",
+    "last_case_date": "30/11/2017"
+  },
+  {
+    "full_name": "De Gaetano Vincent , Scicluna David , Micallef Joseph R.",
+    "profession": "Judge/Magistrate",
+    "case_count": 34,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "02/09/2010",
+    "last_case_date": "29/05/2008"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Ellul Anthony , Simiana Mark",
+    "profession": "Judge/Magistrate",
+    "case_count": 28,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "03/06/2024",
+    "last_case_date": "28/04/2025"
+  },
+  {
+    "full_name": "Scicluna David , Lofaro Abigail , Zammit Mc Keon Joseph",
+    "profession": "Judge/Magistrate",
+    "case_count": 21,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "05/03/2015",
+    "last_case_date": "31/10/2013"
+  },
+  {
+    "full_name": "Azzopardi Joseph , Caruana Demajo Giannino , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 19,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "16/12/2019",
+    "last_case_date": "28/02/2020"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Mallia Tonio , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 16,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "08/10/2020",
+    "last_case_date": "25/02/2021"
+  },
+  {
+    "full_name": "Chetcuti Mark , Ellul Anthony , Mangion Robert G",
+    "profession": "Judge/Magistrate",
+    "case_count": 14,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "16/03/2026",
+    "last_case_date": "26/03/2026"
+  },
+  {
+    "full_name": "Dottor",
+    "profession": "Advocate",
+    "case_count": 13,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "CIVIL COURT, FIRST HALL",
+      "RENT REGULATION BOARD",
+      "CONSTITUTIONAL",
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Said Pullicino Joseph , Agius Carmel A. , Arrigo Noel V.",
+    "profession": "Judge/Magistrate",
+    "case_count": 10,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "05/04/2001",
+    "last_case_date": "26/04/2001"
+  },
+  {
+    "full_name": "Dottor Noe",
+    "profession": "Advocate",
+    "case_count": 10,
+    "courts_active_in": [
+      "CIVIL COURT (ASSET RECOVERY SECTION)",
+      "CIVIL COURT, FIRST HALL",
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Chetcuti Mark , Mangion Robert G , Falzon Scerri Christian",
+    "profession": "Judge/Magistrate",
+    "case_count": 9,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "02/02/2026",
+    "last_case_date": "29/01/2026"
+  },
+  {
+    "full_name": "Chetcuti Mark , Mangion Robert G , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 9,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "08/05/2025",
+    "last_case_date": "26/11/2024"
+  },
+  {
+    "full_name": "Pace Raymond C. , Scicluna David , Zammit Mc Keon Joseph",
+    "profession": "Judge/Magistrate",
+    "case_count": 9,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "02/12/2010",
+    "last_case_date": "28/02/2012"
+  },
+  {
+    "full_name": "Et Noe",
+    "profession": "Advocate",
+    "case_count": 9,
+    "courts_active_in": [
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Mallia Tonio , Cuschieri Noel",
+    "profession": "Judge/Magistrate",
+    "case_count": 8,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "07/05/2018",
+    "last_case_date": "28/06/2019"
+  },
+  {
+    "full_name": "Azzopardi Joseph , Zammit Mc Keon Joseph , Grima Edwina",
+    "profession": "Judge/Magistrate",
+    "case_count": 7,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "03/10/2018",
+    "last_case_date": "31/10/2018"
+  },
+  {
+    "full_name": "Filletti Joseph A. , Camilleri Gino , Scicluna David",
+    "profession": "Judge/Magistrate",
+    "case_count": 7,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "02/06/2005",
+    "last_case_date": "30/10/2003"
+  },
+  {
+    "full_name": "Mangion Robert G , Mercieca Grazio , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 5,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "10/11/2025",
+    "last_case_date": "22/10/2024"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Micallef Joseph R. , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 5,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "08/10/2020",
+    "last_case_date": "26/11/2020"
+  },
+  {
+    "full_name": "Chetcuti Mark , Mercieca Grazio , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 5,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "08/04/2025",
+    "last_case_date": "25/02/2025"
+  },
+  {
+    "full_name": "Zammit Mc Keon Joseph , Lofaro Abigail , Grima Edwina",
+    "profession": "Judge/Magistrate",
+    "case_count": 5,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "14/06/2018",
+    "last_case_date": "31/10/2018"
+  },
+  {
+    "full_name": "De Gaetano Vincent , Scicluna David , Zammit Mc Keon Joseph",
+    "profession": "Judge/Magistrate",
+    "case_count": 5,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "02/03/2010",
+    "last_case_date": "12/11/2009"
+  },
+  {
+    "full_name": "Filletti Joseph A. , Scicluna David , Micallef Joseph R.",
+    "profession": "Judge/Magistrate",
+    "case_count": 5,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "04/12/2003",
+    "last_case_date": "28/06/2006"
+  },
+  {
+    "full_name": "Chetcuti Mark , Ellul Anthony , Falzon Scerri Christian",
+    "profession": "Judge/Magistrate",
+    "case_count": 4,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "05/01/2026",
+    "last_case_date": "23/06/2025"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Ellul Anthony , Mangion Robert G",
+    "profession": "Judge/Magistrate",
+    "case_count": 4,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "10/11/2022",
+    "last_case_date": "18/11/2024"
+  },
+  {
+    "full_name": "Chetcuti Mark , Mallia Tonio , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 4,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "20/07/2020",
+    "last_case_date": "28/04/2021"
+  },
+  {
+    "full_name": "Mercieca Grazio , Falzon Scerri Christian , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 4,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "08/07/2025",
+    "last_case_date": "18/03/2025"
+  },
+  {
+    "full_name": "Mangion Robert G , Mercieca Grazio , Simiana Mark",
+    "profession": "Judge/Magistrate",
+    "case_count": 4,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "06/05/2025",
+    "last_case_date": "22/10/2024"
+  },
+  {
+    "full_name": "Chetcuti Mark , Grima Edwina , Bugeja Aaron",
+    "profession": "Judge/Magistrate",
+    "case_count": 4,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "04/10/2023",
+    "last_case_date": "23/03/2022"
+  },
+  {
+    "full_name": "Arrigo Noel V. , Filletti Joseph A. , Vella Patrick",
+    "profession": "Judge/Magistrate",
+    "case_count": 4,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "05/07/2002",
+    "last_case_date": "05/07/2002"
+  },
+  {
+    "full_name": "Falzon Scerri Christian , Demicoli Josette , Simiana Mark",
+    "profession": "Judge/Magistrate",
+    "case_count": 3,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "07/11/2024",
+    "last_case_date": "26/03/2026"
+  },
+  {
+    "full_name": "Chetcuti Mark , Ellul Anthony , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 3,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "20/10/2025",
+    "last_case_date": "31/05/2023"
+  },
+  {
+    "full_name": "Mangion Robert G , Falzon Scerri Christian , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 3,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "08/07/2025",
+    "last_case_date": "22/10/2024"
+  },
+  {
+    "full_name": "Micallef Joseph R. , Mallia Tonio , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 3,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "12/01/2021",
+    "last_case_date": "26/04/2022"
+  },
+  {
+    "full_name": "Chetcuti Mark , Caruana Demajo Giannino , Mallia Tonio",
+    "profession": "Judge/Magistrate",
+    "case_count": 3,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "01/12/2021",
+    "last_case_date": "27/10/2021"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Cuschieri Noel , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 3,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "04/06/2018",
+    "last_case_date": "18/02/2019"
+  },
+  {
+    "full_name": "Ellul Anthony , Falzon Scerri Christian , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 3,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "05/01/2026",
+    "last_case_date": "26/01/2026"
+  },
+  {
+    "full_name": "Mangion Robert G , Mercieca Grazio , Falzon Scerri Christian",
+    "profession": "Judge/Magistrate",
+    "case_count": 3,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "10/12/2024",
+    "last_case_date": "18/06/2024"
+  },
+  {
+    "full_name": "Filletti Joseph A. , Pace Raymond C. , Scicluna David",
+    "profession": "Judge/Magistrate",
+    "case_count": 3,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "06/10/2003",
+    "last_case_date": "17/07/2003"
+  },
+  {
+    "full_name": "Dottor Anna",
+    "profession": "Advocate",
+    "case_count": 3,
+    "courts_active_in": [
+      "RENT REGULATION BOARD",
+      "CONSTITUTIONAL",
+      "OF APPEAL (CIVIL, INFERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Tal-Istat Noe",
+    "profession": "Advocate",
+    "case_count": 3,
     "courts_active_in": [
       "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
     ],
-    "first_case_date": "18/02/2026",
-    "last_case_date": "18/02/2026",
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-72",
-    "full_name": "Dr Michelle Noe Vs Micallef Saviour",
+    "full_name": "Caruana Demajo Giannino , Ellul Anthony , Falzon Scerri Christian",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "03/06/2024",
+    "last_case_date": "23/01/2025"
+  },
+  {
+    "full_name": "Micallef Joseph R. , Mallia Tonio , Falzon Scerri Christian",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "06/10/2023",
+    "last_case_date": "06/12/2022"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Micallef Joseph R. , Mallia Tonio",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "21/10/2021",
+    "last_case_date": "28/01/2021"
+  },
+  {
+    "full_name": "Azzopardi Joseph , Cuschieri Noel , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "14/12/2018",
+    "last_case_date": "29/11/2019"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Micallef Joseph R. , Cuschieri Noel",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "07/10/2019",
+    "last_case_date": "28/06/2019"
+  },
+  {
+    "full_name": "Azzopardi Joseph , Mangion Robert G , Mercieca Grazio",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "29/03/2019",
+    "last_case_date": "29/03/2019"
+  },
+  {
+    "full_name": "Chetcuti Mark , Mercieca Grazio , Falzon Scerri Christian",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "14/10/2025",
+    "last_case_date": "25/02/2025"
+  },
+  {
+    "full_name": "Chetcuti Mark , Ellul Anthony , Simiana Mark",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "13/01/2025",
+    "last_case_date": "13/01/2025"
+  },
+  {
+    "full_name": "Chetcuti Mark , Micallef Joseph R. , Grima Edwina",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "22/09/2021",
+    "last_case_date": "22/09/2021"
+  },
+  {
+    "full_name": "Chetcuti Mark , Zammit Mc Keon Joseph , Grima Edwina",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "27/01/2021",
+    "last_case_date": "27/05/2020"
+  },
+  {
+    "full_name": "Azzopardi Joseph , Zammit Mc Keon Joseph , Grixti Giovanni",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "15/01/2020",
+    "last_case_date": "23/10/2019"
+  },
+  {
+    "full_name": "Scicluna David , Zammit Mc Keon Joseph , Lofaro Abigail",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "12/07/2013",
+    "last_case_date": "19/09/2013"
+  },
+  {
+    "full_name": "Scicluna David , Micallef Joseph R. , Zammit Mc Keon Joseph",
+    "profession": "Judge/Magistrate",
+    "case_count": 2,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "19/05/2011",
+    "last_case_date": "28/07/2011"
+  },
+  {
+    "full_name": "Michelle Noe",
     "profession": "Advocate",
-    "firm": "",
-    "email": "",
-    "phone": "",
-    "practice_areas": [],
+    "case_count": 2,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)",
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor Edward",
+    "profession": "Advocate",
+    "case_count": 2,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)",
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "William",
+    "profession": "Advocate",
+    "case_count": 2,
+    "courts_active_in": [
+      "CIVIL COURT, FIRST HALL",
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Nomine",
+    "profession": "Advocate",
+    "case_count": 2,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor Alexander Noe",
+    "profession": "Advocate",
+    "case_count": 2,
+    "courts_active_in": [
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Ellul Anthony , Falzon Scerri Christian , Simiana Mark",
+    "profession": "Judge/Magistrate",
     "case_count": 1,
     "courts_active_in": [
       "OF APPEAL (CIVIL, SUPERIOR)"
     ],
-    "first_case_date": "17/02/2026",
-    "last_case_date": "17/02/2026",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "16/03/2026",
+    "last_case_date": "16/03/2026"
+  },
+  {
+    "full_name": "Chetcuti Mark , Ellul Anthony , Grech Simone",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "16/03/2026",
+    "last_case_date": "16/03/2026"
+  },
+  {
+    "full_name": "Mangion Robert G , Simiana Mark , Grech Simone",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "10/03/2026",
+    "last_case_date": "10/03/2026"
+  },
+  {
+    "full_name": "Mangion Robert G , Demicoli Audrey , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "10/03/2026",
+    "last_case_date": "10/03/2026"
+  },
+  {
+    "full_name": "Ellul Anthony , Mangion Robert G , Grech Simone",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "19/02/2026",
+    "last_case_date": "19/02/2026"
+  },
+  {
+    "full_name": "Mercieca Grazio , Demicoli Josette , Simiana Mark",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "21/01/2025",
+    "last_case_date": "21/01/2025"
+  },
+  {
+    "full_name": "Depasquale Francesco , Demicoli Audrey , Clarke Doreen",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "01/02/2024",
+    "last_case_date": "01/02/2024"
+  },
+  {
+    "full_name": "Micallef Joseph R. , Ellul Anthony , Mangion Robert G",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "26/01/2024",
+    "last_case_date": "26/01/2024"
+  },
+  {
+    "full_name": "Chetcuti Mark , Micallef Joseph R. , Mangion Robert G",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "23/01/2024",
+    "last_case_date": "23/01/2024"
+  },
+  {
+    "full_name": "Micallef Joseph R. , Falzon Scerri Christian , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "07/07/2023",
+    "last_case_date": "07/07/2023"
+  },
+  {
+    "full_name": "Chetcuti Mark , Micallef Joseph R. , Falzon Scerri Christian",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "20/03/2023",
+    "last_case_date": "20/03/2023"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Ellul Anthony , Mercieca Grazio",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "17/03/2022",
+    "last_case_date": "17/03/2022"
+  },
+  {
+    "full_name": "Mallia Tonio , Ellul Anthony , Mangion Robert G",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "25/03/2021",
+    "last_case_date": "25/03/2021"
+  },
+  {
+    "full_name": "Chetcuti Mark , Micallef Joseph R. , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "27/01/2021",
+    "last_case_date": "27/01/2021"
+  },
+  {
+    "full_name": "Ellul Anthony , Azzopardi Joseph , Caruana Demajo Giannino",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "27/03/2020",
+    "last_case_date": "27/03/2020"
+  },
+  {
+    "full_name": "Azzopardi Joseph , Micallef Joseph R. , Mallia Tonio",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "12/07/2019",
+    "last_case_date": "12/07/2019"
+  },
+  {
+    "full_name": "Cuschieri Noel , Azzopardi Joseph , Caruana Demajo Giannino",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "29/03/2019",
+    "last_case_date": "29/03/2019"
+  },
+  {
+    "full_name": "Azzopardi Joseph , Mallia Tonio , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "14/12/2018",
+    "last_case_date": "14/12/2018"
+  },
+  {
+    "full_name": "Azzopardi Joseph , Mallia Tonio , Cuschieri Noel",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "14/12/2018",
+    "last_case_date": "14/12/2018"
+  },
+  {
+    "full_name": "Azzopardi Joseph , Caruana Demajo Giannino , Mallia Tonio",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "29/10/2018",
+    "last_case_date": "29/10/2018"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Cuschieri Noel , Azzopardi Joseph",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "05/10/2018",
+    "last_case_date": "05/10/2018"
+  },
+  {
+    "full_name": "Cuschieri Noel , Caruana Demajo Giannino , Mallia Tonio",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "16/10/2017",
+    "last_case_date": "16/10/2017"
+  },
+  {
+    "full_name": "Mallia Tonio , Azzopardi Joseph , Chetcuti Mark",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "11/07/2017",
+    "last_case_date": "11/07/2017"
+  },
+  {
+    "full_name": "Mallia Tonio , Cuschieri Noel , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "11/07/2017",
+    "last_case_date": "11/07/2017"
+  },
+  {
+    "full_name": "Mallia Tonio , Azzopardi Joseph , Ellul Anthony",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "11/04/2017",
+    "last_case_date": "11/04/2017"
+  },
+  {
+    "full_name": "Micallef Joseph R. , Chetcuti Mark , Mangion Robert G",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "16/03/2017",
+    "last_case_date": "16/03/2017"
+  },
+  {
+    "full_name": "Mangion Robert G , Demicoli Josette , Grech Simone",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "13/01/2026",
+    "last_case_date": "13/01/2026"
+  },
+  {
+    "full_name": "Mintoff Lawrence , Hayman Miriam , Depasquale Francesco",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "10/12/2025",
+    "last_case_date": "10/12/2025"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Ellul Anthony , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "20/10/2025",
+    "last_case_date": "20/10/2025"
+  },
+  {
+    "full_name": "Chetcuti Mark , Mercieca Grazio , Simiana Mark",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "08/04/2025",
+    "last_case_date": "08/04/2025"
+  },
+  {
+    "full_name": "Chetcuti Mark , Caruana Demajo Giannino , Falzon Scerri Christian",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "10/03/2025",
+    "last_case_date": "10/03/2025"
+  },
+  {
+    "full_name": "Chetcuti Mark , Mangion Robert G , Abela Toni",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "21/01/2025",
+    "last_case_date": "21/01/2025"
+  },
+  {
+    "full_name": "Abela Toni , Falzon Scerri Christian , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "12/12/2024",
+    "last_case_date": "12/12/2024"
+  },
+  {
+    "full_name": "Mangion Robert G , Abela Toni , Mercieca Grazio",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "10/12/2024",
+    "last_case_date": "10/12/2024"
+  },
+  {
+    "full_name": "Caruana Demajo Giannino , Mangion Robert G , Simiana Mark",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "14/11/2024",
+    "last_case_date": "14/11/2024"
+  },
+  {
+    "full_name": "Chetcuti Mark , Micallef Joseph R. , Mallia Tonio",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "22/10/2024",
+    "last_case_date": "22/10/2024"
+  },
+  {
+    "full_name": "Chetcuti Mark , Caruana Demajo Giannino , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "07/10/2024",
+    "last_case_date": "07/10/2024"
+  },
+  {
+    "full_name": "Chetcuti Mark , Mercieca Grazio , Demicoli Audrey",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "18/06/2024",
+    "last_case_date": "18/06/2024"
+  },
+  {
+    "full_name": "Felice Anna , Mangion Robert G , Mercieca Grazio",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "21/05/2024",
+    "last_case_date": "21/05/2024"
+  },
+  {
+    "full_name": "Harding Hugh , Herrera Joseph A. , Agius Carmel A.",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (COMMERCIAL)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "21/06/2000",
+    "last_case_date": "21/06/2000"
+  },
+  {
+    "full_name": "Chetcuti Mark , Demicoli Josette , Clarke Doreen",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "21/01/2026",
+    "last_case_date": "21/01/2026"
+  },
+  {
+    "full_name": "Chetcuti Mark , Grixti Giovanni , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "09/09/2025",
+    "last_case_date": "09/09/2025"
+  },
+  {
+    "full_name": "Chetcuti Mark , Grima Edwina , Demicoli Josette",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "05/03/2025",
+    "last_case_date": "05/03/2025"
+  },
+  {
+    "full_name": "Chetcuti Mark , Micallef Joseph R. , Grixti Giovanni",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "20/03/2024",
+    "last_case_date": "20/03/2024"
+  },
+  {
+    "full_name": "Grima Edwina , Grixti Giovanni , Bugeja Aaron",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "26/05/2021",
+    "last_case_date": "26/05/2021"
+  },
+  {
+    "full_name": "Chetcuti Mark , Zammit Mc Keon Joseph , Grixti Giovanni",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "17/02/2021",
+    "last_case_date": "17/02/2021"
+  },
+  {
+    "full_name": "Zammit Mc Keon Joseph , Lofaro Abigail , Grixti Giovanni",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "03/04/2019",
+    "last_case_date": "03/04/2019"
+  },
+  {
+    "full_name": "Camilleri Silvio , Zammit Mc Keon Joseph , Grima Edwina",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "09/04/2018",
+    "last_case_date": "09/04/2018"
+  },
+  {
+    "full_name": "Micallef Joseph R. , Lofaro Abigail , Zammit Mc Keon Joseph",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "30/11/2017",
+    "last_case_date": "30/11/2017"
+  },
+  {
+    "full_name": "Camilleri Gino , Scicluna David , Zammit Mc Keon Joseph",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "13/06/2013",
+    "last_case_date": "13/06/2013"
+  },
+  {
+    "full_name": "Zammit Mc Keon Joseph , Pace Raymond C. , Scicluna David",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "14/06/2012",
+    "last_case_date": "14/06/2012"
+  },
+  {
+    "full_name": "Scicluna David , Cuschieri Noel , Zammit Mc Keon Joseph",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "20/05/2010",
+    "last_case_date": "20/05/2010"
+  },
+  {
+    "full_name": "Scicluna David , Cuschieri Noel , Micallef Joseph R.",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "04/03/2010",
+    "last_case_date": "04/03/2010"
+  },
+  {
+    "full_name": "Camilleri Gino , Pace Raymond C. , Scicluna David",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "12/12/2007",
+    "last_case_date": "12/12/2007"
+  },
+  {
+    "full_name": "Scicluna David , Micallef Joseph R. , Felice Anna",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "14/06/2007",
+    "last_case_date": "14/06/2007"
+  },
+  {
+    "full_name": "Filletti Joseph A. , Scicluna David , Pace Raymond C.",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "28/03/2007",
+    "last_case_date": "28/03/2007"
+  },
+  {
+    "full_name": "De Gaetano Vincent , Caruana Demajo Giannino , Scicluna David",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "23/11/2006",
+    "last_case_date": "23/11/2006"
+  },
+  {
+    "full_name": "Scicluna David , Pace Raymond C. , Micallef Joseph R.",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "26/05/2005",
+    "last_case_date": "26/05/2005"
+  },
+  {
+    "full_name": "Scicluna David , Filletti Joseph A. , Camilleri Gino",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "24/11/2003",
+    "last_case_date": "24/11/2003"
+  },
+  {
+    "full_name": "Scicluna David , De Gaetano Vincent , Filletti Joseph A.",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "22/05/2003",
+    "last_case_date": "22/05/2003"
+  },
+  {
+    "full_name": "Filletti Joseph A. , Camilleri Gino , Galea Debono Joseph",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "15/05/2003",
+    "last_case_date": "15/05/2003"
+  },
+  {
+    "full_name": "Pace Raymond C. , Scicluna David , Micallef Joseph R.",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "24/04/2003",
+    "last_case_date": "24/04/2003"
+  },
+  {
+    "full_name": "Vella Patrick , Pace Raymond C. , Micallef Joseph R.",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "04/07/2002",
+    "last_case_date": "04/07/2002"
+  },
+  {
+    "full_name": "Arrigo Noel V. , Filletti Joseph A. , De Gaetano Vincent",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "04/06/2002",
+    "last_case_date": "04/06/2002"
+  },
+  {
+    "full_name": "Said Pullicino Joseph , Arrigo Noel V. , Agius Carmel A.",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "30/10/2001",
+    "last_case_date": "30/10/2001"
+  },
+  {
+    "full_name": "Said Pullicino Joseph , Agius Carmel A. , Vella Patrick",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "20/09/2001",
+    "last_case_date": "20/09/2001"
+  },
+  {
+    "full_name": "Agius Carmel A. , Arrigo Noel V. , Said Pullicino Joseph",
+    "profession": "Judge/Magistrate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF CRIMINAL APPEAL (SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements",
+    "first_case_date": "19/04/2001",
+    "last_case_date": "19/04/2001"
+  },
+  {
+    "full_name": "Tal-Istat  Et",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+    ],
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   },
   {
-    "warrant_number": "ECT-73",
-    "full_name": "Et Vs Best Deal Developments Limited",
+    "full_name": "Jesmond",
     "profession": "Advocate",
-    "firm": "",
-    "email": "",
-    "phone": "",
-    "practice_areas": [],
     "case_count": 1,
     "courts_active_in": [
-      "SMALL CLAIMS TRIBUNAL"
+      "THE ADMINISTRATIVE REVIEW TRIBUNAL"
     ],
-    "first_case_date": "12/02/2026",
-    "last_case_date": "12/02/2026",
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Generali U L-Awtorita Tad-Djar",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Ghal-Istat",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Cedric Noe",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Tal-Istat U Suprintendent Tas-Sahha Pubblika",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Generali Noe",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Generali Tar-Repubblika",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CONSTITUTIONAL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor Peter",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor Jesmond Manicaro",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor L-Onor. Kap Tal-Oppozizzjoni U Kap Tal-Partit Nazzjonalista",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor Pio M",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor Nomine",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, SUPERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor Alec Et",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, INFERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Spiteri Michela Noe",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, INFERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Luigi A. Sansone Noe",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, INFERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Sandra Santos Rodrigues Noe",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF APPEAL (CIVIL, INFERIOR)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Caruana Galizia  Peter Pro",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Ghal-Istat Et",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Tal Istat Et",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Iana Said Et",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Gerald",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor Francis",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottore Francis",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL FIRST HALL (CONSTITUTIONAL JURISDICTION)"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor Luigi A. Noe",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Robert",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor Joseph Anton Schembri",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Tanya Noe",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Chris Noe",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Joseph",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "CIVIL COURT, FIRST HALL"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Louis",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "LAND ARBITRATION BOARD"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Dottor Michelina Sive Michelle Noe",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "RENT REGULATION BOARD"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Et Nomine",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF COMMERCE"
+    ],
+    "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
+  },
+  {
+    "full_name": "Victor J Bugeja Noe Et",
+    "profession": "Advocate",
+    "case_count": 1,
+    "courts_active_in": [
+      "OF COMMERCE"
+    ],
     "source_url": "https://ecourts.gov.mt/onlineservices/Judgements"
   }
 ]
