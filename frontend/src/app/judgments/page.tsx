@@ -1,164 +1,142 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Search, Scale, ExternalLink, FileText, Loader2, ArrowUpDown } from "lucide-react";
+import { motion } from "framer-motion";
+import { Search, Scale, ArrowUpDown, ArrowUp, ArrowDown, ChevronRight, User, Calendar } from "lucide-react";
 import { useLanguage } from "@/lib/useLanguage";
 import { getJudgments, type Judgment } from "@/lib/api";
 import Link from "next/link";
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-
-const LABELS = {
+const L = {
   mt: {
     title: "Sentenzi tal-Qorti",
-    subtitle: "Fittex u esplora s-sentenzi tal-qrati Maltin",
-    placeholder: "Fittex referenza, partijiet, imħallef...",
-    search: "Fittex",
-    reference: "Referenza",
-    court: "Qorti",
-    judge: "Imħallef",
-    parties: "Partijiet",
-    date: "Data",
-    outcome: "Riżultat",
-    viewSource: "Ara s-Sors",
-    noResults: "L-ebda sentenza ma nstabet. Ipprova termini differenti.",
-    connecting: "Qed jingħaqad mal-backend...",
-    results: "riżultati",
+    sub: "Fittex u esplora s-sentenzi tal-qrati Maltin — sortabbli u filtrabbli",
+    search: "Fittex referenza, partijiet, imħallef...",
     back: "← Lura / Back",
-    filterCourt: "Il-Qorti kollha",
-    filterYear: "Is-Sena kollha",
+    loading: "Qed jgħabbi...",
+    noResults: "L-ebda riżultat.",
     showing: "Qed juri",
     of: "minn",
-    backendTitle: "Il-backend qed jgħabbi...",
-    backendSub: "Run the backend server to see data here",
-    nav: {
-      laws: "Liġijiet",
-      judgments: "Sentenzi",
-      lawyers: "Avukati",
-      documents: "Dokumenti",
-      igaming: "iGaming",
-    },
+    results: "riżultati",
+    col_date: "Data",
+    col_ref: "Referenza",
+    col_court: "Qorti",
+    col_judge: "Imħallef",
+    col_parties: "Partijiet",
+    allCourts: "Il-Qorti kollha",
+    allYears: "Is-Sena kollha",
   },
   en: {
     title: "Court Judgments",
-    subtitle: "Search and explore Maltese court judgments",
-    placeholder: "Search reference, parties, judge...",
-    search: "Search",
-    reference: "Reference",
-    court: "Court",
-    judge: "Judge",
-    parties: "Parties",
-    date: "Date",
-    outcome: "Outcome",
-    viewSource: "View Source",
-    noResults: "No judgments found. Try different search terms.",
-    connecting: "Connecting to backend...",
-    results: "results",
-    back: "← Lura / Back",
-    filterCourt: "All Courts",
-    filterYear: "All Years",
+    sub: "Search and explore Maltese court judgments — sortable and filterable",
+    search: "Search reference, parties, judge...",
+    back: "← Back",
+    loading: "Loading...",
+    noResults: "No results.",
     showing: "Showing",
     of: "of",
-    backendTitle: "Backend loading...",
-    backendSub: "Run the backend server to see data here",
-    nav: {
-      laws: "Laws",
-      judgments: "Judgments",
-      lawyers: "Lawyers",
-      documents: "Documents",
-      igaming: "iGaming",
-    },
+    results: "results",
+    col_date: "Date",
+    col_ref: "Reference",
+    col_court: "Court",
+    col_judge: "Judge",
+    col_parties: "Parties",
+    allCourts: "All Courts",
+    allYears: "All Years",
   },
 };
 
-const COURTS = [
-  "All",
-  "Civil Court",
-  "Criminal Court",
-  "Court of Appeal",
-  "Constitutional Court",
-  "Family Court",
-  "Small Claims Tribunal",
+const NAV_LINKS = [
+  { href: "/laws", label_mt: "Liġijiet", label_en: "Laws" },
+  { href: "/judgments", label_mt: "Sentenzi", label_en: "Judgments" },
+  { href: "/lawyers", label_mt: "Avukati", label_en: "Lawyers" },
+  { href: "/documents", label_mt: "Dokumenti", label_en: "Documents" },
+  { href: "/igaming", label_mt: "iGaming", label_en: "iGaming" },
 ];
 
-const YEARS = ["All", "2024", "2023", "2022", "2021", "2020", "2019", "2018", "2017", "2016"];
+type SortKey = "date" | "reference" | "court" | "judge" | "parties";
+
+function SortIcon({ active, asc }: { active: boolean; asc: boolean }) {
+  if (!active) return <ArrowUpDown size={11} className="text-[#ccc]" />;
+  return asc ? <ArrowUp size={11} className="text-gold" /> : <ArrowDown size={11} className="text-gold" />;
+}
 
 export default function JudgmentsPage() {
   const [lang, setLang] = useLanguage();
   const [q, setQ] = useState("");
   const [court, setCourt] = useState("All");
   const [year, setYear] = useState("All");
-  const [sortKey, setSortKey] = useState<"date" | "reference" | "court" | "judge" | "parties">("date");
+  const [sortKey, setSortKey] = useState<SortKey>("date");
   const [sortAsc, setSortAsc] = useState(false);
   const [data, setData] = useState<Judgment[]>([]);
   const [loading, setLoading] = useState(true);
-  const [fetchFailed, setFetchFailed] = useState(false);
-  const t = LABELS[lang];
+  const t = L[lang];
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       setLoading(true);
-      try {
-        const results = await getJudgments();
-        if (!cancelled) { setData(results); setFetchFailed(results.length === 0); }
-      } catch {
-        if (!cancelled) { setData([]); setFetchFailed(true); }
-      } finally {
-        if (!cancelled) setLoading(false);
-      }
+      const results = await getJudgments();
+      if (!cancelled) { setData(results); setLoading(false); }
     })();
     return () => { cancelled = true; };
   }, []);
 
+  const toggleSort = (key: SortKey) => {
+    if (sortKey === key) setSortAsc(!sortAsc);
+    else { setSortKey(key); setSortAsc(false); }
+  };
+
+  // Derive unique courts and years from data
+  const courts = useMemo(() => {
+    const set = new Set<string>();
+    data.forEach(j => { if (j.court) set.add(j.court); });
+    return Array.from(set).sort();
+  }, [data]);
+
+  const years = useMemo(() => {
+    const set = new Set<string>();
+    data.forEach(j => {
+      const dateStr = j.date || "";
+      // Try to extract year from various date formats
+      const y4 = dateStr.match(/(\d{4})/);
+      if (y4) set.add(y4[1]);
+    });
+    return Array.from(set).sort().reverse();
+  }, [data]);
+
   const filtered = useMemo(() => {
-    let results = data;
-    const lower = q.toLowerCase();
+    let results = [...data];
+
     if (q.trim()) {
-      results = results.filter(
-        (j) =>
-          j.reference?.toLowerCase().includes(lower) ||
-          j.parties?.toLowerCase().includes(lower) ||
-          j.judge?.toLowerCase().includes(lower) ||
-          j.court?.toLowerCase().includes(lower) ||
-          j.outcome?.toLowerCase().includes(lower)
+      const lower = q.toLowerCase();
+      results = results.filter(j =>
+        j.reference?.toLowerCase().includes(lower) ||
+        j.parties?.toLowerCase().includes(lower) ||
+        j.judge?.toLowerCase().includes(lower) ||
+        j.court?.toLowerCase().includes(lower) ||
+        j.outcome?.toLowerCase().includes(lower)
       );
     }
     if (court !== "All") {
-      results = results.filter((j) => j.court?.toLowerCase().includes(court.toLowerCase()));
+      results = results.filter(j => j.court === court);
     }
     if (year !== "All") {
-      results = results.filter((j) => j.date?.startsWith(year));
+      results = results.filter(j => j.date?.includes(year));
     }
-    // Sort
+
     results.sort((a, b) => {
       const va = (a[sortKey] || "").toLowerCase();
       const vb = (b[sortKey] || "").toLowerCase();
       return sortAsc ? (va > vb ? 1 : -1) : (va < vb ? 1 : -1);
     });
+
     return results;
   }, [data, q, court, year, sortKey, sortAsc]);
 
-  const formatDate = (dateStr: string) => {
-    if (!dateStr) return "—";
-    try {
-      return new Date(dateStr).toLocaleDateString(lang === "mt" ? "mt-MT" : "en-GB", {
-        day: "2-digit",
-        month: "short",
-        year: "numeric",
-      });
-    } catch {
-      return dateStr;
-    }
-  };
-
-  const NAV_LINKS = Object.entries(t.nav);
-
   return (
     <div className="min-h-screen bg-cream text-[#1a1a2e]">
-      {/* Nav */}
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#e5e0d5] shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Scale size={20} className="text-gold" />
             <span className="text-lg font-display font-bold text-[#1a1a2e]">
@@ -166,273 +144,123 @@ export default function JudgmentsPage() {
             </span>
           </Link>
           <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
-            {NAV_LINKS.map(([key, label]) => (
-              <Link
-                key={key}
-                href={`/${key}`}
-                className={`hover:text-gold transition-colors font-medium ${key === "judgments" ? "text-gold" : ""}`}
-              >
-                {label}
+            {NAV_LINKS.map((link) => (
+              <Link key={link.href} href={link.href}
+                className={`hover:text-gold transition-colors font-medium ${link.href === "/judgments" ? "text-gold" : ""}`}>
+                {lang === "mt" ? link.label_mt : link.label_en}
               </Link>
             ))}
           </div>
-          <button
-            onClick={() => setLang(lang === "mt" ? "en" : "mt")}
+          <button onClick={() => setLang(lang === "mt" ? "en" : "mt")}
             className="px-3 py-1.5 rounded-full border border-[#e5e0d5] hover:border-gold/50
-                       hover:bg-gold/5 text-xs font-mono text-[#6b7280] transition-all"
-          >
+                       hover:bg-gold/5 text-xs font-mono text-[#6b7280] transition-all">
             {lang === "mt" ? "EN" : "MT"}
           </button>
         </div>
       </nav>
 
-      <div className="max-w-5xl mx-auto px-4 py-8">
-        {/* Back link */}
-        <Link href="/" className="text-sm text-[#9ca3af] hover:text-[#1a1a2e] transition-colors mb-6 inline-block">
-          {t.back}
-        </Link>
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <Link href="/" className="text-sm text-[#9ca3af] hover:text-[#6b7280] mb-6 inline-block">{t.back}</Link>
 
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="mb-8"
-        >
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <div className="flex items-center gap-3 mb-2">
             <div className="p-2.5 rounded-xl bg-gold/10 border border-gold/20">
               <Scale size={22} className="text-gold" />
             </div>
             <h1 className="text-3xl font-display font-bold text-[#1a1a2e]">{t.title}</h1>
           </div>
-          <p className="text-[#6b7280] ml-14">{t.subtitle}</p>
-        </motion.div>
+          <p className="text-[#9ca3af] text-sm mb-6 ml-14">{t.sub}</p>
 
-        {/* Search Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-4 mb-4"
-        >
-          <div className="flex gap-3">
-            <div className="relative flex-1">
-              <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9ca3af] pointer-events-none" />
-              <input
-                value={q}
-                onChange={(e) => setQ(e.target.value)}
-                placeholder={t.placeholder}
-                className="w-full pl-10 pr-4 py-3 bg-white border border-[#e5e0d5] rounded-xl
-                           focus:outline-none focus:border-[#b8963a]/50 text-[#1a1a2e]
-                           placeholder:text-[#9ca3af] text-sm transition-all"
-              />
+          {/* Search + Filters */}
+          <div className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-4 mb-4">
+            <div className="flex gap-2 mb-3">
+              <div className="relative flex-1">
+                <Search size={15} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#9ca3af]" />
+                <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t.search}
+                  className="w-full pl-10 pr-4 py-2.5 bg-cream border border-[#e5e0d5] rounded-xl text-sm
+                             focus:outline-none focus:border-gold/50 placeholder:text-[#9ca3af] text-[#1a1a2e]" />
+              </div>
+            </div>
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="flex items-center gap-2">
+                <label className="text-xs text-[#9ca3af]">{t.col_court}:</label>
+                <select value={court} onChange={(e) => setCourt(e.target.value)}
+                  className="text-xs bg-white border border-[#e5e0d5] rounded-lg px-2 py-1.5 text-[#6b7280] focus:outline-none focus:border-gold/50">
+                  <option value="All">{t.allCourts}</option>
+                  {courts.map(c => <option key={c} value={c}>{c}</option>)}
+                </select>
+              </div>
+              <div className="flex items-center gap-2">
+                <label className="text-xs text-[#9ca3af]">{t.col_date}:</label>
+                <select value={year} onChange={(e) => setYear(e.target.value)}
+                  className="text-xs bg-white border border-[#e5e0d5] rounded-lg px-2 py-1.5 text-[#6b7280] focus:outline-none focus:border-gold/50">
+                  <option value="All">{t.allYears}</option>
+                  {years.map(y => <option key={y} value={y}>{y}</option>)}
+                </select>
+              </div>
             </div>
           </div>
 
-          {/* Filters */}
-          <div className="flex flex-wrap gap-3 mt-3 pt-3 border-t border-[#e5e0d5]">
-            <div className="flex items-center gap-2">
-              <label className="text-xs text-[#9ca3af] font-medium shrink-0">{t.court}:</label>
-              <select
-                value={court}
-                onChange={(e) => setCourt(e.target.value)}
-                className="text-sm bg-white border border-[#e5e0d5] rounded-lg px-3 py-1.5
-                           focus:outline-none focus:border-[#b8963a]/50 text-[#1a1a2e] cursor-pointer"
-              >
-                {COURTS.map((c) => (
-                  <option key={c} value={c}>
-                    {c === "All" ? t.filterCourt : c}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="flex items-center gap-2">
-              <label className="text-xs text-[#9ca3af] font-medium shrink-0">{t.date}:</label>
-              <select
-                value={year}
-                onChange={(e) => setYear(e.target.value)}
-                className="text-sm bg-white border border-[#e5e0d5] rounded-lg px-3 py-1.5
-                           focus:outline-none focus:border-[#b8963a]/50 text-[#1a1a2e] cursor-pointer"
-              >
-                {YEARS.map((y) => (
-                  <option key={y} value={y}>
-                    {y === "All" ? t.filterYear : y}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Results Count + Sort */}
-        {!loading && data.length > 0 && (
-          <div className="flex items-center gap-2 mb-4 px-1 flex-wrap">
-            <p className="text-xs text-[#9ca3af]">
+          {!loading && data.length > 0 && (
+            <p className="text-xs text-[#9ca3af] mb-2 px-1">
               {t.showing} {filtered.length} {t.of} {data.length} {t.results}
             </p>
-            <span className="text-xs text-[#9ca3af]">·</span>
-            <span className="text-xs text-[#9ca3af]">Sort:</span>
-            {(["date", "reference", "court", "judge", "parties"] as const).map((key) => (
-              <button key={key} onClick={() => { if (sortKey === key) setSortAsc(!sortAsc); else { setSortKey(key); setSortAsc(true); } }}
-                className={`flex items-center gap-1 px-2 py-0.5 rounded text-xs transition-all ${
-                  sortKey === key ? "text-gold bg-gold/10 font-medium" : "text-[#9ca3af] hover:text-[#6b7280]"
-                }`}>
-                {key.charAt(0).toUpperCase() + key.slice(1)}
-                {sortKey === key && <ArrowUpDown size={10} />}
-              </button>
-            ))}
-          </div>
-        )}
-
-        {/* Status States */}
-        <AnimatePresence mode="wait">
-          {loading && (
-            <motion.div
-              key="loading"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="flex flex-col items-center justify-center py-24 gap-4"
-            >
-              <Loader2 size={32} className="text-gold animate-spin" />
-              <p className="text-sm text-[#9ca3af]">{t.connecting}</p>
-            </motion.div>
           )}
 
-          {!loading && data.length === 0 && fetchFailed && (
-            <motion.div
-              key="error"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-10 text-center"
-            >
-              <Scale size={36} className="text-[#9ca3af] mx-auto mb-3" />
-              <p className="text-[#1a1a2e] font-semibold mb-1">{t.backendTitle}</p>
-              <p className="text-[#6b7280] text-sm mb-3">{t.backendSub}</p>
-              <p className="text-xs text-[#9ca3af] font-mono">Run: python3 main.py in /backend</p>
-              <p className="text-xs text-[#9ca3af] font-mono mt-1">API: {API}/api/judgments/</p>
-            </motion.div>
-          )}
+          {/* Table */}
+          {loading ? (
+            <p className="text-[#9ca3af] text-sm py-8">{t.loading}</p>
+          ) : filtered.length === 0 ? (
+            <p className="text-[#9ca3af] text-sm py-8">{t.noResults}</p>
+          ) : (
+            <div className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm overflow-hidden">
+              {/* Table header */}
+              <div className="grid grid-cols-[85px_110px_150px_140px_1fr_30px] gap-2 px-4 py-3 border-b border-[#e5e0d5] bg-[#f9f7f3] text-xs font-semibold text-[#6b7280]">
+                <button onClick={() => toggleSort("date")} className="flex items-center gap-1 hover:text-[#1a1a2e] transition-colors">
+                  {t.col_date} <SortIcon active={sortKey === "date"} asc={sortAsc} />
+                </button>
+                <button onClick={() => toggleSort("reference")} className="flex items-center gap-1 hover:text-[#1a1a2e] transition-colors">
+                  {t.col_ref} <SortIcon active={sortKey === "reference"} asc={sortAsc} />
+                </button>
+                <button onClick={() => toggleSort("court")} className="flex items-center gap-1 hover:text-[#1a1a2e] transition-colors">
+                  {t.col_court} <SortIcon active={sortKey === "court"} asc={sortAsc} />
+                </button>
+                <button onClick={() => toggleSort("judge")} className="flex items-center gap-1 hover:text-[#1a1a2e] transition-colors">
+                  {t.col_judge} <SortIcon active={sortKey === "judge"} asc={sortAsc} />
+                </button>
+                <button onClick={() => toggleSort("parties")} className="flex items-center gap-1 hover:text-[#1a1a2e] transition-colors">
+                  {t.col_parties} <SortIcon active={sortKey === "parties"} asc={sortAsc} />
+                </button>
+                <span></span>
+              </div>
 
-          {!loading && data.length === 0 && !fetchFailed && (
-            <motion.div
-              key="empty"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-10 text-center"
-            >
-              <FileText size={36} className="text-[#9ca3af] mx-auto mb-3" />
-              <p className="text-[#6b7280] text-sm">{t.noResults}</p>
-            </motion.div>
-          )}
-
-          {!loading && filtered.length === 0 && data.length > 0 && (
-            <motion.div
-              key="no-filter"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-10 text-center"
-            >
-              <FileText size={36} className="text-[#9ca3af] mx-auto mb-3" />
-              <p className="text-[#6b7280] text-sm">{t.noResults}</p>
-            </motion.div>
-          )}
-
-          {!loading && filtered.length > 0 && (
-            <motion.div
-              key="results"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="flex flex-col gap-3"
-            >
-              {filtered.map((j, i) => (
-                <Link
-                  key={`${j.reference}-${i}`}
-                  href={`/detail?type=judgment&id=${encodeURIComponent(j.reference)}`}
-                >
-                  <motion.div
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: Math.min(i * 0.02, 0.5), duration: 0.3 }}
-                    className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-5
-                               hover:border-gold/30 hover:shadow-md transition-all group cursor-pointer"
+              {/* Table rows */}
+              <div className="divide-y divide-[#e5e0d5]/50">
+                {filtered.slice(0, 500).map((j, i) => (
+                  <Link
+                    key={`${j.reference}-${i}`}
+                    href={`/detail?type=judgment&id=${encodeURIComponent(j.reference)}`}
+                    className="grid grid-cols-[85px_110px_150px_140px_1fr_30px] gap-2 px-4 py-3 hover:bg-gold/5 transition-colors group items-center"
                   >
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex-1 min-w-0">
-                        {/* Reference */}
-                        <div className="flex items-center gap-2 mb-2">
-                          <span
-                            className="font-mono text-sm font-semibold px-2.5 py-0.5 rounded-lg
-                                       bg-gold/10 border border-gold/20"
-                            style={{ color: "#b8963a" }}
-                          >
-                            {j.reference || "—"}
-                          </span>
-                          {j.outcome && (
-                            <span className="text-xs text-[#9ca3af] bg-[#f5f3ee] px-2 py-0.5 rounded-full border border-[#e5e0d5]">
-                              {j.outcome}
-                            </span>
-                          )}
-                        </div>
-
-                        {/* Parties */}
-                        {j.parties && (
-                          <p className="text-[#1a1a2e] font-semibold text-base mb-1.5 leading-snug truncate group-hover:text-gold transition-colors">
-                            {j.parties}
-                          </p>
-                        )}
-
-                        {/* Meta row — each data point in its own labeled field */}
-                        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-[#6b7280]">
-                          {j.court && (
-                            <span className="flex items-center gap-1 bg-[#f5f3ee] px-2 py-0.5 rounded">
-                              <Scale size={11} className="text-[#9ca3af]" />
-                              {j.court}
-                            </span>
-                          )}
-                          {j.judge && (
-                            <span className="flex items-center gap-1 bg-[#f5f3ee] px-2 py-0.5 rounded">
-                              {t.judge}: {j.judge}
-                            </span>
-                          )}
-                          {j.date && (
-                            <span className="flex items-center gap-1 bg-[#f5f3ee] px-2 py-0.5 rounded">
-                              {formatDate(j.date)}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-
-                      {/* External link */}
-                      {j.source_url && (
-                        <a
-                          href={j.source_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="shrink-0 flex items-center gap-1.5 text-xs font-medium
-                                     text-[#9ca3af] hover:text-gold transition-colors
-                                     px-3 py-2 rounded-xl border border-[#e5e0d5]
-                                     hover:border-gold/30 hover:bg-gold/5 group-hover:text-gold"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          <ExternalLink size={12} />
-                          {t.viewSource}
-                        </a>
-                      )}
-                    </div>
-                  </motion.div>
-                </Link>
-              ))}
-            </motion.div>
+                    <span className="text-[10px] font-mono text-[#9ca3af]">{j.date || "—"}</span>
+                    <span className="text-xs font-mono text-gold font-semibold truncate">{j.reference}</span>
+                    <span className="text-[10px] text-[#6b7280] truncate">{j.court || "—"}</span>
+                    <span className="text-[10px] text-[#6b7280] truncate">{j.judge || "—"}</span>
+                    <span className="text-sm text-[#6b7280] group-hover:text-[#1a1a2e] transition-colors truncate">{j.parties}</span>
+                    <ChevronRight size={14} className="text-[#9ca3af] group-hover:text-gold transition-colors" />
+                  </Link>
+                ))}
+                {filtered.length > 500 && (
+                  <div className="px-4 py-3 text-xs text-[#9ca3af] text-center">
+                    {lang === "mt" ? `Qed juri l-ewwel 500 minn ${filtered.length}. Uża l-filtri biex issib aktar.` : `Showing first 500 of ${filtered.length}. Use filters to narrow down.`}
+                  </div>
+                )}
+              </div>
+            </div>
           )}
-        </AnimatePresence>
+        </motion.div>
 
-        {/* Footer */}
-        <div className="py-10 text-center text-xs text-[#9ca3af] border-t border-[#e5e0d5] mt-10">
+        <div className="py-10 mt-10 text-center text-xs text-[#9ca3af] border-t border-[#e5e0d5]">
           <p>Ligi4Friends — Powered by Rark Musso</p>
         </div>
       </div>
