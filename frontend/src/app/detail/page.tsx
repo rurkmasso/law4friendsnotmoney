@@ -14,7 +14,7 @@ import dynamic from "next/dynamic";
 
 const PdfViewer = dynamic(() => import("@/components/PdfViewer"), { ssr: false });
 
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/ligi4friends" : "";
 
 type Tab = "overview" | "details" | "citations" | "cases" | "pdf";
 
@@ -56,7 +56,9 @@ function LawDetail({ law, lang }: { law: Law; lang: string }) {
   const [pdfLang, setPdfLang] = useState<"en" | "mt">("en");
 
   const pdfUrl = pdfLang === "en" ? (law.pdf_url_en || law.pdf_url) : (law.pdf_url_mt || law.pdf_url);
-  const proxyPdfUrl = pdfUrl ? `${API}/api/documents/proxy-pdf?url=${encodeURIComponent(pdfUrl)}` : "";
+  // Try local PDF first (if downloaded), otherwise use source URL directly
+  const capNum = law.chapter?.match(/\d+/)?.[0];
+  const localPdfPath = capNum ? `cap_${capNum}_${pdfLang}.pdf` : undefined;
 
   const tabs: { key: Tab; label: string }[] = [
     { key: "details", label: lang === "mt" ? "Dettalji" : "Details" },
@@ -89,14 +91,26 @@ function LawDetail({ law, lang }: { law: Law; lang: string }) {
           {law.pdf_url_en && (
             <button onClick={() => { setPdfLang("en"); setShowPdf(true); setActiveTab("pdf"); }}
               className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#4c9ac9] hover:bg-[#3a86b5] text-white text-sm font-medium rounded-lg transition-colors shadow-sm">
-              <FileText size={14} /> English PDF
+              <FileText size={14} /> View English PDF
             </button>
           )}
           {law.pdf_url_mt && (
             <button onClick={() => { setPdfLang("mt"); setShowPdf(true); setActiveTab("pdf"); }}
               className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#d4a853] hover:bg-[#c09640] text-white text-sm font-medium rounded-lg transition-colors shadow-sm">
-              <FileText size={14} /> Maltese PDF
+              <FileText size={14} /> View Maltese PDF
             </button>
+          )}
+          {law.pdf_url_en && (
+            <a href={law.pdf_url_en} download target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-[#e5e0d5] hover:border-[#4c9ac9]/30 text-[#6b7280] text-sm font-medium rounded-lg transition-colors">
+              <Download size={14} /> EN PDF
+            </a>
+          )}
+          {law.pdf_url_mt && (
+            <a href={law.pdf_url_mt} download target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-[#e5e0d5] hover:border-[#d4a853]/30 text-[#6b7280] text-sm font-medium rounded-lg transition-colors">
+              <Download size={14} /> MT PDF
+            </a>
           )}
           <a href={law.source_url} target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-[#e5e0d5] hover:border-[#4c9ac9]/30 text-[#6b7280] text-sm font-medium rounded-lg transition-colors">
@@ -116,7 +130,7 @@ function LawDetail({ law, lang }: { law: Law; lang: string }) {
       </div>
 
       {activeTab === "pdf" && pdfUrl && (
-        <PdfViewer url={proxyPdfUrl} title={law.title} />
+        <PdfViewer url={pdfUrl} title={law.title} localPath={localPdfPath} />
       )}
 
       {activeTab === "details" && (
