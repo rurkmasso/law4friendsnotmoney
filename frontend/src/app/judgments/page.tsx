@@ -118,6 +118,16 @@ export default function JudgmentsPage() {
     }
 
     results.sort((a, b) => {
+      // Date sort: parse DD/MM/YYYY to ISO for correct ordering
+      if (sortKey === "date") {
+        const parse = (s: string) => {
+          const m = (s || "").match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+          return m ? `${m[3]}-${m[2].padStart(2,"0")}-${m[1].padStart(2,"0")}` : "";
+        };
+        const va = parse(a.date || "");
+        const vb = parse(b.date || "");
+        return sortAsc ? (va > vb ? 1 : -1) : (va < vb ? 1 : -1);
+      }
       const va = (a[sortKey] || "").toLowerCase();
       const vb = (b[sortKey] || "").toLowerCase();
       return sortAsc ? (va > vb ? 1 : -1) : (va < vb ? 1 : -1);
