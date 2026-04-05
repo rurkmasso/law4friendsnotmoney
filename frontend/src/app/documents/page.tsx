@@ -260,7 +260,7 @@ export default function DocumentsPage() {
               <p className="text-xs text-[#9ca3af] uppercase tracking-widest mb-3">
                 {lang === "mt" ? "Korpi Regolatorji" : "Regulatory Bodies"}
               </p>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
                 {REGULATORY_BODIES.map((body) => (
                   <a key={body.name} href={body.url} target="_blank" rel="noopener noreferrer"
                     className="bg-white hover:shadow-md border border-[#e5e0d5] hover:border-gold/30

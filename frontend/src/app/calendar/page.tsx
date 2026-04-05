@@ -272,7 +272,7 @@ export default function CalendarPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="mb-8 flex items-start justify-between gap-4"
+          className="mb-8 flex flex-col sm:flex-row items-start justify-between gap-3 sm:gap-4"
         >
           <div>
             <div className="flex items-center gap-3 mb-2">
@@ -281,7 +281,7 @@ export default function CalendarPage() {
               </div>
               <h1 className="text-3xl font-display font-bold text-[#1a1a2e]">{t.title}</h1>
             </div>
-            <p className="text-[#6b7280] ml-14">{t.subtitle}</p>
+            <p className="text-[#6b7280] ml-0 sm:ml-14">{t.subtitle}</p>
           </div>
           <button
             onClick={() => handleOpenForm(format(new Date(), "yyyy-MM-dd"))}
@@ -293,7 +293,7 @@ export default function CalendarPage() {
           </button>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
           {/* ========== CALENDAR ========== */}
           <div className="lg:col-span-2">
             <motion.div

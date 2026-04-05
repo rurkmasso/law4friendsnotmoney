@@ -152,9 +152,9 @@ export default function LawyersPage() {
             <div className="p-2.5 rounded-xl bg-gold/10 border border-gold/20">
               <User size={22} className="text-gold" />
             </div>
-            <h1 className="text-3xl font-display font-bold text-[#1a1a2e]">{t.title}</h1>
+            <h1 className="text-2xl sm:text-3xl font-display font-bold text-[#1a1a2e]">{t.title}</h1>
           </div>
-          <p className="text-[#9ca3af] text-sm mb-6 ml-14">{t.sub}</p>
+          <p className="text-[#9ca3af] text-sm mb-6 ml-0 sm:ml-14">{t.sub}</p>
 
           {/* Search + Filters */}
           <div className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-4 mb-4">

@@ -73,7 +73,7 @@ export default function MatterPage() {
               <p className="text-sm font-medium text-[#1a1a2e] mb-3">
                 {lang === "mt" ? "Daħħal l-email tiegħek biex taċċessa l-matters" : "Enter your email to access your matters"}
               </p>
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <input
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
@@ -104,7 +104,7 @@ export default function MatterPage() {
                 <p className="text-xs font-medium text-[#6b7280] mb-3">
                   {lang === "mt" ? "Matter ġdid" : "New matter"}
                 </p>
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2">
                   <input
                     value={newName}
                     onChange={(e) => setNewName(e.target.value)}
@@ -112,20 +112,22 @@ export default function MatterPage() {
                     className="flex-1 bg-white border border-[#e5e0d5] rounded-xl px-4 py-3 text-[#1a1a2e]
                                focus:outline-none focus:border-gold/50 placeholder:text-[#9ca3af] text-sm"
                   />
-                  <select
-                    value={newSector}
-                    onChange={(e) => setNewSector(e.target.value)}
-                    className="bg-white border border-[#e5e0d5] rounded-xl px-3 py-3 text-sm text-[#1a1a2e] focus:outline-none focus:border-gold/50"
-                  >
-                    {SECTORS.map((s) => <option key={s} value={s}>{s}</option>)}
-                  </select>
-                  <button
-                    onClick={createMatter}
-                    disabled={creating || !newName.trim()}
-                    className="px-4 py-3 bg-gold hover:bg-[#a8852f] text-white font-semibold rounded-xl disabled:opacity-40 transition-colors"
-                  >
-                    <Plus size={18} />
-                  </button>
+                  <div className="flex gap-2">
+                    <select
+                      value={newSector}
+                      onChange={(e) => setNewSector(e.target.value)}
+                      className="flex-1 sm:flex-none bg-white border border-[#e5e0d5] rounded-xl px-3 py-3 text-sm text-[#1a1a2e] focus:outline-none focus:border-gold/50"
+                    >
+                      {SECTORS.map((s) => <option key={s} value={s}>{s}</option>)}
+                    </select>
+                    <button
+                      onClick={createMatter}
+                      disabled={creating || !newName.trim()}
+                      className="px-4 py-3 bg-gold hover:bg-[#a8852f] text-white font-semibold rounded-xl disabled:opacity-40 transition-colors"
+                    >
+                      <Plus size={18} />
+                    </button>
+                  </div>
                 </div>
               </div>
 

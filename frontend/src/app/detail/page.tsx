@@ -81,7 +81,7 @@ function LawDetail({ law, lang }: { law: Law; lang: string }) {
             </h1>
           </div>
         </div>
-        <div className="flex flex-wrap gap-2 ml-14">
+        <div className="flex flex-wrap gap-2 ml-0 sm:ml-14">
           {law.pdf_url_en && (
             <button onClick={() => { setPdfLang("en"); setShowPdf(true); setActiveTab("pdf"); }}
               className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#4c9ac9] hover:bg-[#3a86b5] text-white text-sm font-medium rounded-lg transition-colors shadow-sm">
@@ -114,7 +114,7 @@ function LawDetail({ law, lang }: { law: Law; lang: string }) {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 bg-white rounded-xl border border-[#e5e0d5] p-1">
+      <div className="flex flex-wrap gap-1 bg-white rounded-xl border border-[#e5e0d5] p-1 overflow-x-auto">
         {tabs.map(tab => (
           <button key={tab.key} onClick={() => setActiveTab(tab.key)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
@@ -204,7 +204,7 @@ function JudgmentDetail({ judgment, lang }: { judgment: Judgment; lang: string }
             </div>
           </div>
         </div>
-        <div className="flex gap-2 ml-14">
+        <div className="flex flex-wrap gap-2 ml-0 sm:ml-14">
           <a href={judgment.source_url} target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-[#e5e0d5] hover:border-gold/30 text-[#6b7280] text-sm font-medium rounded-lg transition-colors">
             <ExternalLink size={14} /> eCourts

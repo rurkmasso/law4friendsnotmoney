@@ -105,7 +105,7 @@ export default function HowToUsePage() {
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.06 }}
-                  className="flex gap-4 bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-5 hover:shadow-md transition-shadow"
+                  className="flex gap-3 sm:gap-4 bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-4 sm:p-5 hover:shadow-md transition-shadow"
                 >
                   <div className="flex flex-col items-center gap-2 shrink-0">
                     <span className="w-7 h-7 rounded-full bg-[#f5f3ee] border border-[#e5e0d5] text-xs

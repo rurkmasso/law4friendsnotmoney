@@ -439,9 +439,9 @@ export default function IGamingPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.07 }}
                 className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm p-5
-                           hover:border-navy/30 hover:shadow-md transition-all group flex items-center justify-between gap-4"
+                           hover:border-navy/30 hover:shadow-md transition-all group flex items-start sm:items-center justify-between gap-3 sm:gap-4"
               >
-                <div className="flex items-start gap-4 min-w-0">
+                <div className="flex items-start gap-3 min-w-0">
                   <div className="p-2 rounded-xl bg-navy/5 border border-navy/10 shrink-0 mt-0.5">
                     <BookOpen size={16} className="text-navy" />
                   </div>

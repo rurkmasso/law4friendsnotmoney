@@ -132,7 +132,7 @@ export default function SettingsPage() {
 
             {/* Default sector */}
             <Section icon={BookOpen} title={lang === "mt" ? "Settur Awtomatiku" : "Default Sector"}>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {SECTORS.map((s) => (
                   <button key={s}
                     onClick={() => setSettings((prev) => ({ ...prev, defaultSector: s }))}

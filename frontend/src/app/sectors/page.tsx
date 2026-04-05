@@ -104,7 +104,7 @@ export default function SectorsPage() {
           </p>
 
           {/* Sector tabs */}
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-2 mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 mb-8">
             {SECTORS.map((s) => {
               const Icon = s.icon;
               return (
@@ -141,7 +141,7 @@ export default function SectorsPage() {
           </div>
 
           {/* Search */}
-          <div className="flex gap-2 mb-6">
+          <div className="flex flex-col sm:flex-row gap-2 mb-6">
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
