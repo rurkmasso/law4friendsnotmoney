@@ -5,9 +5,10 @@ import { Bell, Plus, X } from "lucide-react";
 import { createAlert } from "@/lib/api";
 import Link from "next/link";
 import { useLanguage } from "@/lib/useLanguage";
+import Nav from "@/components/Nav";
 
 export default function AlertsPage() {
-  const [lang, setLang] = useLanguage();
+  const [lang] = useLanguage();
   const [email, setEmail] = useState("");
   const [keyword, setKeyword] = useState("");
   const [keywords, setKeywords] = useState<string[]>([]);
@@ -36,31 +37,7 @@ export default function AlertsPage() {
 
   return (
     <div className="min-h-screen bg-[#f5f3ee]">
-      {/* Nav */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#e5e0d5] shadow-sm">
-        <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-          <Link href="/" className="font-display text-lg font-bold text-navy">
-            Tizzju
-          </Link>
-          <div className="flex items-center gap-6">
-            <Link href="/sectors" className="text-sm text-[#6b7280] hover:text-[#1a1a2e] transition-colors">
-              {lang === "mt" ? "Setturi" : "Sectors"}
-            </Link>
-            <Link href="/matter" className="text-sm text-[#6b7280] hover:text-[#1a1a2e] transition-colors">
-              Matters
-            </Link>
-            <Link href="/alerts" className="text-sm text-gold font-medium">
-              {lang === "mt" ? "Allerts" : "Alerts"}
-            </Link>
-            <button
-              onClick={() => setLang(lang === "mt" ? "en" : "mt")}
-              className="px-3 py-1 rounded-full border border-[#e5e0d5] text-xs font-mono text-[#6b7280] hover:border-gold/50 transition-colors"
-            >
-              {lang === "mt" ? "EN" : "MT"}
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       <div className="max-w-xl mx-auto px-4 py-10">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-4">

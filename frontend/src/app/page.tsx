@@ -5,6 +5,7 @@ import { Search, Scale, BookOpen, Users, FileText, Bell, TrendingUp, ChevronRigh
 import { search, type Language, type SearchResult } from "@/lib/api";
 import { useLanguage } from "@/lib/useLanguage";
 import CitationCard from "@/components/CitationCard";
+import Nav from "@/components/Nav";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 
@@ -73,7 +74,7 @@ const LABELS = {
 };
 
 export default function HomePage() {
-  const [lang, setLang] = useLanguage();
+  const [lang] = useLanguage();
   const [query, setQuery] = useState("");
   const [result, setResult] = useState<SearchResult | null>(null);
   const [loading, setLoading] = useState(false);
@@ -121,34 +122,9 @@ export default function HomePage() {
     }
   };
 
-  const NAV_LINKS = Object.entries(t.nav).slice(0, 6);
-
   return (
     <div className="min-h-screen bg-cream text-[#1a1a2e]">
-      {/* Nav */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#e5e0d5] shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Scale size={20} className="text-gold" />
-            <span className="text-lg font-display font-bold text-[#1a1a2e]">
-              <span className="text-gold">Tizz</span>ju
-            </span>
-          </Link>
-          <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
-            {NAV_LINKS.map(([key, label]) => (
-              <Link key={key} href={`/${key}`}
-                className="hover:text-gold transition-colors font-medium">{label}</Link>
-            ))}
-          </div>
-          <button
-            onClick={() => setLang(lang === "mt" ? "en" : "mt")}
-            className="px-3 py-1.5 rounded-full border border-[#e5e0d5] hover:border-gold/50
-                       hover:bg-gold/5 text-xs font-mono text-[#6b7280] transition-all"
-          >
-            {lang === "mt" ? "EN" : "MT"}
-          </button>
-        </div>
-      </nav>
+      <Nav />
 
       <div className="max-w-3xl mx-auto px-4">
         {/* Hero */}
@@ -170,10 +146,10 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          <h1 className="text-5xl font-display font-bold tracking-tight mb-3 text-[#1a1a2e]">
+          <h1 className="text-4xl sm:text-5xl font-display font-bold tracking-tight mb-3 text-[#1a1a2e]">
             <span className="text-gold">Tizz</span>ju
           </h1>
-          <p className="text-lg text-[#6b7280] mb-1">{t.sub}</p>
+          <p className="text-base sm:text-lg text-[#6b7280] mb-1">{t.sub}</p>
           <p className="text-xs text-[#9ca3af] mt-1">Powered by Rark Musso</p>
 
           {/* Stats */}

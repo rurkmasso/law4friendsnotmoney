@@ -4,19 +4,11 @@ import { motion } from "framer-motion";
 import { FileDown, Loader2, Scale } from "lucide-react";
 import { createDraft, type Language } from "@/lib/api";
 import { useLanguage } from "@/lib/useLanguage";
+import Nav from "@/components/Nav";
 import Link from "next/link";
 
-const NAV_LINKS = [
-  { href: "/laws", label_mt: "Liġijiet", label_en: "Laws" },
-  { href: "/judgments", label_mt: "Sentenzi", label_en: "Judgments" },
-  { href: "/lawyers", label_mt: "Avukati", label_en: "Lawyers" },
-  { href: "/documents", label_mt: "Dokumenti", label_en: "Documents" },
-  { href: "/draft", label_mt: "Abbozza", label_en: "Draft" },
-  { href: "/case-builder", label_mt: "Ibni Każ", label_en: "Build Case" },
-];
-
 export default function DraftPage() {
-  const [lang, setLang] = useLanguage();
+  const [lang] = useLanguage();
   const TEMPLATES = [
     { id: "employment_contract", title: lang === "mt" ? "Kuntratt ta' Xogħol" : "Employment Contract" },
     { id: "lease_agreement", title: lang === "mt" ? "Ftehim ta' Kera" : "Lease Agreement" },
@@ -129,32 +121,7 @@ export default function DraftPage() {
 
   return (
     <div className="min-h-screen bg-cream text-[#1a1a2e]">
-      {/* Nav */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#e5e0d5] shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Scale size={20} className="text-gold" />
-            <span className="text-lg font-display font-bold text-[#1a1a2e]">
-              <span className="text-gold">Tizz</span>ju
-            </span>
-          </Link>
-          <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
-            {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href}
-                className="hover:text-gold transition-colors font-medium">
-                {lang === "mt" ? link.label_mt : link.label_en}
-              </Link>
-            ))}
-          </div>
-          <button
-            onClick={() => setLang(lang === "mt" ? "en" : "mt")}
-            className="px-3 py-1.5 rounded-full border border-[#e5e0d5] hover:border-gold/50
-                       hover:bg-gold/5 text-xs font-mono text-[#6b7280] transition-all"
-          >
-            {lang === "mt" ? "EN" : "MT"}
-          </button>
-        </div>
-      </nav>
+      <Nav />
 
       <div className="max-w-2xl mx-auto px-4 py-10">
         <Link href="/" className="text-sm text-[#9ca3af] hover:text-[#6b7280]">{t.back}</Link>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { BookOpen, Search, ChevronRight, Scale, ArrowUpDown, ArrowUp, ArrowDown, FileText, CheckCircle, XCircle } from "lucide-react";
 import { getLaws, type Law } from "@/lib/api";
 import { useLanguage } from "@/lib/useLanguage";
+import Nav from "@/components/Nav";
 import Link from "next/link";
 
 const L = {
@@ -53,14 +54,6 @@ const L = {
   },
 };
 
-const NAV_LINKS = [
-  { href: "/laws", label_mt: "Liġijiet", label_en: "Laws" },
-  { href: "/judgments", label_mt: "Sentenzi", label_en: "Judgments" },
-  { href: "/lawyers", label_mt: "Avukati", label_en: "Lawyers" },
-  { href: "/documents", label_mt: "Dokumenti", label_en: "Documents" },
-  { href: "/igaming", label_mt: "iGaming", label_en: "iGaming" },
-];
-
 type SortKey = "chapter" | "title" | "status" | "effective_date" | "type";
 
 function SortIcon({ active, asc }: { active: boolean; asc: boolean }) {
@@ -69,7 +62,7 @@ function SortIcon({ active, asc }: { active: boolean; asc: boolean }) {
 }
 
 export default function LawsPage() {
-  const [lang, setLang] = useLanguage();
+  const [lang] = useLanguage();
   const [q, setQ] = useState("");
   const [data, setData] = useState<Law[]>([]);
   const [loading, setLoading] = useState(true);
@@ -141,30 +134,7 @@ export default function LawsPage() {
 
   return (
     <div className="min-h-screen bg-cream text-[#1a1a2e]">
-      {/* Nav */}
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#e5e0d5] shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Scale size={20} className="text-gold" />
-            <span className="text-lg font-display font-bold text-[#1a1a2e]">
-              <span className="text-gold">Tizz</span>ju
-            </span>
-          </Link>
-          <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
-            {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href}
-                className={`hover:text-gold transition-colors font-medium ${link.href === "/laws" ? "text-gold" : ""}`}>
-                {lang === "mt" ? link.label_mt : link.label_en}
-              </Link>
-            ))}
-          </div>
-          <button onClick={() => setLang(lang === "mt" ? "en" : "mt")}
-            className="px-3 py-1.5 rounded-full border border-[#e5e0d5] hover:border-gold/50
-                       hover:bg-gold/5 text-xs font-mono text-[#6b7280] transition-all">
-            {lang === "mt" ? "EN" : "MT"}
-          </button>
-        </div>
-      </nav>
+      <Nav />
 
       <div className="max-w-7xl mx-auto px-4 py-8">
         <Link href="/" className="text-sm text-[#9ca3af] hover:text-[#6b7280] mb-6 inline-block">{t.back}</Link>
@@ -232,8 +202,8 @@ export default function LawsPage() {
             <p className="text-[#9ca3af] text-sm py-8">{t.noResults}</p>
           ) : (
             <div className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm overflow-hidden">
-              {/* Table header */}
-              <div className="grid grid-cols-[80px_1fr_90px_70px_90px_50px] gap-2 px-4 py-3 border-b border-[#e5e0d5] bg-[#f9f7f3] text-xs font-semibold text-[#6b7280]">
+              {/* Desktop table header */}
+              <div className="hidden sm:grid grid-cols-[80px_1fr_90px_60px_90px_30px] gap-2 px-4 py-3 border-b border-[#e5e0d5] bg-[#f9f7f3] text-xs font-semibold text-[#6b7280]">
                 <button onClick={() => toggleSort("chapter")} className="flex items-center gap-1 hover:text-[#1a1a2e] transition-colors">
                   {t.col_chapter} <SortIcon active={sortKey === "chapter"} asc={sortAsc} />
                 </button>
@@ -250,7 +220,6 @@ export default function LawsPage() {
                 <span></span>
               </div>
 
-              {/* Table rows */}
               <div className="divide-y divide-[#e5e0d5]/50">
                 {filtered.map((law) => {
                   const isInForce = !law.status || law.status.toLowerCase().includes("force") || law.status.toLowerCase().includes("seħħ");
@@ -259,30 +228,35 @@ export default function LawsPage() {
                     <Link
                       key={law.chapter}
                       href={`/detail?type=law&id=${encodeURIComponent(law.chapter)}`}
-                      className="grid grid-cols-[80px_1fr_90px_70px_90px_50px] gap-2 px-4 py-3 hover:bg-[#4c9ac9]/5 transition-colors group items-center"
+                      className="group block sm:grid sm:grid-cols-[80px_1fr_90px_60px_90px_30px] sm:gap-2 sm:items-center px-4 py-3 hover:bg-[#4c9ac9]/5 transition-colors"
                     >
-                      <span className="text-xs font-mono text-[#4c9ac9] font-semibold">{law.chapter}</span>
-                      <span className="text-sm text-[#6b7280] group-hover:text-[#1a1a2e] transition-colors truncate">
-                        {law.title}
-                      </span>
-                      <span>
-                        {isInForce ? (
-                          <span className="inline-flex items-center gap-1 text-[10px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full font-medium">
-                            <CheckCircle size={9} /> {lang === "mt" ? "Fis-Seħħ" : "Active"}
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center gap-1 text-[10px] text-red-600 bg-red-50 px-2 py-0.5 rounded-full font-medium">
-                            <XCircle size={9} /> {lang === "mt" ? "Imħassar" : "Repealed"}
-                          </span>
-                        )}
-                      </span>
-                      <span>
-                        {hasPdf && (
-                          <span className="text-[10px] bg-red-50 text-red-600 px-1.5 py-0.5 rounded font-bold">PDF</span>
-                        )}
-                      </span>
-                      <span className="text-[10px] text-[#9ca3af] font-mono">{law.effective_date || ""}</span>
-                      <ChevronRight size={14} className="text-[#9ca3af] group-hover:text-[#4c9ac9] transition-colors" />
+                      {/* Mobile layout */}
+                      <div className="flex items-start justify-between gap-2 sm:contents">
+                        <div className="flex-1 min-w-0 sm:contents">
+                          <div className="flex items-center gap-2 mb-1 sm:contents">
+                            <span className="text-xs font-mono text-[#4c9ac9] font-semibold shrink-0">{law.chapter}</span>
+                            <span className="text-sm text-[#6b7280] group-hover:text-[#1a1a2e] transition-colors sm:truncate line-clamp-2 sm:line-clamp-1">{law.title}</span>
+                          </div>
+                          <div className="flex items-center gap-2 mt-1 sm:contents">
+                            <span className="sm:block">
+                              {isInForce ? (
+                                <span className="inline-flex items-center gap-1 text-[10px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full font-medium">
+                                  <CheckCircle size={9} /> {lang === "mt" ? "Fis-Seħħ" : "Active"}
+                                </span>
+                              ) : (
+                                <span className="inline-flex items-center gap-1 text-[10px] text-red-600 bg-red-50 px-2 py-0.5 rounded-full font-medium">
+                                  <XCircle size={9} /> {lang === "mt" ? "Imħassar" : "Repealed"}
+                                </span>
+                              )}
+                            </span>
+                            <span className="sm:block">
+                              {hasPdf && <span className="text-[10px] bg-red-50 text-red-600 px-1.5 py-0.5 rounded font-bold">PDF</span>}
+                            </span>
+                            <span className="text-[10px] text-[#9ca3af] font-mono sm:block">{law.effective_date || ""}</span>
+                          </div>
+                        </div>
+                        <ChevronRight size={14} className="text-[#9ca3af] group-hover:text-[#4c9ac9] transition-colors shrink-0 mt-1" />
+                      </div>
                     </Link>
                   );
                 })}

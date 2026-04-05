@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import { getLawyers, getJudgments, type Lawyer, type Judgment } from "@/lib/api";
 import { useLanguage } from "@/lib/useLanguage";
+import Nav from "@/components/Nav";
 import Link from "next/link";
 
 type SortKey = "full_name" | "case_count" | "profession" | "firm";
@@ -17,14 +18,6 @@ const PROFESSIONS = [
   { key: "judge", label_mt: "Imħallef", label_en: "Judge / Magistrate" },
   { key: "procurator", label_mt: "Prokutur", label_en: "Legal Procurator" },
   { key: "notary", label_mt: "Nutar", label_en: "Notary" },
-];
-
-const NAV_LINKS = [
-  { href: "/laws", label_mt: "Liġijiet", label_en: "Laws" },
-  { href: "/judgments", label_mt: "Sentenzi", label_en: "Judgments" },
-  { href: "/lawyers", label_mt: "Avukati", label_en: "Lawyers" },
-  { href: "/documents", label_mt: "Dokumenti", label_en: "Documents" },
-  { href: "/igaming", label_mt: "iGaming", label_en: "iGaming" },
 ];
 
 const L = {
@@ -74,7 +67,7 @@ function SortIcon({ active, asc }: { active: boolean; asc: boolean }) {
 }
 
 export default function LawyersPage() {
-  const [lang, setLang] = useLanguage();
+  const [lang] = useLanguage();
   const [q, setQ] = useState("");
   const [data, setData] = useState<Lawyer[]>([]);
   const [judgments, setJudgments] = useState<Judgment[]>([]);
@@ -149,29 +142,7 @@ export default function LawyersPage() {
 
   return (
     <div className="min-h-screen bg-cream text-[#1a1a2e]">
-      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#e5e0d5] shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <Scale size={20} className="text-gold" />
-            <span className="text-lg font-display font-bold text-[#1a1a2e]">
-              <span className="text-gold">Tizz</span>ju
-            </span>
-          </Link>
-          <div className="hidden lg:flex items-center gap-6 text-sm text-[#6b7280]">
-            {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href}
-                className={`hover:text-gold transition-colors font-medium ${link.href === "/lawyers" ? "text-gold" : ""}`}>
-                {lang === "mt" ? link.label_mt : link.label_en}
-              </Link>
-            ))}
-          </div>
-          <button onClick={() => setLang(lang === "mt" ? "en" : "mt")}
-            className="px-3 py-1.5 rounded-full border border-[#e5e0d5] hover:border-gold/50
-                       hover:bg-gold/5 text-xs font-mono text-[#6b7280] transition-all">
-            {lang === "mt" ? "EN" : "MT"}
-          </button>
-        </div>
-      </nav>
+      <Nav />
 
       <div className="max-w-7xl mx-auto px-4 py-8">
         <Link href="/" className="text-sm text-[#9ca3af] hover:text-[#6b7280] mb-6 inline-block">{t.back}</Link>
@@ -221,8 +192,8 @@ export default function LawyersPage() {
             <p className="text-[#9ca3af] text-sm py-8">{t.noResults}</p>
           ) : (
             <div className="bg-white border border-[#e5e0d5] rounded-2xl shadow-sm overflow-hidden">
-              {/* Header */}
-              <div className="grid grid-cols-[1fr_130px_70px_90px_100px_40px] gap-2 px-4 py-3 border-b border-[#e5e0d5] bg-[#f9f7f3] text-xs font-semibold text-[#6b7280]">
+              {/* Desktop header */}
+              <div className="hidden md:grid grid-cols-[1fr_130px_60px_80px_90px_32px] gap-2 px-4 py-3 border-b border-[#e5e0d5] bg-[#f9f7f3] text-xs font-semibold text-[#6b7280]">
                 <button onClick={() => toggleSort("full_name")} className="flex items-center gap-1 hover:text-[#1a1a2e] transition-colors">
                   {t.col_name} <SortIcon active={sortKey === "full_name"} asc={sortAsc} />
                 </button>
@@ -247,39 +218,44 @@ export default function LawyersPage() {
                   return (
                     <div key={l.warrant_number}>
                       <div
-                        className="grid grid-cols-[1fr_130px_70px_90px_100px_40px] gap-2 px-4 py-3 hover:bg-gold/5 transition-colors group items-center cursor-pointer"
+                        className="flex items-center gap-3 px-4 py-3 hover:bg-gold/5 transition-colors group cursor-pointer
+                                   md:grid md:grid-cols-[1fr_130px_60px_80px_90px_32px] md:gap-2"
                         onClick={() => setExpandedLawyer(expanded ? null : l.warrant_number)}
                       >
-                        <div className="flex items-center gap-2 min-w-0">
+                        {/* Avatar + name (always visible) */}
+                        <div className="flex items-center gap-2 min-w-0 flex-1">
                           <div className="w-7 h-7 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center shrink-0 text-gold font-bold text-[10px]">
                             {l.full_name.split(" ").map(n => n[0]).slice(0, 2).join("")}
                           </div>
-                          <Link href={`/detail?type=lawyer&id=${encodeURIComponent(l.warrant_number)}`}
-                            className="text-sm text-[#6b7280] group-hover:text-[#1a1a2e] transition-colors truncate hover:text-gold"
-                            onClick={(e) => e.stopPropagation()}>
-                            {l.full_name}
-                          </Link>
+                          <div className="min-w-0 flex-1">
+                            <Link href={`/detail?type=lawyer&id=${encodeURIComponent(l.warrant_number)}`}
+                              className="text-sm text-[#6b7280] group-hover:text-[#1a1a2e] transition-colors hover:text-gold block truncate"
+                              onClick={(e) => e.stopPropagation()}>
+                              {l.full_name}
+                            </Link>
+                            {/* Mobile-only subtitle */}
+                            <div className="flex items-center gap-2 mt-0.5 md:hidden">
+                              <span className={`inline-flex items-center gap-1 text-[10px] px-2 py-0.5 rounded-full font-medium ${
+                                isJudge ? "text-purple-600 bg-purple-50" : "text-gold bg-gold/10"
+                              }`}>{l.profession || "Advocate"}</span>
+                              <span className="text-[10px] text-[#9ca3af] font-mono">{l.case_count || 0} {lang === "mt" ? "kawżi" : "cases"}</span>
+                            </div>
+                          </div>
                         </div>
-                        <span>
+                        {/* Desktop-only columns */}
+                        <span className="hidden md:block">
                           <span className={`inline-flex items-center gap-1 text-[10px] px-2 py-0.5 rounded-full font-medium ${
-                            isJudge
-                              ? "text-purple-600 bg-purple-50"
-                              : "text-gold bg-gold/10"
-                          }`}>
-                            {l.profession || "Advocate"}
-                          </span>
+                            isJudge ? "text-purple-600 bg-purple-50" : "text-gold bg-gold/10"
+                          }`}>{l.profession || "Advocate"}</span>
                         </span>
-                        <span className="text-xs font-mono text-[#1a1a2e] font-semibold">
-                          {l.case_count || 0}
-                        </span>
-                        <span className="text-[10px] text-[#9ca3af]">
+                        <span className="hidden md:block text-xs font-mono text-[#1a1a2e] font-semibold">{l.case_count || 0}</span>
+                        <span className="hidden md:block text-[10px] text-[#9ca3af]">
                           {(l.courts_active_in || []).length > 0
                             ? `${l.courts_active_in.length} ${lang === "mt" ? "qrati" : "courts"}`
-                            : "—"
-                          }
+                            : "—"}
                         </span>
-                        <span className="text-[10px] text-[#9ca3af] font-mono">{l.last_case_date?.split("T")[0] || "—"}</span>
-                        <ChevronRight size={14} className={`text-[#9ca3af] group-hover:text-gold transition-all ${expanded ? "rotate-90" : ""}`} />
+                        <span className="hidden md:block text-[10px] text-[#9ca3af] font-mono">{l.last_case_date?.split("T")[0] || "—"}</span>
+                        <ChevronRight size={14} className={`text-[#9ca3af] group-hover:text-gold transition-all shrink-0 ${expanded ? "rotate-90" : ""}`} />
                       </div>
 
                       {/* Expanded: show cases */}
