@@ -26,6 +26,10 @@ import os
 import sys
 import re
 import time
+import functools
+
+# Unbuffered print
+print = functools.partial(print, flush=True)
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from playwright.async_api import async_playwright
@@ -86,8 +90,8 @@ async def navigate_to_search(page):
     await page.wait_for_timeout(3000)
 
 
-async def do_search_by_court(page, court_id, year=None):
-    """Submit search filtered by court (and optionally year). Returns True if form submitted."""
+async def do_search_by_court(page, court_id, year=None, year_from=None, year_to=None):
+    """Submit search filtered by court (and optionally year/range). Returns True if form submitted."""
     try:
         await navigate_to_search(page)
 
@@ -96,6 +100,10 @@ async def do_search_by_court(page, court_id, year=None):
         await page.wait_for_timeout(500)
 
         if year:
+            year_from = year
+            year_to = year
+
+        if year_from and year_to:
             # Select "between" radio to enable date inputs
             await page.locator('#judgementdateOption3').check()
             await page.wait_for_timeout(800)
@@ -103,9 +111,9 @@ async def do_search_by_court(page, court_id, year=None):
             df = page.locator('#judgementDateFrom')
             dt = page.locator('#judgementDateTo')
             await df.click()
-            await df.fill(f"01/01/{year}")
+            await df.fill(f"01/01/{year_from}")
             await dt.click()
-            await dt.fill(f"31/12/{year}")
+            await dt.fill(f"31/12/{year_to}")
             await page.wait_for_timeout(300)
         else:
             # "any day" — dateOptionAlways
@@ -122,15 +130,15 @@ async def do_search_by_court(page, court_id, year=None):
             # URL might not change if results load via AJAX
             pass
 
-        await page.wait_for_timeout(5000)
+        await page.wait_for_timeout(2000)
 
-        # Extra wait for DataTables to render
+        # Wait for DataTables to render
         try:
             await page.wait_for_selector(".dataTables_info, table tbody tr td", timeout=10000)
         except:
             pass
 
-        await page.wait_for_timeout(2000)
+        await page.wait_for_timeout(1000)
         return True
     except Exception as e:
         print(f"    Search error: {e}")
@@ -138,34 +146,27 @@ async def do_search_by_court(page, court_id, year=None):
 
 
 async def get_total_from_page(page):
-    """Get total result count from the page."""
+    """Get total result count from the page.
+
+    Handles both English ("Showing 1 to 10 of 5,432 entries")
+    and Maltese ("Jidhru 1 sa 10 minn 5,432 rekord") DataTables info text.
+    """
     try:
-        content = await page.content()
-
-        # DataTables: "Showing 1 to 10 of 5,432 entries"
-        m = re.search(r"Showing\s+\d+\s+to\s+\d+\s+of\s+([\d,]+)\s+entr", content)
-        if m:
-            return int(m.group(1).replace(",", ""))
-
-        # Maltese variant
-        m2 = re.search(r"([\d,]+)\s+entr", content)
-        if m2:
-            return int(m2.group(1).replace(",", ""))
-
-        # Try via JS
+        # Use JS to read the dataTables_info element directly
         total = await page.evaluate("""
             () => {
                 const info = document.querySelector('.dataTables_info');
-                if (info) {
-                    const m = info.textContent.match(/of\\s+([\\d,]+)\\s+entr/);
-                    if (m) return parseInt(m[1].replace(',', ''));
-                }
-                // Bootgrid info
-                const binfo = document.querySelector('.infos');
-                if (binfo) {
-                    const m = binfo.textContent.match(/of\\s+([\\d,]+)\\s+entr/);
-                    if (m) return parseInt(m[1].replace(',', ''));
-                }
+                if (!info) return 0;
+                const text = info.textContent;
+                // English: "Showing 1 to 10 of 5,432 entries"
+                let m = text.match(/of\\s+([\\d,]+)\\s+entr/);
+                if (m) return parseInt(m[1].replace(/,/g, ''));
+                // Maltese: "Jidhru 1 sa 10 minn 5,432 rekord"
+                m = text.match(/minn\\s+([\\d,]+)\\s+rekord/);
+                if (m) return parseInt(m[1].replace(/,/g, ''));
+                // Fallback: just find the last number in the text
+                const nums = text.match(/[\\d,]+/g);
+                if (nums && nums.length >= 3) return parseInt(nums[nums.length - 1].replace(/,/g, ''));
                 return 0;
             }
         """)
@@ -292,7 +293,7 @@ async def paginate_and_collect(page):
                     break
 
             await next_btn.click()
-            await page.wait_for_timeout(3000)
+            await page.wait_for_timeout(2000)
             page_num += 1
 
             if page_num > 2000:
@@ -376,63 +377,20 @@ async def main(resume=False, test=False):
             total = await get_total_from_page(pg)
             print(f"    Total results: {total}")
 
-            # Debug: take screenshot of first court to verify
-            if ci == 0:
-                await pg.screenshot(path="/tmp/ecourts_first_court.png")
-                # Also save HTML for debugging
-                content = await pg.content()
-                with open("/tmp/ecourts_first_court.html", "w") as f:
-                    f.write(content)
-                print(f"    Debug: saved screenshot and HTML to /tmp/ecourts_first_court.*")
+            if total == 0:
+                print(f"    No results, skipping court")
+                progress["completed_courts"].append(court_key)
+                save_progress(progress)
+                continue
 
-            if total >= 1000:
-                # DataTables caps at ~1000 results — break down by year to get them all
-                print(f"    Large court ({total}+) — breaking down by year...")
-                court_new = 0
-
-                for year in range(2026, 1943, -1):
-                    cy_key = f"{court_key}_{year}"
-                    if cy_key in progress.get("completed_court_years", []):
-                        continue
-
-                    ok = await do_search_by_court(pg, court["id"], year=year)
-                    if not ok:
-                        continue
-
-                    yt = await get_total_from_page(pg)
-                    if yt == 0:
-                        progress.setdefault("completed_court_years", []).append(cy_key)
-                        continue
-
-                    judgments = await paginate_and_collect(pg)
-                    new_batch = [j for j in judgments if j.get("reference") and j["reference"] not in existing_refs]
-                    for j in new_batch:
-                        existing_refs.add(j["reference"])
-                    dupes = len(judgments) - len(new_batch)
-
-                    if new_batch:
-                        # Fill in court name if missing
-                        for j in new_batch:
-                            if not j.get("court"):
-                                j["court"] = court["name"]
-                        existing.extend(new_batch)
-                        court_new += len(new_batch)
-                        total_new += len(new_batch)
-                        total_dupes += dupes
-                        print(f"      {year}: +{len(new_batch)} new ({yt} total)")
-
-                    progress.setdefault("completed_court_years", []).append(cy_key)
-
-                print(f"    Court total: +{court_new} new")
-            else:
-                # Paginate through all results
+            if total > 0 and total < 500:
+                # Small court — paginate directly (no year breakdown needed)
+                print(f"    Small court — paginating directly...")
                 judgments = await paginate_and_collect(pg)
-
                 new_batch = [j for j in judgments if j.get("reference") and j["reference"] not in existing_refs]
                 for j in new_batch:
                     existing_refs.add(j["reference"])
                 dupes = len(judgments) - len(new_batch)
-
                 if new_batch:
                     for j in new_batch:
                         if not j.get("court"):
@@ -440,9 +398,92 @@ async def main(resume=False, test=False):
                     existing.extend(new_batch)
                     total_new += len(new_batch)
                     total_dupes += dupes
-                    print(f"    +{len(new_batch)} new judgments (paginated {len(judgments)} total)")
+                    print(f"    +{len(new_batch)} new judgments")
+                    save_judgments(existing)
                 else:
                     print(f"    {len(judgments)} found, all duplicates")
+            else:
+                # Large court (500+) — break into decades, then years if needed
+                print(f"    Large court — breaking down by decade...")
+                court_new = 0
+
+                # Decades from 2020s back to 1940s
+                decades = [(d, d + 9) for d in range(2020, 1939, -10)]
+                # Plus current partial decade
+                decades.insert(0, (2020, 2026))
+
+                for decade_start, decade_end in decades:
+                    decade_key = f"{court_key}_{decade_start}_{decade_end}"
+                    if decade_key in progress.get("completed_court_years", []):
+                        continue
+
+                    ok = await do_search_by_court(pg, court["id"], year_from=decade_start, year_to=decade_end)
+                    if not ok:
+                        continue
+
+                    dt = await get_total_from_page(pg)
+                    if dt == 0:
+                        progress.setdefault("completed_court_years", []).append(decade_key)
+                        save_progress(progress)
+                        continue
+
+                    if dt < 500:
+                        # Small decade — paginate directly
+                        judgments = await paginate_and_collect(pg)
+                        new_batch = [j for j in judgments if j.get("reference") and j["reference"] not in existing_refs]
+                        for j in new_batch:
+                            existing_refs.add(j["reference"])
+                        if new_batch:
+                            for j in new_batch:
+                                if not j.get("court"):
+                                    j["court"] = court["name"]
+                            existing.extend(new_batch)
+                            court_new += len(new_batch)
+                            total_new += len(new_batch)
+                            print(f"      {decade_start}-{decade_end}: +{len(new_batch)} new ({dt} total)")
+                            save_judgments(existing)
+                        progress.setdefault("completed_court_years", []).append(decade_key)
+                        save_progress(progress)
+                    else:
+                        # Large decade — break into individual years
+                        print(f"      {decade_start}-{decade_end}: {dt} results, breaking into years...")
+                        for year in range(decade_end, decade_start - 1, -1):
+                            cy_key = f"{court_key}_{year}"
+                            if cy_key in progress.get("completed_court_years", []):
+                                continue
+
+                            ok = await do_search_by_court(pg, court["id"], year=year)
+                            if not ok:
+                                continue
+
+                            yt = await get_total_from_page(pg)
+                            if yt == 0:
+                                progress.setdefault("completed_court_years", []).append(cy_key)
+                                save_progress(progress)
+                                continue
+
+                            judgments = await paginate_and_collect(pg)
+                            new_batch = [j for j in judgments if j.get("reference") and j["reference"] not in existing_refs]
+                            for j in new_batch:
+                                existing_refs.add(j["reference"])
+
+                            if new_batch:
+                                for j in new_batch:
+                                    if not j.get("court"):
+                                        j["court"] = court["name"]
+                                existing.extend(new_batch)
+                                court_new += len(new_batch)
+                                total_new += len(new_batch)
+                                print(f"        {year}: +{len(new_batch)} new ({yt} total)")
+                                save_judgments(existing)
+
+                            progress.setdefault("completed_court_years", []).append(cy_key)
+                            save_progress(progress)
+
+                        progress.setdefault("completed_court_years", []).append(decade_key)
+                        save_progress(progress)
+
+                print(f"    Court total: +{court_new} new")
 
             # Mark court as done
             progress["completed_courts"].append(court_key)
